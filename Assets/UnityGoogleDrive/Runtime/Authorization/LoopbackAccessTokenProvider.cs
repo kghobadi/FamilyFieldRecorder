@@ -55,7 +55,7 @@ namespace UnityGoogleDrive
             //if (string.IsNullOrEmpty(settings.CachedRefreshToken))
             //{
             //    ExecuteFullAuth();
-            //    //settings.CachedAccessToken = "1/jl7-023wIN8MKMHw_xiU1pODMqbWK9fphOn5AYGNyRU";
+
             //    //accessTokenRefresher.RefreshAccessToken(settings.CachedRefreshToken);
             //    //Debug.Log("empty refresh");
             //}
