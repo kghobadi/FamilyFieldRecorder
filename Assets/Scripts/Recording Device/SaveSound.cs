@@ -29,11 +29,13 @@ public class SaveSound : MonoBehaviour
 	InputField enterName;
 
 	public bool newRec = false;
-
+    private AudioListener recListener, cameraListener;
 
 	void Awake()
 	{
-		//AudioSettings.outputSampleRate = outputRate;
+		AudioSettings.outputSampleRate = outputRate;
+        recListener = GetComponent<AudioListener>();
+        cameraListener = GetComponentInParent<AudioListener>();
 	}
 
 	void Start()
@@ -72,6 +74,8 @@ public class SaveSound : MonoBehaviour
 				spaceToStopObj.SetActive(false);
 				newRec = true;
 				oneNewRecObj.SetActive(true);
+                recListener.enabled = false;
+                cameraListener.enabled = true;
 			}
 		}
 
@@ -79,6 +83,8 @@ public class SaveSound : MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.Return))
 			{
+                cameraListener.enabled = false;
+                recListener.enabled = true;
 				fileName = enterName.text + ".wav";
 				StartWriting(fileName);
 				recOutput = true;
@@ -109,7 +115,7 @@ public class SaveSound : MonoBehaviour
 		if (recOutput)
 		{
 			ConvertAndWrite(data);//audio data is interlaced
-
+            Debug.Log("on audio filter read");
 		}
 	}
 
@@ -133,6 +139,7 @@ public class SaveSound : MonoBehaviour
 			byteArr.CopyTo(bytesData, i * 2);
 		}
 
+        Debug.Log(bytesData);
 		fileStream.Write(bytesData, 0, bytesData.Length);
 		//audioC.SetData(dataSource, outputRate);
 	}
@@ -170,9 +177,11 @@ public class SaveSound : MonoBehaviour
 		fileStream.Write(sampleRate, 0, 4);
 
 		Byte[] byteRate = BitConverter.GetBytes(outputRate * 4);
-		// sampleRate * bytesPerSample*number of channels, here 44100*2*2
+        // sampleRate * bytesPerSample*number of channels, here 44100*2*2
 
-		fileStream.Write(byteRate, 0, 4);
+        Debug.Log(byteRate);
+
+        fileStream.Write(byteRate, 0, 4);
 
 		UInt16 four = 4;
 		Byte[] blockAlign = BitConverter.GetBytes(four);
