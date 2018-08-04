@@ -52,16 +52,16 @@ namespace UnityGoogleDrive
             }
 
             // Refresh token isn't available; executing full auth procedure.
-            if (string.IsNullOrEmpty(settings.CachedRefreshToken))
-            {
-                ExecuteFullAuth();
-                //settings.CachedAccessToken = "1/jl7-023wIN8MKMHw_xiU1pODMqbWK9fphOn5AYGNyRU";
-                //accessTokenRefresher.RefreshAccessToken(settings.CachedRefreshToken);
-                //Debug.Log("empty refresh");
-            }
-            // Using refresh token to issue a new access token.
-            else
-                accessTokenRefresher.RefreshAccessToken(settings.CachedRefreshToken);
+            //if (string.IsNullOrEmpty(settings.CachedRefreshToken))
+            //{
+            //    ExecuteFullAuth();
+
+            //    //accessTokenRefresher.RefreshAccessToken(settings.CachedRefreshToken);
+            //    //Debug.Log("empty refresh");
+            //}
+            //// Using refresh token to issue a new access token.
+            //else
+            accessTokenRefresher.RefreshAccessToken(settings.CachedRefreshToken);
 
         }
 
