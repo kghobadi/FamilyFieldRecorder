@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721508604715520}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -244.6675, y: -2.8692994, z: -243.56715}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4226095714374266}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1816203501949480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -244.6675, y: -2.8692994, z: -243.56715}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4226095714374266}
@@ -268,7 +268,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ba2131d1551cf384281702bd66310097, type: 3}
   - {fileID: 8300000, guid: 85366ae25486cec4aa74cc2f1efcc622, type: 3}
   - {fileID: 8300000, guid: 505dd1c00552a83409bdfdf31ef7b3f5, type: 3}
-  singingDist: 40
+  singingDist: 50
+  singTimer: 0
 --- !u!114 &114897360111637908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,7 +330,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 213522566421881434, guid: a201097957deaf74a87e2bfcce2c6b57, type: 2}
+  m_Sprite: {fileID: 213163233852712836, guid: a201097957deaf74a87e2bfcce2c6b57, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
