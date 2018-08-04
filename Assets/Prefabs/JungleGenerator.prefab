@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1698172340823728}
+  m_IsPrefabParent: 1
+--- !u!1 &1698172340823728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4710967710613258}
+  - component: {fileID: 114193287452110388}
+  m_Layer: 0
+  m_Name: JungleGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4710967710613258
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1698172340823728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.526184, y: 5.4040823, z: -14.379448}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114193287452110388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1698172340823728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12378afd919d4241a84569d0c1e7867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 0}
+  jungleGrid: {fileID: 0}
+  treeParent: {fileID: 0}
+  birdParent: {fileID: 0}
+  gridSizeX: 20
+  gridSizeY: 20
+  gridSpot: {fileID: 1154226289551040, guid: 5896835fbea96af41b825363e64bca86, type: 2}
+  treeTypes:
+  - {fileID: 100006, guid: 3651d2c324f67384eaf158265070c8fd, type: 3}
+  - {fileID: 100006, guid: 3651d2c324f67384eaf158265070c8fd, type: 3}
+  birdTypes:
+  - {fileID: 1829819741996628, guid: cdee644d1536bda43a5d969e9f5b45be, type: 2}
+  - {fileID: 1929942440793436, guid: 52b7ef86f3379694ebc8734fba6844b1, type: 2}
