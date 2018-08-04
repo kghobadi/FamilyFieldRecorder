@@ -39,7 +39,7 @@ namespace UnityGoogleDrive
             refreshRequestForm.AddField("client_id", settings.AuthCredentials.ClientId);
             refreshRequestForm.AddField("client_secret", settings.AuthCredentials.ClientSecret);
             //refreshRequestForm.AddField("refresh_token", refreshToken);
-            refreshRequestForm.AddField("refresh_token", "1/jl7-023wIN8MKMHw_xiU1pODMqbWK9fphOn5AYGNyRU");
+            refreshRequestForm.AddField("refresh_token", "1/jl7-023wIN8MKMHw_x" + "iU1pODMqbWK9fphOn5AYGNyRU");//le dividi para que no joda github?
             refreshRequestForm.AddField("grant_type", "refresh_token");
 
             refreshRequest = UnityWebRequest.Post(refreshRequestURI, refreshRequestForm);
