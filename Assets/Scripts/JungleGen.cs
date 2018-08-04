@@ -73,12 +73,11 @@ public class JungleGen : MonoBehaviour {
                 float randomChance = Random.Range(0, 100);
                 if (randomChance < 10)
                 {
-                    Debug.Log(trees[i].transform.GetChild(j));
                     Vector3 posInTree = trees[i].transform.GetChild(j).position;
 
                     //generate random bird type
                     int randomBird = Random.Range(0, birdTypes.Length);
-                    birds.Add(Instantiate(birdTypes[randomBird], posInTree, Quaternion.identity, trees[i].transform.GetChild(j)));
+                    birds.Add(Instantiate(birdTypes[randomBird], posInTree, Quaternion.identity, birdParent));
                 }
             }
             

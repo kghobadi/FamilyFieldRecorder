@@ -346,27 +346,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1218142907
+--- !u!1 &623316302
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1218142908}
+  - component: {fileID: 623316303}
   m_Layer: 0
   m_Name: BirdParent
-  m_TagString: Plant
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1218142908
+--- !u!4 &623316303
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1218142907}
+  m_GameObject: {fileID: 623316302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -432,7 +432,7 @@ Prefab:
         type: 2}
       propertyPath: birdParent
       value: 
-      objectReference: {fileID: 1218142908}
+      objectReference: {fileID: 623316303}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
   m_IsPrefabParent: 0

@@ -32,11 +32,12 @@ public class Bird : MonoBehaviour {
         if (Vector3.Distance(transform.position, player.transform.position) < singingDist)
         {
             singTimer -= Time.deltaTime;
+            transform.LookAt(player.transform.position);
 
             if (!birdAudio.isPlaying && singTimer < 0)
             {
                 Serenade();
-                singTimer = Random.Range(1, 5);
+                singTimer = Random.Range(3, 10);
             }
         }
 
