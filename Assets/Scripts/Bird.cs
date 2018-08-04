@@ -26,9 +26,11 @@ public class Bird : MonoBehaviour {
         //if near player, serenade
         if (Vector3.Distance(transform.position, player.transform.position) < singingDist)
         {
+            Debug.Log("Player is near");
             if (!changed)
             {
-                ChangeAnimationState(singing);
+                idle.SetActive(false);
+                singing.SetActive(true);
                 changed = true;
             }
 
@@ -45,7 +47,8 @@ public class Bird : MonoBehaviour {
         {
             if (changed)
             {
-                ChangeAnimationState(idle);
+                idle.SetActive(true);
+                singing.SetActive(false);
                 changed = false;
             }
         }

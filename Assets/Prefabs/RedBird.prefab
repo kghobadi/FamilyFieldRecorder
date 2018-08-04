@@ -254,7 +254,7 @@ MonoBehaviour:
   birdSounds:
   - {fileID: 8300000, guid: 23069de1cf57b0c40ae85d9453b02088, type: 3}
   - {fileID: 8300000, guid: b9328fa5b1a1b3a46ab8495bcf705a37, type: 3}
-  singingDist: 40
+  singingDist: 50
 --- !u!114 &114951542428762452
 MonoBehaviour:
   m_ObjectHideFlags: 1

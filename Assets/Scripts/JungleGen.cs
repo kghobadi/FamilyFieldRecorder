@@ -12,7 +12,7 @@ public class JungleGen : MonoBehaviour {
     GameObject[] trees;
     public GameObject[] treeTypes;
 
-    GameObject[] birds;
+    public List<GameObject> birds = new List<GameObject>();
     public GameObject[] birdTypes;
 
 	void Awake () {
@@ -49,8 +49,11 @@ public class JungleGen : MonoBehaviour {
             trees[i] = Instantiate(treeTypes[randomTree], grid[i].transform.position, Quaternion.identity, treeParent);
 
             //alter the scale
-            float randomScaleMultiplier = Random.Range(0.5f, 2f);
-            trees[i].transform.localScale *= randomScaleMultiplier;
+            float randomScaleX = Random.Range(0.5f, 2f);
+            float randomScaleY = Random.Range(0.5f, 2f);
+            float randomScaleZ = Random.Range(0.5f, 2f);
+            trees[i].transform.localScale = new Vector3(trees[i].transform.localScale.x * randomScaleX,
+                trees[i].transform.localScale.y * randomScaleY, trees[i].transform.localScale.z * randomScaleZ);
 
             //alter the position
             float randomX = Random.Range(0f, 5f);
@@ -63,26 +66,22 @@ public class JungleGen : MonoBehaviour {
 
     void GenerateBirds()
     {
-        birds = new GameObject[trees.Length];
-
-        for (int i = 0; i < birds.Length; i++)
+        for (int i = 0; i < trees.Length; i++)
         {
-            float randomChance = Random.Range(0, 100);
-
-            if(randomChance > 40)
+            for(int j = 2; j < trees[i].transform.childCount; j++)
             {
-                //randomize position in treetop
-                float randomX = Random.Range(-5, 5);
-                float randomY = Random.Range(15, 25);
-                float randomZ = Random.Range(-5, 5);
+                float randomChance = Random.Range(0, 100);
+                if (randomChance < 10)
+                {
+                    Debug.Log(trees[i].transform.GetChild(j));
+                    Vector3 posInTree = trees[i].transform.GetChild(j).position;
 
-                Vector3 posInTree = new Vector3(trees[i].transform.position.x + randomX, 
-                    trees[i].transform.position.y + randomY, trees[i].transform.position.z + randomZ );
-
-                //generate random bird type
-                int randomBird = Random.Range(0, birdTypes.Length);
-                birds[i] = Instantiate(birdTypes[randomBird], posInTree, Quaternion.identity);
+                    //generate random bird type
+                    int randomBird = Random.Range(0, birdTypes.Length);
+                    birds.Add(Instantiate(birdTypes[randomBird], posInTree, Quaternion.identity));
+                }
             }
+            
         }
     }
 }

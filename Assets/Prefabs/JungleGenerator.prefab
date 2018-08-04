@@ -59,8 +59,8 @@ MonoBehaviour:
   gridSizeY: 20
   gridSpot: {fileID: 1154226289551040, guid: 5896835fbea96af41b825363e64bca86, type: 2}
   treeTypes:
-  - {fileID: 100006, guid: 3651d2c324f67384eaf158265070c8fd, type: 3}
-  - {fileID: 100006, guid: 3651d2c324f67384eaf158265070c8fd, type: 3}
+  - {fileID: 1958085601736110, guid: 9ba2237d57de1504e84718589c5fd022, type: 2}
+  - {fileID: 1958085601736110, guid: 9ba2237d57de1504e84718589c5fd022, type: 2}
   birdTypes:
   - {fileID: 1829819741996628, guid: cdee644d1536bda43a5d969e9f5b45be, type: 2}
   - {fileID: 1929942440793436, guid: 52b7ef86f3379694ebc8734fba6844b1, type: 2}
