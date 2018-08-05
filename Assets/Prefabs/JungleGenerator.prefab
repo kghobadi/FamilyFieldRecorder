@@ -54,13 +54,15 @@ MonoBehaviour:
   terrain: {fileID: 0}
   jungleGrid: {fileID: 0}
   treeParent: {fileID: 0}
-  birdParent: {fileID: 0}
   gridSizeX: 20
   gridSizeY: 20
   gridSpot: {fileID: 1154226289551040, guid: 5896835fbea96af41b825363e64bca86, type: 2}
   treeTypes:
-  - {fileID: 100006, guid: 3651d2c324f67384eaf158265070c8fd, type: 3}
-  - {fileID: 100006, guid: 3651d2c324f67384eaf158265070c8fd, type: 3}
+  - {fileID: 1958085601736110, guid: 9ba2237d57de1504e84718589c5fd022, type: 2}
+  - {fileID: 1975380764392272, guid: fea7ab595dc338447b6025beb80482da, type: 2}
+  - {fileID: 1629231460475942, guid: ccb03a59bae128841b87f111b0d54025, type: 2}
+  - {fileID: 1692562426009244, guid: f8371381ef48d054d92a822c40e3fe9a, type: 2}
+  birds: []
   birdTypes:
   - {fileID: 1829819741996628, guid: cdee644d1536bda43a5d969e9f5b45be, type: 2}
   - {fileID: 1929942440793436, guid: 52b7ef86f3379694ebc8734fba6844b1, type: 2}

@@ -9,7 +9,7 @@ public class Bird : MonoBehaviour {
     public AudioClip[] birdSounds;
     GameObject player;
 
-    public float singingDist;
+    public float singingDist, singTimer;
     bool changed;
 
 	void Start () {
@@ -17,6 +17,11 @@ public class Bird : MonoBehaviour {
 
         player = GameObject.FindGameObjectWithTag("Player");
         birdAudio = GetComponent<AudioSource>();
+
+        idle = transform.GetChild(0).gameObject;
+        singing = transform.GetChild(1).gameObject;
+
+        singTimer = Random.Range(1, 5);
 	}
 	
 	// Update is called once per frame
@@ -26,30 +31,27 @@ public class Bird : MonoBehaviour {
         //if near player, serenade
         if (Vector3.Distance(transform.position, player.transform.position) < singingDist)
         {
-            if (!changed)
-            {
-                ChangeAnimationState(singing);
-                changed = true;
-            }
+            singTimer -= Time.deltaTime;
+            transform.LookAt(player.transform.position);
 
-            if (!birdAudio.isPlaying)
+            if (!birdAudio.isPlaying && singTimer < 0)
             {
                 Serenade();
+                singTimer = Random.Range(3, 10);
             }
-
-            
         }
 
-        //set back to idle
-        else if(Vector3.Distance(transform.position, player.transform.position) > singingDist + 5)
+        if (birdAudio.isPlaying)
         {
-            if (changed)
-            {
-                ChangeAnimationState(idle);
-                changed = false;
-            }
+            singing.SetActive(true);
+            idle.SetActive(false);
         }
-	}
+        else
+        {
+            singing.SetActive(false);
+            idle.SetActive(true);
+        }
+    }
 
     void ChangeAnimationState(GameObject desiredAnim)
     {
