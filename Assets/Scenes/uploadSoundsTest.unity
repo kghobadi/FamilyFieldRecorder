@@ -1247,10 +1247,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s: {fileID: 366821685}
-  songNamesText: {fileID: 0}
-  rButt: {fileID: 0}
-  lButt: {fileID: 0}
-  playButt: {fileID: 0}
+  songNamesText: {fileID: 1751714594}
+  rButt: {fileID: 661518042}
+  lButt: {fileID: 783190336}
+  playButt: {fileID: 126210415}
 --- !u!1 &1930897574
 GameObject:
   m_ObjectHideFlags: 0

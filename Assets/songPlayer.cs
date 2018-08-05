@@ -51,7 +51,7 @@ public class songPlayer : MonoBehaviour
     void PlayButton()
     {
 
-        s.downloadSelectedSong(songIndex);
+        StartCoroutine(s.downloadSelectedSong(songIndex));
 
     }
 }
