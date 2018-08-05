@@ -52,7 +52,7 @@ public class SaveSound : MonoBehaviour
 
 	void Update()
 	{
-        if (Input.GetKeyDown(KeyCode.R) && !isWritingName)
+        if (Input.GetKeyDown(KeyCode.Space) && !isWritingName)
 		{
 
 			if (recOutput == false)
@@ -115,7 +115,6 @@ public class SaveSound : MonoBehaviour
 		if (recOutput)
 		{
 			ConvertAndWrite(data);//audio data is interlaced
-            Debug.Log("on audio filter read");
 		}
 	}
 
@@ -138,8 +137,7 @@ public class SaveSound : MonoBehaviour
 			byteArr = BitConverter.GetBytes(intData[i]);
 			byteArr.CopyTo(bytesData, i * 2);
 		}
-
-        Debug.Log(bytesData);
+        
 		fileStream.Write(bytesData, 0, bytesData.Length);
 		//audioC.SetData(dataSource, outputRate);
 	}
@@ -178,8 +176,6 @@ public class SaveSound : MonoBehaviour
 
 		Byte[] byteRate = BitConverter.GetBytes(outputRate * 4);
         // sampleRate * bytesPerSample*number of channels, here 44100*2*2
-
-        Debug.Log(byteRate);
 
         fileStream.Write(byteRate, 0, 4);
 
