@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641234, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -288,11 +288,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2029682356}
     m_Modifications:
-    - target: {fileID: 114522245652465126, guid: 141be11c140d9db478b24993561ddb21,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4236674270515034, guid: 141be11c140d9db478b24993561ddb21, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.925
@@ -324,25 +319,6 @@ Prefab:
     - target: {fileID: 4236674270515034, guid: 141be11c140d9db478b24993561ddb21, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114522245652465126, guid: 141be11c140d9db478b24993561ddb21,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114522245652465126, guid: 141be11c140d9db478b24993561ddb21,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114522245652465126, guid: 141be11c140d9db478b24993561ddb21,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1271188194}
-    - target: {fileID: 1456188516411266, guid: 141be11c140d9db478b24993561ddb21, type: 2}
-      propertyPath: m_Name
-      value: RecordingDevice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 141be11c140d9db478b24993561ddb21, type: 2}
@@ -417,12 +393,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4236674270515034, guid: 141be11c140d9db478b24993561ddb21,
     type: 2}
   m_PrefabInternal: {fileID: 462212538}
---- !u!114 &570651091 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114683322533534338, guid: 141be11c140d9db478b24993561ddb21,
-    type: 2}
-  m_PrefabInternal: {fileID: 462212538}
-  m_Script: {fileID: 11500000, guid: 73faa3f631482b24e98172bf04651d1b, type: 3}
 --- !u!1 &623316302
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,30 +483,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1271188194 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1728744236046214, guid: 141be11c140d9db478b24993561ddb21,
-    type: 2}
-  m_PrefabInternal: {fileID: 462212538}
---- !u!114 &1271188199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1271188194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18f59c386f7bb354597cec75c4e11899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recorderScript: {fileID: 570651091}
-  keys:
-  - 1
-  - a
-  - b
-  - c
-  scaleMultiplier: 1.1
-  scalePopTotal: 0.1
 --- !u!1 &1369387109
 GameObject:
   m_ObjectHideFlags: 0
