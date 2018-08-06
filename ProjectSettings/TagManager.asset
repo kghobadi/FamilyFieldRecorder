@@ -9,6 +9,8 @@ TagManager:
   - Grid
   - PhysicalPlane
   - Animal
+  - recorder
+  - Recorder
   layers:
   - Default
   - TransparentFX
