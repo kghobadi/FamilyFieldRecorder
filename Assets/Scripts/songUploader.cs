@@ -6,10 +6,12 @@ using System.Net;
 using System;
 using System.Xml;
 using UnityEngine.UI;
-
+using System.IO;
 using System.Xml.Linq;
 using System.Text;
 using UnityGoogleDrive;
+
+using UnityEditor;
 
 
 
@@ -20,24 +22,113 @@ public class songUploader : MonoBehaviour
     AudioSource a;
 
     public List<string> songNames = new List<string>();
+    public List<string> songIds = new List<string>();
 
-    public AudioClip testClip;
+    public AudioClip testClip, testUpload;
 
-    // Use this for initialization
+    public GameObject playUIStuff;
+
     void Start()
     {
-        //StartCoroutine(GetSongNames());
 
-        //StartCoroutine(GetWAV("01_no_me_siento_mejor.wav"));
 
-        //StartCoroutine(UploadWav(testClip));
-        driveUpload();
+        //StartCoroutine(uploadSong());
 
 
         a = GetComponent<AudioSource>();
 
 
     }
+
+    public GoogleDriveFiles.ListRequest request;
+
+    public IEnumerator checkSongs()
+    {
+
+        request = GoogleDriveFiles.List();
+        request.Q = "'1Hq-AsAj1e7xJkbEHumqhWltlyvN-LcwL' in parents";
+        yield return request.Send();
+
+        if (request.IsError || request.ResponseData.Files == null || request.ResponseData.Files.Count == 0)
+        {
+
+            Debug.Log("error getting files");
+
+        }
+        else
+        {
+            for (int i = 0; i < request.ResponseData.Files.Count; i++)
+            {
+                //request.ResponseData.Files[]+= BuildResults;
+                songNames.Add(request.ResponseData.Files[i].Name);
+                songIds.Add(request.ResponseData.Files[i].Id);
+
+                Debug.Log(request.ResponseData.Files[i].Name + " , " + request.ResponseData.Files[i].Id);
+            }
+
+        }
+
+
+    }
+
+    private GoogleDriveFiles.DownloadAudioRequest downloadRequest;
+
+    public IEnumerator downloadSelectedSong(int songId)
+    {
+        downloadRequest = GoogleDriveFiles.DownloadAudio(songIds[songId], AudioType.WAV);
+
+        yield return downloadRequest.Send();
+        //show progress bar here!
+        Debug.Log("downloading song");
+
+        if (downloadRequest.IsError)
+        {
+            Debug.Log("error downloading song");
+        }
+        else
+        {
+            testClip = downloadRequest.ResponseData.AudioClip;
+
+            a.clip = testClip;
+            a.Play();
+        }
+    }
+
+    GoogleDriveFiles.CreateRequest uploadRequest;
+
+    public IEnumerator uploadSong()
+    {
+        float[] f = new float[testUpload.samples * testUpload.channels];
+        testUpload.GetData(f, 0);
+
+        byte[] b = File.ReadAllBytes(AssetDatabase.GetAssetPath(testUpload));//this might only work on the editor
+
+
+        UnityGoogleDrive.Data.File file = new UnityGoogleDrive.Data.File()
+        { Name = "TestUnityGoogleDriveFilesUpload.wav", Content = b, MimeType = "audio/wav" };
+        file.Parents = new List<string> { "1Hq-AsAj1e7xJkbEHumqhWltlyvN-LcwL" };
+        uploadRequest = GoogleDriveFiles.Create(file);
+        //        Debug.Log(file.Content.Length);
+
+        yield return uploadRequest.Send();
+        if (uploadRequest.IsError)
+        {
+            Debug.Log("error uploading song");
+        }
+        else
+        {
+            //Debug.Log(uploadRequest.ResponseData.Content.Length);
+            StartCoroutine(checkSongs());
+        }
+
+
+
+
+
+
+
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -46,6 +137,15 @@ public class songUploader : MonoBehaviour
 
 
     }
+
+
+
+
+
+
+
+
+
 
     //IEnumerator GetSongNames()
     //{
@@ -139,31 +239,7 @@ public class songUploader : MonoBehaviour
 
     //}
 
-    public GoogleDriveFiles.ListRequest request;
-    public Dictionary<string, string> results;
 
-    void driveUpload()
-    {
-
-        request = GoogleDriveFiles.List();
-        request.Fields = new List<string> { "nextPageToken, files(id, name, size, createdTime)" };
-
-        request.Send().OnDone += BuildResults;
-    }
-    private void BuildResults(UnityGoogleDrive.Data.FileList fileList)
-    {
-        results = new Dictionary<string, string>();
-
-        foreach (var file in fileList.Files)
-        {
-            var fileInfo = string.Format("Name: {0} Size: {1:0.00}MB Created: {2:dd.MM.yyyy}",
-                file.Name,
-                file.Size * .000001f,
-                file.CreatedTime);
-            results.Add(file.Id, fileInfo);
-            Debug.Log(fileInfo);
-        }
-    }
 
     //float[] f = new float[testClip.samples];
     //testClip.GetData(f, 0);
