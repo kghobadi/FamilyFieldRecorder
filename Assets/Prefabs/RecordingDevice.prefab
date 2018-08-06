@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 222697594483261892}
   - component: {fileID: 114982869362263920}
   - component: {fileID: 114720709254878892}
+  - component: {fileID: 114350567558211206}
   m_Layer: 5
   m_Name: Button2
   m_TagString: Untagged
@@ -106,6 +107,7 @@ GameObject:
   - component: {fileID: 222344771675430012}
   - component: {fileID: 114763281937881110}
   - component: {fileID: 114704946465114536}
+  - component: {fileID: 114071174384906096}
   m_Layer: 5
   m_Name: Button 4
   m_TagString: Untagged
@@ -124,6 +126,7 @@ GameObject:
   - component: {fileID: 222110637129513282}
   - component: {fileID: 114989833944537248}
   - component: {fileID: 114701754727794442}
+  - component: {fileID: 114914896505064118}
   m_Layer: 5
   m_Name: StopButton
   m_TagString: Untagged
@@ -160,6 +163,7 @@ GameObject:
   - component: {fileID: 222544524612362456}
   - component: {fileID: 114305207143087428}
   - component: {fileID: 114157815519779784}
+  - component: {fileID: 114173087352576358}
   m_Layer: 5
   m_Name: Button5
   m_TagString: Untagged
@@ -263,8 +267,8 @@ GameObject:
   - component: {fileID: 4236674270515034}
   - component: {fileID: 33431311445802672}
   - component: {fileID: 114683322533534338}
-  - component: {fileID: 114131632568923926}
   - component: {fileID: 81924417157624980}
+  - component: {fileID: 82191321975130460}
   m_Layer: 0
   m_Name: RecordingDevice
   m_TagString: recorder
@@ -283,6 +287,7 @@ GameObject:
   - component: {fileID: 222599583873114272}
   - component: {fileID: 114023934431267894}
   - component: {fileID: 114344723794572360}
+  - component: {fileID: 114836054395813262}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -301,6 +306,7 @@ GameObject:
   - component: {fileID: 222274187205812592}
   - component: {fileID: 114256519987323482}
   - component: {fileID: 114486753430183764}
+  - component: {fileID: 114442440916140702}
   m_Layer: 5
   m_Name: RecButton
   m_TagString: Untagged
@@ -336,6 +342,7 @@ GameObject:
   - component: {fileID: 222368442109461412}
   - component: {fileID: 114260856986986550}
   - component: {fileID: 114403034052618604}
+  - component: {fileID: 114152841181387198}
   m_Layer: 5
   m_Name: Button8
   m_TagString: Untagged
@@ -527,6 +534,7 @@ GameObject:
   - component: {fileID: 222292516824958358}
   - component: {fileID: 114287824252006552}
   - component: {fileID: 114761856937854396}
+  - component: {fileID: 114669430526123398}
   m_Layer: 5
   m_Name: Button9
   m_TagString: Untagged
@@ -562,6 +570,7 @@ GameObject:
   - component: {fileID: 222813359307875150}
   - component: {fileID: 114024495494878516}
   - component: {fileID: 114853598812847190}
+  - component: {fileID: 114503864492049178}
   m_Layer: 5
   m_Name: Button 7
   m_TagString: Untagged
@@ -597,6 +606,7 @@ GameObject:
   - component: {fileID: 222667179172956742}
   - component: {fileID: 114105807105331294}
   - component: {fileID: 114832299015104564}
+  - component: {fileID: 114743449891756716}
   m_Layer: 5
   m_Name: Button6
   m_TagString: Untagged
@@ -702,6 +712,101 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1456188516411266}
   m_Enabled: 0
+--- !u!82 &82191321975130460
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1456188516411266}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114018711863439288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -816,6 +921,31 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\n1 \na b c "
+--- !u!114 &114071174384906096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1159361361289486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f59c386f7bb354597cec75c4e11899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recorderScript: {fileID: 114683322533534338}
+  keys:
+  - 4
+  - j
+  - k
+  - l
+  scaleMultiplier: 1.1
+  scalePopTotal: 0.1
+  recAudio: {fileID: 82191321975130460}
+  buttonSounds:
+  - {fileID: 8300000, guid: 87a5a61c1aa66f344838818d932904f6, type: 3}
+  - {fileID: 8300000, guid: 711d9e85eaf381e44bcbf2ddc74797f9, type: 3}
+  - {fileID: 8300000, guid: cf27f967f081f3f47bd7dc1d22995a67, type: 3}
+  - {fileID: 8300000, guid: d1db3c346399dec409724fbfc346c347, type: 3}
 --- !u!114 &114105807105331294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -887,18 +1017,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79515aabd46b21c448ff3b5c4f4b65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114131632568923926
+--- !u!114 &114152841181387198
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1456188516411266}
+  m_GameObject: {fileID: 1591271883058046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aca8705fa93cd234f98ee9292b1ef445, type: 3}
+  m_Script: {fileID: 11500000, guid: 18f59c386f7bb354597cec75c4e11899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recordedFiles: {fileID: 0}
+  recorderScript: {fileID: 114683322533534338}
+  keys:
+  - 8
+  - u
+  - v
+  - w
+  scaleMultiplier: 1.1
+  scalePopTotal: 0.1
+  recAudio: {fileID: 82191321975130460}
+  buttonSounds:
+  - {fileID: 8300000, guid: a2c9ce5cb7da0cc45a827b994793422c, type: 3}
+  - {fileID: 8300000, guid: c365299093ccea1419d45157e1e935e9, type: 3}
+  - {fileID: 8300000, guid: 6e60964ffaeb857448feb144a8291ecd, type: 3}
+  - {fileID: 8300000, guid: 711d9e85eaf381e44bcbf2ddc74797f9, type: 3}
 --- !u!114 &114157815519779784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -940,6 +1083,30 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114173087352576358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294509090833372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f59c386f7bb354597cec75c4e11899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recorderScript: {fileID: 114683322533534338}
+  keys:
+  - 5
+  - m
+  - n
+  scaleMultiplier: 1.1
+  scalePopTotal: 0.1
+  recAudio: {fileID: 82191321975130460}
+  buttonSounds:
+  - {fileID: 8300000, guid: a2c9ce5cb7da0cc45a827b994793422c, type: 3}
+  - {fileID: 8300000, guid: c365299093ccea1419d45157e1e935e9, type: 3}
+  - {fileID: 8300000, guid: 6e60964ffaeb857448feb144a8291ecd, type: 3}
+  - {fileID: 8300000, guid: 711d9e85eaf381e44bcbf2ddc74797f9, type: 3}
 --- !u!114 &114175821858531502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1290,6 +1457,31 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114350567558211206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1147878077241690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f59c386f7bb354597cec75c4e11899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recorderScript: {fileID: 114683322533534338}
+  keys:
+  - 2
+  - d
+  - e
+  - f
+  scaleMultiplier: 1.1
+  scalePopTotal: 0.1
+  recAudio: {fileID: 82191321975130460}
+  buttonSounds:
+  - {fileID: 8300000, guid: a2c9ce5cb7da0cc45a827b994793422c, type: 3}
+  - {fileID: 8300000, guid: c365299093ccea1419d45157e1e935e9, type: 3}
+  - {fileID: 8300000, guid: 6e60964ffaeb857448feb144a8291ecd, type: 3}
+  - {fileID: 8300000, guid: 711d9e85eaf381e44bcbf2ddc74797f9, type: 3}
 --- !u!114 &114354766779573698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1444,6 +1636,25 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114442440916140702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1536006027083020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f59c386f7bb354597cec75c4e11899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recorderScript: {fileID: 114683322533534338}
+  keys:
+  - space
+  scaleMultiplier: 1.2
+  scalePopTotal: 0.1
+  recAudio: {fileID: 82191321975130460}
+  buttonSounds:
+  - {fileID: 8300000, guid: 6e60964ffaeb857448feb144a8291ecd, type: 3}
 --- !u!114 &114446031350211806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1518,6 +1729,31 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114503864492049178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1949797024765418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f59c386f7bb354597cec75c4e11899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recorderScript: {fileID: 114683322533534338}
+  keys:
+  - 7
+  - r
+  - s
+  - t
+  scaleMultiplier: 1.1
+  scalePopTotal: 0.1
+  recAudio: {fileID: 82191321975130460}
+  buttonSounds:
+  - {fileID: 8300000, guid: 87a5a61c1aa66f344838818d932904f6, type: 3}
+  - {fileID: 8300000, guid: 711d9e85eaf381e44bcbf2ddc74797f9, type: 3}
+  - {fileID: 8300000, guid: cf27f967f081f3f47bd7dc1d22995a67, type: 3}
+  - {fileID: 8300000, guid: d1db3c346399dec409724fbfc346c347, type: 3}
 --- !u!114 &114509981428452098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1597,6 +1833,31 @@ MonoBehaviour:
         m_CallState: 0
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114669430526123398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1872350252611138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f59c386f7bb354597cec75c4e11899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recorderScript: {fileID: 114683322533534338}
+  keys:
+  - 9
+  - x
+  - y
+  - z
+  scaleMultiplier: 1.1
+  scalePopTotal: 0.1
+  recAudio: {fileID: 82191321975130460}
+  buttonSounds:
+  - {fileID: 8300000, guid: cf27f967f081f3f47bd7dc1d22995a67, type: 3}
+  - {fileID: 8300000, guid: d1db3c346399dec409724fbfc346c347, type: 3}
+  - {fileID: 8300000, guid: a2c9ce5cb7da0cc45a827b994793422c, type: 3}
+  - {fileID: 8300000, guid: 87a5a61c1aa66f344838818d932904f6, type: 3}
 --- !u!114 &114683322533534338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1617,6 +1878,8 @@ MonoBehaviour:
   recordingLight: {fileID: 1958563155447936}
   stopLight: {fileID: 1350402371501092}
   newRec: 0
+  soundSavePath: 
+  loader: {fileID: 0}
 --- !u!114 &114684840706979950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1663,6 +1926,12 @@ MonoBehaviour:
   - c
   scaleMultiplier: 1.1
   scalePopTotal: 0.1
+  recAudio: {fileID: 82191321975130460}
+  buttonSounds:
+  - {fileID: 8300000, guid: 87a5a61c1aa66f344838818d932904f6, type: 3}
+  - {fileID: 8300000, guid: 711d9e85eaf381e44bcbf2ddc74797f9, type: 3}
+  - {fileID: 8300000, guid: cf27f967f081f3f47bd7dc1d22995a67, type: 3}
+  - {fileID: 8300000, guid: d1db3c346399dec409724fbfc346c347, type: 3}
 --- !u!114 &114701754727794442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1856,6 +2125,31 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114743449891756716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1971600693048770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f59c386f7bb354597cec75c4e11899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recorderScript: {fileID: 114683322533534338}
+  keys:
+  - 6
+  - o
+  - p
+  - q
+  scaleMultiplier: 1.1
+  scalePopTotal: 0.1
+  recAudio: {fileID: 82191321975130460}
+  buttonSounds:
+  - {fileID: 8300000, guid: cf27f967f081f3f47bd7dc1d22995a67, type: 3}
+  - {fileID: 8300000, guid: d1db3c346399dec409724fbfc346c347, type: 3}
+  - {fileID: 8300000, guid: a2c9ce5cb7da0cc45a827b994793422c, type: 3}
+  - {fileID: 8300000, guid: 87a5a61c1aa66f344838818d932904f6, type: 3}
 --- !u!114 &114761856937854396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2031,6 +2325,31 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114836054395813262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1479206268334042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f59c386f7bb354597cec75c4e11899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recorderScript: {fileID: 114683322533534338}
+  keys:
+  - 3
+  - g
+  - h
+  - i
+  scaleMultiplier: 1.1
+  scalePopTotal: 0.1
+  recAudio: {fileID: 82191321975130460}
+  buttonSounds:
+  - {fileID: 8300000, guid: cf27f967f081f3f47bd7dc1d22995a67, type: 3}
+  - {fileID: 8300000, guid: d1db3c346399dec409724fbfc346c347, type: 3}
+  - {fileID: 8300000, guid: a2c9ce5cb7da0cc45a827b994793422c, type: 3}
+  - {fileID: 8300000, guid: 87a5a61c1aa66f344838818d932904f6, type: 3}
 --- !u!114 &114853598812847190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2163,6 +2482,25 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\n2 \nd e f"
+--- !u!114 &114914896505064118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168485621845180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f59c386f7bb354597cec75c4e11899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recorderScript: {fileID: 114683322533534338}
+  keys:
+  - space
+  scaleMultiplier: 1.2
+  scalePopTotal: 0.1
+  recAudio: {fileID: 82191321975130460}
+  buttonSounds:
+  - {fileID: 8300000, guid: a2c9ce5cb7da0cc45a827b994793422c, type: 3}
 --- !u!114 &114930564391885220
 MonoBehaviour:
   m_ObjectHideFlags: 1
