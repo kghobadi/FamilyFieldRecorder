@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class songPlayer : MonoBehaviour
+public class OnlineSongPlayer : MonoBehaviour
 {
 
     public songUploader s;
