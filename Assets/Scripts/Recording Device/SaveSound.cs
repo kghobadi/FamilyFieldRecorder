@@ -38,7 +38,7 @@ public class SaveSound : MonoBehaviour
     {
         AudioSettings.outputSampleRate = outputRate;
         recListener = GetComponent<AudioListener>();
-        cameraListener = GetComponentInParent<AudioListener>();
+        cameraListener = Camera.main.GetComponent<AudioListener>();
     }
 
     void Start()
@@ -119,7 +119,7 @@ public class SaveSound : MonoBehaviour
         if (recOutput)
         {
             ConvertAndWrite(data);//audio data is interlaced
-            Debug.Log("on audio filter read");
+                                  //            Debug.Log("on audio filter read");
         }
     }
 
@@ -143,7 +143,7 @@ public class SaveSound : MonoBehaviour
             byteArr.CopyTo(bytesData, i * 2);
         }
 
-        Debug.Log(bytesData);
+        //        Debug.Log(bytesData);
         fileStream.Write(bytesData, 0, bytesData.Length);
         //audioC.SetData(dataSource, outputRate);
     }
