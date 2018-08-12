@@ -35,6 +35,8 @@ public class SaveSound : MonoBehaviour
     public string soundSavePath;
     public loadAudioClips loader;
 
+    public bool popRec, popStop;
+
     void Awake()
     {
         AudioSettings.outputSampleRate = outputRate;
@@ -62,9 +64,11 @@ public class SaveSound : MonoBehaviour
             if (recOutput == false)
             {
                 //enternamehere
+                popRec = true;
                 spaceToRecordObj.SetActive(false);
                 enterNameObj.SetActive(true);
                 enterName.ActivateInputField();
+                enterName.text = "Enter file name...";
                 isWritingName = true;
 
                 //enterName.placeholder = "name it";
@@ -72,6 +76,7 @@ public class SaveSound : MonoBehaviour
             }
             else
             {
+                popStop = true;
                 recOutput = false;
                 WriteHeader();
                 print("rec stop");
