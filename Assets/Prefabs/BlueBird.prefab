@@ -268,6 +268,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ba2131d1551cf384281702bd66310097, type: 3}
   - {fileID: 8300000, guid: 85366ae25486cec4aa74cc2f1efcc622, type: 3}
   - {fileID: 8300000, guid: 505dd1c00552a83409bdfdf31ef7b3f5, type: 3}
+  - {fileID: 8300000, guid: be8490a3006997c4f8f4db009eb15130, type: 3}
+  - {fileID: 8300000, guid: da1fef2eba2436b42bcdb7ec14e27abf, type: 3}
+  - {fileID: 8300000, guid: e8de4e987a85d614cb3dd472907a420a, type: 3}
   singingDist: 50
   singTimer: 0
 --- !u!114 &114897360111637908

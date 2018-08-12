@@ -39,25 +39,21 @@ public class RecTypeKeys : MonoBehaviour {
         }
 
         //for rec button
-        else if(!recorderScript.recOutput && isRec)
+        if(recorderScript.popRec && isRec)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
                 scalePop = true;
                 scalePopTimer = scalePopTotal;
                 recAudio.PlayOneShot(buttonSounds[0]);
-            }
+            recorderScript.popRec = false;
         }
 
         //for stop button
-        else if (recorderScript.recOutput && isStop)
+        if (recorderScript.popStop && isStop)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
                 scalePop = true;
                 scalePopTimer = scalePopTotal;
                 recAudio.PlayOneShot(buttonSounds[0]);
-            }
+            recorderScript.popStop = false;
         }
 
         //enlarges scale for a moment

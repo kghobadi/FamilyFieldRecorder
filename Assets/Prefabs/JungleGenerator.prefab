@@ -54,6 +54,7 @@ MonoBehaviour:
   terrain: {fileID: 0}
   jungleGrid: {fileID: 0}
   treeParent: {fileID: 0}
+  birdParent: {fileID: 0}
   gridSizeX: 20
   gridSizeY: 20
   gridSpot: {fileID: 1154226289551040, guid: 5896835fbea96af41b825363e64bca86, type: 2}
