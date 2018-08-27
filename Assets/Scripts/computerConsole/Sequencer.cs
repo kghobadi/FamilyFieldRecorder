@@ -8,13 +8,15 @@ struct sequenceKey
 {
     public Transform keyNum;
     public AudioSource[] slots;
+    public Image keyImage;
+    public Image[] slotsImage;
 }
 
 public class Sequencer : MonoBehaviour
 {
     public AudioClip[] basicBeats;
 
-    public Image[] sequenceKeysSprite;
+
     int sequencerIndex;
 
     bool playedAudio, showRhythm;
@@ -27,6 +29,7 @@ public class Sequencer : MonoBehaviour
     bool sequenceAtZero;
 
 
+    public Transform canvasSequencer;
     sequenceKey[] sequenceKeys;
 
     // Use this for initialization
@@ -46,17 +49,24 @@ public class Sequencer : MonoBehaviour
 
 
             sequenceKeys[i].keyNum = transform.GetChild(i);
+            sequenceKeys[i].keyImage = canvasSequencer.GetChild(i).GetComponent<Image>();
             sequenceKeys[i].slots = new AudioSource[sequenceKeys[i].keyNum.childCount];
+            sequenceKeys[i].slotsImage = new Image[sequenceKeys[i].keyNum.childCount];
 
 
             for (int ii = 0; ii < sequenceKeys[i].keyNum.childCount; ii++)
             {
                 sequenceKeys[i].slots[ii] = sequenceKeys[i].keyNum.GetChild(ii).GetComponent<AudioSource>();
             }
+            for (int ii = 0; ii < sequenceKeys[i].keyImage.transform.childCount - 1; ii++)
+            {
+                sequenceKeys[i].slotsImage[ii] = sequenceKeys[i].keyImage.transform.GetChild(ii + 1).GetComponent<Image>();
+            }
 
         }
 
-        //gameObject.SetActive(false);
+        SequenceChange();
+        gameObject.SetActive(false);
     }
 
     void OnDestroy()
@@ -120,11 +130,11 @@ public class Sequencer : MonoBehaviour
                 sequenceAtZero = false;
             }
 
-            for (int i = 0; i < sequenceKeysSprite.Length; i++)
+            for (int i = 0; i < sequenceKeys.Length; i++)
             {
                 if (i == sequencerIndex)
                 {//play stuff here
-                    sequenceKeysSprite[i].color = Color.black;
+                    sequenceKeys[i].keyImage.color = Color.black;
                     //                    Debug.Log(sequencerIndex);
                     for (int slotNum = 0; slotNum < sequenceKeys[i].slots.Length; slotNum++)
                     {
@@ -134,13 +144,31 @@ public class Sequencer : MonoBehaviour
                 }
                 else
                 {
-                    if (sequenceKeysSprite[i].color != Color.white)
-                        sequenceKeysSprite[i].color = Color.white;
+                    if (sequenceKeys[i].keyImage.color != Color.white)
+                        sequenceKeys[i].keyImage.color = Color.white;
                 }
             }
 
             showRhythm = false;
         }
+
+    }
+
+    void SequenceChange()
+    {
+        for (int i = 0; i < sequenceKeys.Length; i++)
+        {
+            for (int ii = 0; ii < sequenceKeys[i].slotsImage.Length; ii++)
+            {
+                if (sequenceKeys[i].slots[ii].clip == null)
+                    sequenceKeys[i].slotsImage[ii].color = Color.white;
+                else
+                    sequenceKeys[i].slotsImage[ii].color = Color.blue;
+
+            }
+        }
+
+
 
     }
 

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class LocalClipPlayer : MonoBehaviour
 {
     public Transform player;
@@ -22,6 +21,9 @@ public class LocalClipPlayer : MonoBehaviour
 
     AudioSource audioSource;
     public GameObject sequencer;
+
+
+    public List<AudioClip> sampleList = new List<AudioClip>();
 
 
     // Use this for initialization
@@ -67,6 +69,7 @@ public class LocalClipPlayer : MonoBehaviour
                 clipScroller.value = audioSource.time / audioSource.clip.length;
         }
 
+
     }
 
     public void RightButton()
@@ -107,7 +110,6 @@ public class LocalClipPlayer : MonoBehaviour
             seqButt.GetComponentInChildren<Text>().text = "on";
             sequencer.SetActive(true);
         }
-
     }
 
 
