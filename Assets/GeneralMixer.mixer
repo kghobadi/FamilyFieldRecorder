@@ -11,7 +11,8 @@ AudioMixerController:
   m_Snapshots:
   - {fileID: 24500006}
   - {fileID: 245098661585928634}
-  m_StartSnapshot: {fileID: 24500006}
+  - {fileID: 245701834260004188}
+  m_StartSnapshot: {fileID: 245098661585928634}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
@@ -25,7 +26,7 @@ AudioMixerController:
     - 46215300f2442334fab5a3c13ae5bcda
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: 245098661585928634}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -70,8 +71,9 @@ AudioMixerSnapshotController:
   m_SnapshotID: 9ded7a6fece996a4dbc6f38eb852f99e
   m_FloatValues:
     dbefcca22368ae7488f00de4bae38bd6: -4.560346
-    18df1e54787c12341b199324fbf51242: -0.16685188
+    18df1e54787c12341b199324fbf51242: -0.27209902
     3984bf8e6a7904c4499c0517237d0391: 3.1596465
+    372395dffdd09144280b1234872033cb: -10.345207
   m_TransitionOverrides: {}
 --- !u!243 &243058444648370862
 AudioMixerGroupController:
@@ -206,4 +208,18 @@ AudioMixerSnapshotController:
     18df1e54787c12341b199324fbf51242: 0
     3984bf8e6a7904c4499c0517237d0391: 3.1596465
     372395dffdd09144280b1234872033cb: 20
+  m_TransitionOverrides: {}
+--- !u!245 &245701834260004188
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MonkeyJungle
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: e30347653ede93245b8b4350153a5df0
+  m_FloatValues:
+    dbefcca22368ae7488f00de4bae38bd6: -0.08374828
+    18df1e54787c12341b199324fbf51242: -0.27209902
+    3984bf8e6a7904c4499c0517237d0391: 3.1596465
+    372395dffdd09144280b1234872033cb: -10.345207
   m_TransitionOverrides: {}

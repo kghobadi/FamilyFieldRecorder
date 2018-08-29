@@ -23,9 +23,12 @@ public class FirstPersonController : MonoBehaviour
     AudioSource playerAudSource;
 
     //dictionary to sort nearby audio sources by distance 
+    [SerializeField]
     public Dictionary<AudioSource, float> soundCreators = new Dictionary<AudioSource, float>();
     //listener range
     public float listeningRadius;
+
+    public bool moving;
 
     Vector3 lastPosition;
 
@@ -37,13 +40,14 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
-        if(transform.position != lastPosition)
-        {
-            ResetNearbyAudioSources();
-        }
+        
+            
+        
         //when hold mouse 1, you begin to move in that direction
             if (Input.GetMouseButton(0))
             {
+            moving = true;
+            ResetNearbyAudioSources();
             movement = new Vector3(0, 0, currentSpeed);
             sprintTimer += Time.deltaTime;
             //while speed is less than sprint, autoAdd
@@ -61,6 +65,8 @@ public class FirstPersonController : MonoBehaviour
         }
             else if(Input.GetMouseButton(1))
         {
+            moving = true;
+            ResetNearbyAudioSources();
             movement = new Vector3(0, 0, -currentSpeed);
             footStepTimer -= Time.deltaTime;
             if (footStepTimer < 0)
@@ -68,10 +74,13 @@ public class FirstPersonController : MonoBehaviour
                 PlayFootStepAudio();
                 footStepTimer = footStepTimerTotal;
             }
+
+            
         }
             //when not moving
             else
             {
+            moving = false;
                 movement = Vector3.zero;
             currentSpeed = walkSpeed;
             }
@@ -82,8 +91,7 @@ public class FirstPersonController : MonoBehaviour
         player.Move(movement * Time.deltaTime);
 
         player.Move(new Vector3(0, -0.5f, 0));
-
-        lastPosition = transform.position;
+        
     }
 
     private void PlayFootStepAudio()
@@ -109,12 +117,13 @@ public class FirstPersonController : MonoBehaviour
             //check to see if obj is plant or rock
             if (hitColliders[i].gameObject.tag == "Plant" || hitColliders[i].gameObject.tag == "Animal")
             {
-                //check distance and add to list
-                float distanceAway = Vector3.Distance(hitColliders[i].transform.position, transform.position);
-                //add to audiosource and distance to dictionary
-                soundCreators.Add(hitColliders[i].gameObject.GetComponent<AudioSource>(), distanceAway);
-
-
+                if (gameObject.activeSelf)
+                {
+                    //check distance and add to list
+                    float distanceAway = Vector3.Distance(hitColliders[i].transform.position, transform.position);
+                    //add to audiosource and distance to dictionary
+                    soundCreators.Add(hitColliders[i].gameObject.GetComponent<AudioSource>(), distanceAway);
+                }
             }
             i++;
         }
@@ -126,6 +135,8 @@ public class FirstPersonController : MonoBehaviour
             // do something with item.Key and item.Value
             item.Key.priority = priority;
             priority++;
+
+            Debug.Log("reseting");
         }
     }
 

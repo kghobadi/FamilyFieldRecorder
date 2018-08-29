@@ -12,6 +12,7 @@ TagManager:
   - recorder
   - Recorder
   - Ocean
+  - WorldManager
   layers:
   - Default
   - TransparentFX
