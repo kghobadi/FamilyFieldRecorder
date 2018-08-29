@@ -15,6 +15,9 @@ public class EffectsManager : MonoBehaviour
 
     bool pitchOn, lowPassOn, highPassOn, flangeOn, echoOn, reverbFilterOn;
 
+    public LineRenderer line, echoLine;
+    float echoLineTimer;
+
     enum EffectType
     {
         pitch,
@@ -44,6 +47,8 @@ public class EffectsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(line.colorGradient.alphaKeys.Length);
+
         switch (effectType)
         {
             case EffectType.pitch:
@@ -63,6 +68,8 @@ public class EffectsManager : MonoBehaviour
 
                     float remappedPitch = effectSlider.value * 2;
                     mixer.SetFloat("pitch", remappedPitch);
+
+
 
                     //visual effects here!
                 }
@@ -147,7 +154,7 @@ public class EffectsManager : MonoBehaviour
                     float remappedHighPass = remapRange(effectSlider.value, 0f, 1f, 0f, 2000f);
                     mixer.SetFloat("echo1", remappedHighPass);
 
-                    //visual effects here!
+
                 }
                 break;
             case EffectType.reverbFilter:
@@ -180,6 +187,91 @@ public class EffectsManager : MonoBehaviour
                 }
                 break;
         }
+
+        //Visual stuff:
+
+
+        if (pitchOn)
+        {
+            float currentPitch;
+            mixer.GetFloat("pitch", out currentPitch);
+            currentPitch /= 2;
+
+            if (currentPitch >= 0.5f)
+            {
+
+                //line.widthMultiplier = 0.02f - (((currentPitch - 0.5f) / 100) * 2);
+                line.widthMultiplier = remapRange(currentPitch, 0.5f, 1f, 0.02f, 0.005f);
+
+            }
+            else
+            {
+
+                line.widthMultiplier = remapRange(currentPitch, 0, 0.5f, 0.08f, 0.02f);
+            }
+
+
+        }
+        else
+        {
+            line.widthMultiplier = 0.02f;
+        }
+
+        if (lowPassOn)
+        {
+            float currentLowPass;
+            mixer.GetFloat("lowpass", out currentLowPass);
+            line.endColor = new Color(line.endColor.r, line.endColor.g, line.endColor.b, remapRange(currentLowPass, 10f, 22000f, 0f, 1f) * 0.3f);
+
+        }
+        else
+        {
+            line.endColor = new Color(line.endColor.r, line.endColor.g, line.endColor.b, 1);
+        }
+
+        if (highPassOn)
+        {
+            float currentHighPass;
+            mixer.GetFloat("highpass", out currentHighPass);
+            line.startColor = new Color(line.endColor.r, line.endColor.g, line.endColor.b, 1 - remapRange(currentHighPass, 10f, 22000f, 0f, 1f) * 3f);
+        }
+        else
+        {
+            line.startColor = new Color(line.endColor.r, line.endColor.g, line.endColor.b, 1);
+        }
+
+        if (echoOn)
+        {
+            echoLine.gameObject.SetActive(true);
+
+            float currentEcho;
+            mixer.GetFloat("echo1", out currentEcho);
+
+            if (echoLineTimer < currentEcho / 1000)
+                echoLineTimer += Time.deltaTime;
+            else
+            {
+                echoLine.startColor = line.startColor - new Color(0, 0, 0.2f, 0.5f);
+                echoLine.endColor = line.endColor - new Color(0, 0, 0.2f, 0.5f);
+                echoLine.widthMultiplier = line.widthMultiplier;
+
+                //echoLine.positionCount = line.positionCount;
+                Vector3[] linePositions = new Vector3[line.positionCount];
+                line.GetPositions(linePositions);
+                echoLine.SetPositions(linePositions);
+                echoLineTimer = 0;
+            }
+
+
+        }
+        else
+        {
+
+            echoLine.gameObject.SetActive(false);
+
+        }
+
+        //must turn off all effects if sequencer is on! make new animations for the sequencer!
 
     }
 

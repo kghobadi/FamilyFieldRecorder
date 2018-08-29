@@ -100,6 +100,9 @@ public class LocalClipPlayer : MonoBehaviour
         }
         else
         {
+            if (sequencer.activeSelf)
+                SequencerButton();
+
             audioSource.clip = l.recordedFiles[songIndex];
             audioSource.Play();
         }
@@ -114,6 +117,11 @@ public class LocalClipPlayer : MonoBehaviour
         }
         else
         {
+            if (audioSource.isPlaying)
+            {
+                audioSource.Pause();
+            }
+
             seqButt.GetComponentInChildren<Text>().text = "on";
             sequencer.SetActive(true);
         }
