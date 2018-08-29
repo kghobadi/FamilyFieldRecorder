@@ -94,8 +94,15 @@ public class LocalClipPlayer : MonoBehaviour
 
     void PlayButton()
     {
-        audioSource.clip = l.recordedFiles[songIndex];
-        audioSource.Play();
+        if (audioSource.isPlaying)
+        {
+            audioSource.Pause();
+        }
+        else
+        {
+            audioSource.clip = l.recordedFiles[songIndex];
+            audioSource.Play();
+        }
     }
 
     void SequencerButton()

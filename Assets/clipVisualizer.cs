@@ -29,9 +29,9 @@ public class clipVisualizer : MonoBehaviour
         for (int i = 0; i < spectrum.Levels.Length; i++)
         {
 
-            xPos = Mathf.Sin(Mathf.Deg2Rad * (360 / spectrum.Levels.Length) * i) * ((spectrum.MeanLevels[i] * 500) + 0.01f);
+            xPos = Mathf.Sin(Mathf.Deg2Rad * (360 / spectrum.Levels.Length) * i) * ((spectrum.MeanLevels[i] * 150) + 0.01f);
             xPos = Mathf.Clamp(xPos, -1, 1);
-            yPos = Mathf.Cos(Mathf.Deg2Rad * (360 / spectrum.Levels.Length) * i) * ((spectrum.MeanLevels[i] * 500) + 0.01f);
+            yPos = Mathf.Cos(Mathf.Deg2Rad * (360 / spectrum.Levels.Length) * i) * ((spectrum.MeanLevels[i] * 150) + 0.01f);
             yPos = Mathf.Clamp(yPos, -1, 1);
 
             lineR.SetPosition(i, new Vector3(xPos, yPos, 0));
