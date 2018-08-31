@@ -11,20 +11,31 @@ public class LocalClipPlayer : MonoBehaviour
 
     loadAudioClips l;
 
-    int songIndex;
+    [HideInInspector]
+    public int clipIndex, sampleIndex, sequenceIndex;
 
     public Text songNamesText;
 
-    public Button rButt, lButt, playButt, seqButt;
+    public Button rButt, lButt, playButt, seqButt, clipButt, sampButt;
     public Slider clipScroller;
     public bool scrollBarValueIsChanging;
 
     AudioSource audioSource;
-    public GameObject sequencer;
+    public Sequencer sequencer;
 
 
     public List<AudioClip> sampleList = new List<AudioClip>();
 
+
+    public enum FileType
+    {
+        clip,
+        sample,
+        sequences//actually make a different machine for the whole online archiveinteraction 
+        //-> maybe this can play only the ones you choose to download to sample yourself? or they just get added to the clips/samples folders?
+    };
+
+    public FileType fileType;
 
     // Use this for initialization
     void Start()
@@ -32,11 +43,15 @@ public class LocalClipPlayer : MonoBehaviour
         l = GetComponent<loadAudioClips>();
         audioSource = GetComponent<AudioSource>();
 
+        ClipButton();
+
 
         rButt.onClick.AddListener(RightButton);
         lButt.onClick.AddListener(LeftButton);
         playButt.onClick.AddListener(PlayButton);
         seqButt.onClick.AddListener(SequencerButton);
+        clipButt.onClick.AddListener(ClipButton);
+        sampButt.onClick.AddListener(SampleButton);
     }
 
     // Update is called once per frame
@@ -56,9 +71,44 @@ public class LocalClipPlayer : MonoBehaviour
 
         }
 
-        if (l.recordedFiles.Count > 0)
-            songNamesText.text = l.recordedFiles[songIndex].name;
+        switch (fileType)
+        {
+            case FileType.clip:
 
+                if (l.clipFiles.Count > 0)
+                {
+                    songNamesText.text = l.clipFiles[clipIndex].name;
+                    playButt.interactable = true;
+                }
+                else
+                {
+                    songNamesText.text = "no clips";
+                    playButt.interactable = false;
+                }
+
+                break;
+            case FileType.sample:
+
+                if (l.sampleFiles.Count > 0)
+                {
+                    songNamesText.text = l.sampleFiles[sampleIndex].name;
+                    playButt.interactable = true;
+                }
+                else
+                {
+                    songNamesText.text = "no samples";
+                    playButt.interactable = false;
+                }
+
+                break;
+            case FileType.sequences:
+                break;
+
+        }
+
+
+
+        //scrollbar functionality
         if (audioSource.clip != null)
         {
             if (scrollBarValueIsChanging)
@@ -74,20 +124,55 @@ public class LocalClipPlayer : MonoBehaviour
 
     public void RightButton()
     {
+        switch (fileType)
+        {
+            case FileType.clip:
 
-        if (songIndex == l.recordedFiles.Count - 1)
-            songIndex = 0;
-        else
-            songIndex++;
+                if (clipIndex == l.clipFiles.Count - 1)
+                    clipIndex = 0;
+                else
+                    clipIndex++;
+
+
+                break;
+            case FileType.sample:
+
+                if (sampleIndex == l.sampleFiles.Count - 1)
+                    sampleIndex = 0;
+                else
+                    sampleIndex++;
+
+                break;
+            case FileType.sequences:
+                break;
+
+        }
 
         audioSource.Stop();
     }
     void LeftButton()
     {
-        if (songIndex == 0)
-            songIndex = l.recordedFiles.Count - 1;
-        else
-            songIndex--;
+        switch (fileType)
+        {
+            case FileType.clip:
+
+                if (clipIndex == 0)
+                    clipIndex = l.clipFiles.Count - 1;
+                else
+                    clipIndex--;
+                break;
+            case FileType.sample:
+
+                if (sampleIndex == 0)
+                    sampleIndex = l.sampleFiles.Count - 1;
+                else
+                    sampleIndex--;
+
+                break;
+            case FileType.sequences:
+                break;
+
+        }
 
         audioSource.Stop();
     }
@@ -100,20 +185,55 @@ public class LocalClipPlayer : MonoBehaviour
         }
         else
         {
-            if (sequencer.activeSelf)
+            if (sequencer.sequencerPlaying)
                 SequencerButton();
 
-            audioSource.clip = l.recordedFiles[songIndex];
-            audioSource.Play();
+            switch (fileType)
+            {
+                case FileType.clip:
+
+                    audioSource.clip = l.clipFiles[clipIndex];
+                    audioSource.Play();
+
+                    break;
+                case FileType.sample:
+
+                    audioSource.clip = l.sampleFiles[sampleIndex];
+                    audioSource.Play();
+
+                    break;
+                case FileType.sequences:
+                    break;
+
+            }
         }
+    }
+
+    void ClipButton()
+    {
+        fileType = FileType.clip;
+
+        clipButt.interactable = false;
+        sampButt.interactable = true;
+
+        audioSource.Stop();
+    }
+    void SampleButton()
+    {
+        fileType = FileType.sample;
+
+        clipButt.interactable = true;
+        sampButt.interactable = false;
+
+        audioSource.Stop();
     }
 
     void SequencerButton()
     {
-        if (sequencer.activeSelf)
+        if (sequencer.sequencerPlaying)
         {
             seqButt.GetComponentInChildren<Text>().text = "off";
-            sequencer.SetActive(false);
+            sequencer.sequencerPlaying = false;
         }
         else
         {
@@ -123,7 +243,7 @@ public class LocalClipPlayer : MonoBehaviour
             }
 
             seqButt.GetComponentInChildren<Text>().text = "on";
-            sequencer.SetActive(true);
+            sequencer.sequencerPlaying = true;
         }
     }
 

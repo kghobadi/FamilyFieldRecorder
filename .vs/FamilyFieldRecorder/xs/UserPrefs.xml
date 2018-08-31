@@ -1,18 +1,18 @@
 ﻿<Properties StartupConfiguration="{F7EA9806-F9EC-1E41-13AE-3D4D1AAF79E6}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FirstPersonController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/clipVisualizer.cs">
     <Files>
       <File FileName="Assets/Scripts/camMouseLook.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/computerConsole/SimpleClock.cs" Line="612" Column="9" />
       <File FileName="Assets/Scripts/Recording Device/SaveSound.cs" Line="89" Column="37" />
       <File FileName="Assets/Scripts/computerConsole/loadAudioClips.cs" Line="65" Column="2" />
-      <File FileName="Assets/Scripts/songArchive/LocalClipPlayer.cs" Line="71" Column="9" />
+      <File FileName="Assets/Scripts/songArchive/LocalClipPlayer.cs" Line="123" Column="14" />
       <File FileName="Assets/Scripts/computerConsole/Sequencer.cs" Line="171" Column="9" />
-      <File FileName="Assets/clipVisualizer.cs" Line="28" Column="9" />
+      <File FileName="Assets/clipVisualizer.cs" Line="32" Column="84" />
       <File FileName="../lobo/loboUnity/Assets/scripts/MuerteSubitaManager.cs" Line="63" Column="17" />
       <File FileName="Assets/Scripts/AudioSpectrum.cs" Line="103" Column="8" />
-      <File FileName="Assets/EffectsManager.cs" Line="119" Column="47" />
-      <File FileName="Assets/Scripts/FirstPersonController.cs" Line="1" Column="1" />
+      <File FileName="Assets/EffectsManager.cs" Line="246" Column="51" />
+      <File FileName="Assets/Scripts/FirstPersonController.cs" Line="30" Column="70" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

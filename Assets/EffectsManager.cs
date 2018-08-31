@@ -18,6 +18,10 @@ public class EffectsManager : MonoBehaviour
     public LineRenderer line, echoLine;
     float echoLineTimer;
 
+    clipVisualizer clipV;
+
+
+
     enum EffectType
     {
         pitch,
@@ -42,6 +46,10 @@ public class EffectsManager : MonoBehaviour
 
         effectType = EffectType.reverbFilter;
         NextEffect();
+
+        clipV = GetComponent<clipVisualizer>();
+
+
     }
 
     // Update is called once per frame
@@ -69,9 +77,6 @@ public class EffectsManager : MonoBehaviour
                     float remappedPitch = effectSlider.value * 2;
                     mixer.SetFloat("pitch", remappedPitch);
 
-
-
-                    //visual effects here!
                 }
                 break;
             case EffectType.lowPass:
@@ -91,7 +96,6 @@ public class EffectsManager : MonoBehaviour
                     float remappedLowPass = remapRange(1 - effectSlider.value, 0f, 1f, 10f, 22000f);
                     mixer.SetFloat("lowpass", remappedLowPass);
 
-                    //visual effects here!
                 }
 
 
@@ -112,7 +116,6 @@ public class EffectsManager : MonoBehaviour
                     float remappedHighPass = remapRange(effectSlider.value, 0f, 1f, 10f, 22000f);
                     mixer.SetFloat("highpass", remappedHighPass);
 
-                    //visual effects here!
                 }
 
                 break;
@@ -240,6 +243,21 @@ public class EffectsManager : MonoBehaviour
             line.startColor = new Color(line.endColor.r, line.endColor.g, line.endColor.b, 1);
         }
 
+        if (flangeOn)//need a good one for this!!!
+        {
+            float currentFlange;
+            mixer.GetFloat("flange", out currentFlange);
+
+            line.transform.localScale = Vector3.one * ((Mathf.Sin(Time.time * (remapRange(currentFlange, 0f, 20f, 1f, 10f))) * 0.5f) + 0.5f);
+        }
+        else
+        {
+
+            if (!reverbFilterOn)
+                line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+        }
+
+
         if (echoOn)
         {
             echoLine.gameObject.SetActive(true);
@@ -255,6 +273,9 @@ public class EffectsManager : MonoBehaviour
                 echoLine.endColor = line.endColor - new Color(0, 0, 0.2f, 0.5f);
                 echoLine.widthMultiplier = line.widthMultiplier;
 
+                echoLine.transform.localEulerAngles = line.transform.eulerAngles;
+                echoLine.transform.localScale = line.transform.localScale;
+
                 //echoLine.positionCount = line.positionCount;
                 Vector3[] linePositions = new Vector3[line.positionCount];
                 line.GetPositions(linePositions);
@@ -269,6 +290,42 @@ public class EffectsManager : MonoBehaviour
 
             echoLine.gameObject.SetActive(false);
 
+        }
+
+        if (reverbFilterOn)//rethink this effect!
+        {
+            if (reverb.reverbPreset == AudioReverbPreset.Cave)
+            {
+                line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+                line.transform.localEulerAngles += new Vector3(0, 0, Time.deltaTime * 20);
+            }
+            if (reverb.reverbPreset == AudioReverbPreset.Psychotic)
+            {
+                line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+                line.transform.localEulerAngles += new Vector3(0, 0, Time.deltaTime * -30);
+            }
+            if (reverb.reverbPreset == AudioReverbPreset.Underwater)
+            {
+                line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+                line.transform.localEulerAngles += new Vector3(0, 0, Time.deltaTime * 40);
+            }
+            if (reverb.reverbPreset == AudioReverbPreset.Drugged)
+            {
+                line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+                line.transform.localEulerAngles += new Vector3(0, 0, Time.deltaTime * -50);
+            }
+            if (reverb.reverbPreset == AudioReverbPreset.SewerPipe)
+            {
+                line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+                line.transform.localEulerAngles += new Vector3(0, 0, Time.deltaTime * 60);
+
+            }
+        }
+        else
+        {
+            if (!flangeOn)
+                line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            line.transform.localEulerAngles = new Vector3(0, 0, 0);
         }
 
         //must turn off all effects if sequencer is on! make new animations for the sequencer!

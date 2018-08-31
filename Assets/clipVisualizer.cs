@@ -10,6 +10,8 @@ public class clipVisualizer : MonoBehaviour
 
     AudioSpectrum spectrum;
 
+    float multiplier;
+
     // Use this for initialization
     void Start()
     {
@@ -26,16 +28,19 @@ public class clipVisualizer : MonoBehaviour
 
         //AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
 
+        multiplier = 1;//this is in to adjust for the spectrum returning smaller numbers for higher frequencies
+
         for (int i = 0; i < spectrum.Levels.Length; i++)
         {
 
-            xPos = Mathf.Sin(Mathf.Deg2Rad * (360 / spectrum.Levels.Length) * i) * ((spectrum.MeanLevels[i] * 150) + 0.01f);
+            xPos = Mathf.Sin(Mathf.Deg2Rad * (360 / spectrum.Levels.Length) * i) * ((spectrum.MeanLevels[i] * 100 * multiplier) + 0.01f);
             xPos = Mathf.Clamp(xPos, -1, 1);
-            yPos = Mathf.Cos(Mathf.Deg2Rad * (360 / spectrum.Levels.Length) * i) * ((spectrum.MeanLevels[i] * 150) + 0.01f);
+            yPos = Mathf.Cos(Mathf.Deg2Rad * (360 / spectrum.Levels.Length) * i) * ((spectrum.MeanLevels[i] * 100 * multiplier) + 0.01f);
             yPos = Mathf.Clamp(yPos, -1, 1);
 
             lineR.SetPosition(i, new Vector3(xPos, yPos, 0));
 
+            multiplier *= 1.1f;
         }
 
 

@@ -9,13 +9,14 @@ struct sequenceKey
     public Transform keyNum;
     public AudioSource[] slots;
     public Image keyImage;
-    public Image[] slotsImage;
+    public Button[] slotsImage;
 }
 
 public class Sequencer : MonoBehaviour
 {
     public AudioClip[] basicBeats;
 
+    public bool sequencerPlaying;
 
     int sequencerIndex;
 
@@ -31,6 +32,13 @@ public class Sequencer : MonoBehaviour
 
     public Transform canvasSequencer;
     sequenceKey[] sequenceKeys;
+
+    public Button[] sequencerButts;
+
+    public AudioSource clipPlayerSource;
+
+    LocalClipPlayer clipPlayerScript;
+    loadAudioClips l;
 
     // Use this for initialization
     void Awake()
@@ -51,7 +59,7 @@ public class Sequencer : MonoBehaviour
             sequenceKeys[i].keyNum = transform.GetChild(i);
             sequenceKeys[i].keyImage = canvasSequencer.GetChild(i).GetComponent<Image>();
             sequenceKeys[i].slots = new AudioSource[sequenceKeys[i].keyNum.childCount];
-            sequenceKeys[i].slotsImage = new Image[sequenceKeys[i].keyNum.childCount];
+            sequenceKeys[i].slotsImage = new Button[sequenceKeys[i].keyNum.childCount];
 
 
             for (int ii = 0; ii < sequenceKeys[i].keyNum.childCount; ii++)
@@ -60,13 +68,52 @@ public class Sequencer : MonoBehaviour
             }
             for (int ii = 0; ii < sequenceKeys[i].keyImage.transform.childCount - 1; ii++)
             {
-                sequenceKeys[i].slotsImage[ii] = sequenceKeys[i].keyImage.transform.GetChild(ii + 1).GetComponent<Image>();
+                sequenceKeys[i].slotsImage[ii] = sequenceKeys[i].keyImage.transform.GetChild(ii + 1).GetComponent<Button>();
             }
 
         }
 
         SequenceChange();
-        gameObject.SetActive(false);
+
+
+        sequencerButts[0].onClick.AddListener(delegate { LoadSampleToSlots(0); });
+        sequencerButts[1].onClick.AddListener(delegate { LoadSampleToSlots(1); });
+        sequencerButts[2].onClick.AddListener(delegate { LoadSampleToSlots(2); });
+        sequencerButts[3].onClick.AddListener(delegate { LoadSampleToSlots(3); });
+        sequencerButts[4].onClick.AddListener(delegate { LoadSampleToSlots(4); });
+        sequencerButts[5].onClick.AddListener(delegate { LoadSampleToSlots(5); });
+        sequencerButts[6].onClick.AddListener(delegate { LoadSampleToSlots(6); });
+        sequencerButts[7].onClick.AddListener(delegate { LoadSampleToSlots(7); });
+
+        clipPlayerScript = clipPlayerSource.GetComponent<LocalClipPlayer>();
+        l = clipPlayerSource.GetComponent<loadAudioClips>();
+
+
+
+        sequenceKeys[0].slotsImage[0].onClick.AddListener(delegate { RemoveSampleFromSlot(0, 0); });
+        sequenceKeys[0].slotsImage[1].onClick.AddListener(delegate { RemoveSampleFromSlot(0, 1); });
+
+        sequenceKeys[1].slotsImage[0].onClick.AddListener(delegate { RemoveSampleFromSlot(1, 0); });
+        sequenceKeys[1].slotsImage[1].onClick.AddListener(delegate { RemoveSampleFromSlot(1, 1); });
+
+        sequenceKeys[2].slotsImage[0].onClick.AddListener(delegate { RemoveSampleFromSlot(2, 0); });
+        sequenceKeys[2].slotsImage[1].onClick.AddListener(delegate { RemoveSampleFromSlot(2, 1); });
+
+        sequenceKeys[3].slotsImage[0].onClick.AddListener(delegate { RemoveSampleFromSlot(3, 0); });
+        sequenceKeys[3].slotsImage[1].onClick.AddListener(delegate { RemoveSampleFromSlot(3, 1); });
+
+        sequenceKeys[4].slotsImage[0].onClick.AddListener(delegate { RemoveSampleFromSlot(4, 0); });
+        sequenceKeys[4].slotsImage[1].onClick.AddListener(delegate { RemoveSampleFromSlot(4, 1); });
+
+        sequenceKeys[5].slotsImage[0].onClick.AddListener(delegate { RemoveSampleFromSlot(5, 0); });
+        sequenceKeys[5].slotsImage[1].onClick.AddListener(delegate { RemoveSampleFromSlot(5, 1); });
+
+        sequenceKeys[6].slotsImage[0].onClick.AddListener(delegate { RemoveSampleFromSlot(6, 0); });
+        sequenceKeys[6].slotsImage[1].onClick.AddListener(delegate { RemoveSampleFromSlot(6, 1); });
+
+        sequenceKeys[7].slotsImage[0].onClick.AddListener(delegate { RemoveSampleFromSlot(7, 0); });
+        sequenceKeys[7].slotsImage[1].onClick.AddListener(delegate { RemoveSampleFromSlot(7, 1); });
+
     }
 
     void OnDestroy()
@@ -80,15 +127,49 @@ public class Sequencer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ActualSequencer();
+        if (sequencerPlaying)
+            ActualSequencer();
 
 
 
     }
 
-    void LoadSampleToSlots()//(trimmed sample)
+    void LoadSampleToSlots(int index)//(trimmed sample)
     {
+        //        Debug.Log(index);
+        if (clipPlayerScript.fileType == LocalClipPlayer.FileType.sample)
+        {
+            if (sequenceKeys[index].slots[0].clip == null)
+            {
+                sequenceKeys[index].slots[0].clip = l.sampleFiles[clipPlayerScript.sampleIndex];
+                if (!sequencerPlaying)
+                {
+                    clipPlayerSource.Pause();
+                    sequenceKeys[index].slots[0].Play();
+                }
+            }
+            else if (sequenceKeys[index].slots[1].clip == null)
+            {
+                sequenceKeys[index].slots[1].clip = l.sampleFiles[clipPlayerScript.sampleIndex];
+                if (!sequencerPlaying)
+                {
+                    clipPlayerSource.Pause();
+                    sequenceKeys[index].slots[1].Play();
+                }
+            }
+            else
+            {
+                Debug.Log("no empty slots!");
+            }
+        }
+        SequenceChange();
+    }
 
+    void RemoveSampleFromSlot(int index, int slot)
+    {
+        Debug.Log("index = " + index + " || slot = " + slot);
+        sequenceKeys[index].slots[slot].clip = null;
+        SequenceChange();
     }
 
 
@@ -161,9 +242,9 @@ public class Sequencer : MonoBehaviour
             for (int ii = 0; ii < sequenceKeys[i].slotsImage.Length; ii++)
             {
                 if (sequenceKeys[i].slots[ii].clip == null)
-                    sequenceKeys[i].slotsImage[ii].color = Color.white;
+                    sequenceKeys[i].slotsImage[ii].GetComponent<Image>().color = Color.white;
                 else
-                    sequenceKeys[i].slotsImage[ii].color = Color.blue;
+                    sequenceKeys[i].slotsImage[ii].GetComponent<Image>().color = Color.blue;
 
             }
         }

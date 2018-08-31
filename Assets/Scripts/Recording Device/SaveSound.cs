@@ -75,7 +75,7 @@ public class SaveSound : MonoBehaviour
                 WriteHeader();
                 print("rec stop");
                 spaceToStopObj.SetActive(false);
-                StartCoroutine(loader.LoadNewSound());
+                StartCoroutine(loader.LoadNewClip());
                 oneNewRecObj.SetActive(true);
                 recListener.enabled = false;
                 cameraListener.enabled = true;
@@ -104,7 +104,7 @@ public class SaveSound : MonoBehaviour
 
     void StartWriting(String name)
     {
-        soundSavePath = Application.dataPath + "/Resources/savedSounds/" + name;
+        soundSavePath = Application.dataPath + "/Resources/savedClips/" + name;
         fileStream = new FileStream(soundSavePath, FileMode.Create);
         byte emptyByte = new byte();
 
