@@ -86,6 +86,8 @@ public class LocalClipPlayer : MonoBehaviour
                     playButt.interactable = false;
                 }
 
+                audioSource.loop = true;
+
                 break;
             case FileType.sample:
 
@@ -100,8 +102,12 @@ public class LocalClipPlayer : MonoBehaviour
                     playButt.interactable = false;
                 }
 
+                audioSource.loop = false;
+
                 break;
             case FileType.sequences:
+
+                audioSource.loop = true;
                 break;
 
         }
@@ -113,10 +119,13 @@ public class LocalClipPlayer : MonoBehaviour
         {
             if (scrollBarValueIsChanging)
             {
+                audioSource.Pause();
                 audioSource.time = clipScroller.value * audioSource.clip.length;
             }
             else
+            {
                 clipScroller.value = audioSource.time / audioSource.clip.length;
+            }
         }
 
 
@@ -149,6 +158,7 @@ public class LocalClipPlayer : MonoBehaviour
         }
 
         audioSource.Stop();
+        audioSource.time = 0;
     }
     void LeftButton()
     {
@@ -175,9 +185,10 @@ public class LocalClipPlayer : MonoBehaviour
         }
 
         audioSource.Stop();
+        audioSource.time = 0;
     }
 
-    void PlayButton()
+    public void PlayButton()
     {
         if (audioSource.isPlaying)
         {
@@ -217,8 +228,9 @@ public class LocalClipPlayer : MonoBehaviour
         sampButt.interactable = true;
 
         audioSource.Stop();
+        audioSource.time = 0;
     }
-    void SampleButton()
+    public void SampleButton()
     {
         fileType = FileType.sample;
 
@@ -226,6 +238,7 @@ public class LocalClipPlayer : MonoBehaviour
         sampButt.interactable = false;
 
         audioSource.Stop();
+        audioSource.time = 0;
     }
 
     void SequencerButton()
@@ -234,6 +247,7 @@ public class LocalClipPlayer : MonoBehaviour
         {
             seqButt.GetComponentInChildren<Text>().text = "off";
             sequencer.sequencerPlaying = false;
+            sequencer.StopSequencer();
         }
         else
         {

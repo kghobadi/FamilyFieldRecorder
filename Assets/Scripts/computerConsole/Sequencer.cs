@@ -76,6 +76,9 @@ public class Sequencer : MonoBehaviour
         SequenceChange();
 
 
+
+        //idk why this is necessary but i couldnt get it to work any other way!
+
         sequencerButts[0].onClick.AddListener(delegate { LoadSampleToSlots(0); });
         sequencerButts[1].onClick.AddListener(delegate { LoadSampleToSlots(1); });
         sequencerButts[2].onClick.AddListener(delegate { LoadSampleToSlots(2); });
@@ -130,8 +133,6 @@ public class Sequencer : MonoBehaviour
         if (sequencerPlaying)
             ActualSequencer();
 
-
-
     }
 
     void LoadSampleToSlots(int index)//(trimmed sample)
@@ -167,7 +168,7 @@ public class Sequencer : MonoBehaviour
 
     void RemoveSampleFromSlot(int index, int slot)
     {
-        Debug.Log("index = " + index + " || slot = " + slot);
+        //        Debug.Log("index = " + index + " || slot = " + slot);
         sequenceKeys[index].slots[slot].clip = null;
         SequenceChange();
     }
@@ -232,6 +233,21 @@ public class Sequencer : MonoBehaviour
 
             showRhythm = false;
         }
+
+    }
+
+    public void StopSequencer()
+    {
+
+        for (int i = 0; i < sequenceKeys.Length; i++)
+        {
+
+            for (int slotNum = 0; slotNum < sequenceKeys[i].slots.Length; slotNum++)
+            {
+                sequenceKeys[i].slots[slotNum].Stop();
+            }
+        }
+
 
     }
 

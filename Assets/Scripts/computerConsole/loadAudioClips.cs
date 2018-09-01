@@ -10,7 +10,10 @@ public class loadAudioClips : MonoBehaviour
     int clipNumber;
 
     public List<AudioClip> sampleFiles = new List<AudioClip>();
+    public Sampler sampler;
     int sampleNumber;
+
+    LocalClipPlayer localClipPlayer;
 
     // Use this for initialization
     void Start()
@@ -18,6 +21,8 @@ public class loadAudioClips : MonoBehaviour
 
         InitClipLoad();
         InitSampleLoad();
+
+        localClipPlayer = GetComponent<LocalClipPlayer>();
     }
 
     // Update is called once per frame
@@ -49,21 +54,23 @@ public class loadAudioClips : MonoBehaviour
 
     public IEnumerator LoadNewSample()
     {
-        WWW www = new WWW("file://" + saveSoundScript.soundSavePath);//figure this out properly
+        Debug.Log(sampler.sampleSavePath);
+        WWW www = new WWW("file://" + sampler.sampleSavePath);
         yield return www;
 
-        AudioClip file = www.GetAudioClip();
-        file.name = saveSoundScript.fileName.Remove(saveSoundScript.fileName.Length - 4);
 
-        //AudioClip file = Resources.Load<AudioClip>("savedClips/" + saveSoundScript.fileName);
-        //Debug.Log("savedClips/" + saveSoundScript.fileName);
+
+        AudioClip file = www.GetAudioClip();
+        file.name = sampler.fileName.Remove(saveSoundScript.fileName.Length - 4);
+
+
 
 
         sampleFiles.Add(file);
-
-        //        print(recordedFiles.name);
         sampleNumber++;
-        //saveSoundScript.newRec = false;
+
+        localClipPlayer.sampleIndex = sampleFiles.Count - 1;
+        localClipPlayer.SampleButton();
 
     }
 
