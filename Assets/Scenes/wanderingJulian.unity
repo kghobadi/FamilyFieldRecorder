@@ -1237,6 +1237,10 @@ MonoBehaviour:
   sequencer: {fileID: 939856142}
   sampleList: []
   fileType: 0
+  effectMixer: {fileID: 243632632289848750, guid: 5dcf8b46882c845d8a75dd5d666f5dbb,
+    type: 2}
+  normalMixer: {fileID: 243093368019287874, guid: 5dcf8b46882c845d8a75dd5d666f5dbb,
+    type: 2}
 --- !u!164 &194015300
 AudioReverbFilter:
   m_ObjectHideFlags: 0
@@ -9618,7 +9622,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000015258789, y: 0}
-  m_SizeDelta: {x: 10, y: 10}
+  m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1734141120
 MonoBehaviour:

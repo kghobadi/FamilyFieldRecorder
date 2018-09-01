@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class LocalClipPlayer : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class LocalClipPlayer : MonoBehaviour
     };
 
     public FileType fileType;
+
+    public AudioMixerGroup effectMixer, normalMixer;
 
     // Use this for initialization
     void Start()
@@ -87,6 +90,7 @@ public class LocalClipPlayer : MonoBehaviour
                 }
 
                 audioSource.loop = true;
+                audioSource.outputAudioMixerGroup = effectMixer;
 
                 break;
             case FileType.sample:
@@ -103,10 +107,12 @@ public class LocalClipPlayer : MonoBehaviour
                 }
 
                 audioSource.loop = false;
+                audioSource.outputAudioMixerGroup = normalMixer;
 
                 break;
             case FileType.sequences:
 
+                audioSource.outputAudioMixerGroup = effectMixer;
                 audioSource.loop = true;
                 break;
 

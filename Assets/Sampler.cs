@@ -107,7 +107,7 @@ public class Sampler : MonoBehaviour
     {
         if (recOutput)
         {
-            if (recordingTimer < 5)
+            if (recordingTimer < 3)
             {
                 recordingTimer += Time.deltaTime;
                 sampleRecordProgress.rectTransform.sizeDelta = new Vector2(recordingTimer * 20, 10);
