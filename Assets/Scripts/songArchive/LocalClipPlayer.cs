@@ -17,7 +17,7 @@ public class LocalClipPlayer : MonoBehaviour
 
     public Text songNamesText;
 
-    public Button rButt, lButt, playButt, seqButt, clipButt, sampButt;
+    public Button rButt, lButt, playButt, seqButt, clipButt, sampButt, delButt;
     public Slider clipScroller;
     public bool scrollBarValueIsChanging;
 
@@ -55,6 +55,7 @@ public class LocalClipPlayer : MonoBehaviour
         seqButt.onClick.AddListener(SequencerButton);
         clipButt.onClick.AddListener(ClipButton);
         sampButt.onClick.AddListener(SampleButton);
+        delButt.onClick.AddListener(DeleteButton);
     }
 
     // Update is called once per frame
@@ -267,5 +268,30 @@ public class LocalClipPlayer : MonoBehaviour
         }
     }
 
+    void DeleteButton()
+    {
+        switch (fileType)
+        {
+            case FileType.clip:
+
+                System.IO.File.Delete(Application.dataPath + "/Resources/savedClips/" + l.clipFiles[clipIndex].name + ".wav");
+                l.clipFiles.RemoveAt(clipIndex);
+
+                break;
+            case FileType.sample:
+
+                System.IO.File.Delete(Application.dataPath + "/Resources/savedSamples/" + l.sampleFiles[sampleIndex].name + ".wav");
+                l.sampleFiles.RemoveAt(sampleIndex);
+
+                break;
+            case FileType.sequences:
+                break;
+
+        }
+
+
+
+        //delete file & remove from list
+    }
 
 }
