@@ -231,6 +231,17 @@ ModelImporter:
     100450: sequences
     100452: soundScroller
     100454: mainMesh
+    100456: leftButt1
+    100458: leftButt2
+    100460: leftButt3
+    100462: mainMesh2
+    100464: playSoundsAndSamplingModule
+    100466: recSample
+    100468: topModule
+    100470: effectSlider
+    100472: mainMesh4
+    100474: nextEffect
+    100476: mainMesh5
     400000: imagePlane1
     400002: //RootNode
     400004: pCube1
@@ -459,6 +470,17 @@ ModelImporter:
     400450: sequences
     400452: soundScroller
     400454: mainMesh
+    400456: leftButt1
+    400458: leftButt2
+    400460: leftButt3
+    400462: mainMesh2
+    400464: playSoundsAndSamplingModule
+    400466: recSample
+    400468: topModule
+    400470: effectSlider
+    400472: mainMesh4
+    400474: nextEffect
+    400476: mainMesh5
     2100000: lambert1
     2300000: pCube1
     2300002: pCube10
@@ -657,6 +679,13 @@ ModelImporter:
     2300388: sequences
     2300390: soundScroller
     2300392: mainMesh
+    2300394: leftButt1
+    2300396: mainMesh2
+    2300398: recSample
+    2300400: effectSlider
+    2300402: mainMesh4
+    2300404: nextEffect
+    2300406: mainMesh5
     3300000: pCube1
     3300002: pCube10
     3300004: pCube3
@@ -854,6 +883,13 @@ ModelImporter:
     3300388: sequences
     3300390: soundScroller
     3300392: mainMesh
+    3300394: leftButt1
+    3300396: mainMesh2
+    3300398: recSample
+    3300400: effectSlider
+    3300402: mainMesh4
+    3300404: nextEffect
+    3300406: mainMesh5
     4300000: pCube1
     4300002: pCube3
     4300004: pCube4
@@ -1051,6 +1087,13 @@ ModelImporter:
     4300388: delete
     4300390: soundScroller
     4300392: mainMesh
+    4300394: leftButt1
+    4300396: mainMesh2
+    4300398: recSample
+    4300400: nextEffect
+    4300402: effectSlider
+    4300404: mainMesh4
+    4300406: mainMesh5
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
