@@ -277,7 +277,7 @@ public class EffectsManager : MonoBehaviour
                         echoLine.endColor = line.endColor - new Color(0, 0, 0.2f, 0.5f);
                         echoLine.widthMultiplier = line.widthMultiplier;
 
-                        echoLine.transform.localEulerAngles = line.transform.eulerAngles;
+                        echoLine.transform.localEulerAngles = line.transform.localEulerAngles;
                         echoLine.transform.localScale = line.transform.localScale;
 
                         //echoLine.positionCount = line.positionCount;
@@ -329,7 +329,7 @@ public class EffectsManager : MonoBehaviour
                 {
                     if (!flangeOn)
                         line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
-                    line.transform.localEulerAngles = new Vector3(0, 0, 0);
+                    line.transform.localEulerAngles = new Vector3(line.transform.localEulerAngles.x, line.transform.localEulerAngles.y, 0);
                 }
             }
             else
@@ -342,7 +342,7 @@ public class EffectsManager : MonoBehaviour
                 line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
                 echoLine.gameObject.SetActive(false);
                 line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
-                line.transform.localEulerAngles = new Vector3(0, 0, 0);
+                line.transform.localEulerAngles = new Vector3(line.transform.localEulerAngles.x, line.transform.localEulerAngles.y, 0);
             }
         }
         else
@@ -355,7 +355,7 @@ public class EffectsManager : MonoBehaviour
             line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
             echoLine.gameObject.SetActive(false);
             line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
-            line.transform.localEulerAngles = new Vector3(0, 0, 0);
+            line.transform.localEulerAngles = new Vector3(line.transform.localEulerAngles.x, line.transform.localEulerAngles.y, 0);
         }
 
 
