@@ -13,6 +13,10 @@ public class loadAudioClips : MonoBehaviour
     public Sampler sampler;
     int sampleNumber;
 
+    public List<AudioClip> sequenceFiles = new List<AudioClip>();
+    public SequenceRecorder seqRecorder;
+    int sequenceNumber;
+
     LocalClipPlayer localClipPlayer;
 
     // Use this for initialization
@@ -21,6 +25,7 @@ public class loadAudioClips : MonoBehaviour
 
         InitClipLoad();
         InitSampleLoad();
+        InitSequenceLoad();
 
         localClipPlayer = GetComponent<LocalClipPlayer>();
     }
@@ -54,23 +59,34 @@ public class loadAudioClips : MonoBehaviour
 
     public IEnumerator LoadNewSample()
     {
-        Debug.Log(sampler.sampleSavePath);
+        //Debug.Log(sampler.sampleSavePath);
         WWW www = new WWW("file://" + sampler.sampleSavePath);
         yield return www;
 
-
-
         AudioClip file = www.GetAudioClip();
-        file.name = sampler.fileName.Remove(saveSoundScript.fileName.Length - 4);
-
-
-
+        file.name = sampler.fileName.Remove(sampler.fileName.Length - 4);
 
         sampleFiles.Add(file);
         sampleNumber++;
 
         localClipPlayer.sampleIndex = sampleFiles.Count - 1;
         localClipPlayer.SampleButton();
+
+    }
+
+    public IEnumerator LoadNewSequence()
+    {
+        WWW www = new WWW("file://" + seqRecorder.sequenceSavePath);
+        yield return www;
+
+        AudioClip file = www.GetAudioClip();
+        file.name = seqRecorder.fileName.Remove(seqRecorder.fileName.Length - 4);
+
+        sequenceFiles.Add(file);
+        sequenceNumber++;
+
+        localClipPlayer.sequenceIndex = sequenceFiles.Count - 1;
+        localClipPlayer.SequenceButton();
 
     }
 
@@ -97,6 +113,18 @@ public class loadAudioClips : MonoBehaviour
             sampleFiles.Add((AudioClip)files[i]);
             sampleNumber++;
             //Debug.Log("added sample" + files[i].name);
+        }
+    }
+    void InitSequenceLoad()
+    {
+        sequenceFiles.Clear();
+        Object[] files = Resources.LoadAll("savedSequences", typeof(AudioClip));
+
+        for (int i = 0; i < files.Length; i++)
+        {
+            sequenceFiles.Add((AudioClip)files[i]);
+            sequenceNumber++;
+            //Debug.Log("added sequence" + files[i].name);
         }
     }
 }

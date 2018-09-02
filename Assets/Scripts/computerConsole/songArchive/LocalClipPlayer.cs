@@ -17,7 +17,7 @@ public class LocalClipPlayer : MonoBehaviour
 
     public Text songNamesText;
 
-    public Button rButt, lButt, playButt, seqButt, clipButt, sampButt, delButt;
+    public Button rButt, lButt, playButt, seqOnButt, clipButt, sampButt, seqButt, delButt;
     public Slider clipScroller;
     public bool scrollBarValueIsChanging;
 
@@ -32,7 +32,7 @@ public class LocalClipPlayer : MonoBehaviour
     {
         clip,
         sample,
-        sequences//actually make a different machine for the whole online archiveinteraction 
+        sequence//actually make a different machine for the whole online archiveinteraction 
         //-> maybe this can play only the ones you choose to download to sample yourself? or they just get added to the clips/samples folders?
     };
 
@@ -52,9 +52,10 @@ public class LocalClipPlayer : MonoBehaviour
         rButt.onClick.AddListener(RightButton);
         lButt.onClick.AddListener(LeftButton);
         playButt.onClick.AddListener(PlayButton);
-        seqButt.onClick.AddListener(SequencerButton);
+        seqOnButt.onClick.AddListener(SequencerOnButton);
         clipButt.onClick.AddListener(ClipButton);
         sampButt.onClick.AddListener(SampleButton);
+        seqButt.onClick.AddListener(SequenceButton);
         delButt.onClick.AddListener(DeleteButton);
     }
 
@@ -111,10 +112,21 @@ public class LocalClipPlayer : MonoBehaviour
                 audioSource.outputAudioMixerGroup = normalMixer;
 
                 break;
-            case FileType.sequences:
+            case FileType.sequence:
+
+                if (l.sequenceFiles.Count > 0)
+                {
+                    songNamesText.text = l.sequenceFiles[sequenceIndex].name;
+                    playButt.interactable = true;
+                }
+                else
+                {
+                    songNamesText.text = "no sequences";
+                    playButt.interactable = false;
+                }
 
                 audioSource.outputAudioMixerGroup = effectMixer;
-                audioSource.loop = true;
+                audioSource.loop = false;
                 break;
 
         }
@@ -159,7 +171,13 @@ public class LocalClipPlayer : MonoBehaviour
                     sampleIndex++;
 
                 break;
-            case FileType.sequences:
+            case FileType.sequence:
+
+                if (sequenceIndex == l.sequenceFiles.Count - 1)
+                    sequenceIndex = 0;
+                else
+                    sequenceIndex++;
+
                 break;
 
         }
@@ -186,7 +204,13 @@ public class LocalClipPlayer : MonoBehaviour
                     sampleIndex--;
 
                 break;
-            case FileType.sequences:
+            case FileType.sequence:
+
+                if (sequenceIndex == 0)
+                    sequenceIndex = l.sequenceFiles.Count - 1;
+                else
+                    sequenceIndex--;
+
                 break;
 
         }
@@ -204,26 +228,30 @@ public class LocalClipPlayer : MonoBehaviour
         else
         {
             if (sequencer.sequencerPlaying)
-                SequencerButton();
+                SequencerOnButton();
 
             switch (fileType)
             {
                 case FileType.clip:
 
                     audioSource.clip = l.clipFiles[clipIndex];
-                    audioSource.Play();
 
                     break;
                 case FileType.sample:
 
                     audioSource.clip = l.sampleFiles[sampleIndex];
-                    audioSource.Play();
 
                     break;
-                case FileType.sequences:
+                case FileType.sequence:
+
+                    audioSource.clip = l.sequenceFiles[sequenceIndex];
+
+
                     break;
 
             }
+
+            audioSource.Play();
         }
     }
 
@@ -233,6 +261,7 @@ public class LocalClipPlayer : MonoBehaviour
 
         clipButt.interactable = false;
         sampButt.interactable = true;
+        seqButt.interactable = true;
 
         audioSource.Stop();
         audioSource.time = 0;
@@ -243,16 +272,28 @@ public class LocalClipPlayer : MonoBehaviour
 
         clipButt.interactable = true;
         sampButt.interactable = false;
+        seqButt.interactable = true;
+
+        audioSource.Stop();
+        audioSource.time = 0;
+    }
+    public void SequenceButton()
+    {
+        fileType = FileType.sequence;
+
+        clipButt.interactable = true;
+        sampButt.interactable = true;
+        seqButt.interactable = false;
 
         audioSource.Stop();
         audioSource.time = 0;
     }
 
-    void SequencerButton()
+    public void SequencerOnButton()
     {
         if (sequencer.sequencerPlaying)
         {
-            seqButt.GetComponentInChildren<Text>().text = "off";
+            seqOnButt.GetComponentInChildren<Text>().text = "off";
             sequencer.sequencerPlaying = false;
             sequencer.StopSequencer();
         }
@@ -263,12 +304,12 @@ public class LocalClipPlayer : MonoBehaviour
                 audioSource.Pause();
             }
 
-            seqButt.GetComponentInChildren<Text>().text = "on";
+            seqOnButt.GetComponentInChildren<Text>().text = "on";
             sequencer.sequencerPlaying = true;
         }
     }
 
-    void DeleteButton()
+    void DeleteButton()// add an "are you sure you want to delete?
     {
         switch (fileType)
         {
@@ -276,15 +317,25 @@ public class LocalClipPlayer : MonoBehaviour
 
                 System.IO.File.Delete(Application.dataPath + "/Resources/savedClips/" + l.clipFiles[clipIndex].name + ".wav");
                 l.clipFiles.RemoveAt(clipIndex);
+                if (clipIndex > l.clipFiles.Count - 1)
+                    clipIndex--;
 
                 break;
             case FileType.sample:
 
                 System.IO.File.Delete(Application.dataPath + "/Resources/savedSamples/" + l.sampleFiles[sampleIndex].name + ".wav");
                 l.sampleFiles.RemoveAt(sampleIndex);
+                if (sampleIndex > l.sampleFiles.Count - 1)
+                    sampleIndex--;
 
                 break;
-            case FileType.sequences:
+            case FileType.sequence:
+
+                System.IO.File.Delete(Application.dataPath + "/Resources/savedSequences/" + l.sequenceFiles[sequenceIndex].name + ".wav");
+                l.sampleFiles.RemoveAt(sampleIndex);
+                if (sequenceIndex > l.sequenceFiles.Count - 1)
+                    sequenceIndex--;
+
                 break;
 
         }

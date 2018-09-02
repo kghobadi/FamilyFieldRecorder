@@ -41,6 +41,8 @@ public class Sampler : MonoBehaviour
 
     public AudioSource audioSource;
 
+    float sampleMaxLength = 3;
+
     void Awake()
     {
         AudioSettings.outputSampleRate = outputRate;
@@ -107,10 +109,11 @@ public class Sampler : MonoBehaviour
     {
         if (recOutput)
         {
-            if (recordingTimer < 3)
+
+            if (recordingTimer < sampleMaxLength)
             {
                 recordingTimer += Time.deltaTime;
-                sampleRecordProgress.rectTransform.sizeDelta = new Vector2(recordingTimer * 20, 10);
+                sampleRecordProgress.rectTransform.sizeDelta = new Vector2(recordingTimer * (100 / sampleMaxLength), 10);//should reach 100
             }
             else
             {
