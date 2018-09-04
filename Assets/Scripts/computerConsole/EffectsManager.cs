@@ -9,7 +9,7 @@ public class EffectsManager : MonoBehaviour
 
     public AudioMixer mixer;
     AudioReverbFilter reverb;
-    public Text effectText, effectOnText;
+    public Text effectText;
     public Slider effectSlider;//if slider at 0 effect is off
     public Button next;
 
@@ -34,6 +34,8 @@ public class EffectsManager : MonoBehaviour
 
     EffectType effectType;
 
+    Vector3 originalLineScale;
+
 
     //ADD MASTER VOLUME CONTROLLER FOR THE ENTIRE CONSOLE (AND PUT SEQUENCER IN THE MIXER SO IT ALSO GETS AFFECTED)
 
@@ -50,6 +52,8 @@ public class EffectsManager : MonoBehaviour
         clipV = GetComponent<clipVisualizer>();
 
         l = GetComponent<LocalClipPlayer>();
+
+        originalLineScale = line.transform.localScale;
     }
 
     // Update is called once per frame
@@ -64,14 +68,14 @@ public class EffectsManager : MonoBehaviour
                 if (effectSlider.value < 0.02f)
                 {
                     pitchOn = false;
-                    effectOnText.text = "off";
+                    //effectOnText.text = "off";
                     mixer.SetFloat("pitch", 1);
 
                 }
                 else
                 {
                     pitchOn = true;
-                    effectOnText.text = "on";
+                    //effectOnText.text = "on";
 
 
                     float remappedPitch = effectSlider.value * 2;
@@ -84,14 +88,14 @@ public class EffectsManager : MonoBehaviour
                 if (effectSlider.value < 0.02f)
                 {
                     lowPassOn = false;
-                    effectOnText.text = "off";
+                    //effectOnText.text = "off";
                     mixer.SetFloat("lowpass", 22000);
 
                 }
                 else
                 {
                     lowPassOn = true;
-                    effectOnText.text = "on";
+                    //effectOnText.text = "on";
 
                     float remappedLowPass = remapRange(1 - effectSlider.value, 0f, 1f, 10f, 22000f);
                     mixer.SetFloat("lowpass", remappedLowPass);
@@ -104,14 +108,14 @@ public class EffectsManager : MonoBehaviour
                 if (effectSlider.value < 0.02f)
                 {
                     highPassOn = false;
-                    effectOnText.text = "off";
+                    //effectOnText.text = "off";
                     mixer.SetFloat("highpass", 10);
 
                 }
                 else
                 {
                     highPassOn = true;
-                    effectOnText.text = "on";
+                    //effectOnText.text = "on";
 
                     float remappedHighPass = remapRange(effectSlider.value, 0f, 1f, 10f, 22000f);
                     mixer.SetFloat("highpass", remappedHighPass);
@@ -123,14 +127,14 @@ public class EffectsManager : MonoBehaviour
                 if (effectSlider.value < 0.02f)
                 {
                     flangeOn = false;
-                    effectOnText.text = "off";
+                    //effectOnText.text = "off";
                     mixer.SetFloat("flange", 0);
 
                 }
                 else
                 {
                     flangeOn = true;
-                    effectOnText.text = "on";
+                    //effectOnText.text = "on";
 
                     float remappedHighPass = remapRange(effectSlider.value, 0f, 1f, 0f, 20f);
                     mixer.SetFloat("flange", remappedHighPass);
@@ -143,7 +147,7 @@ public class EffectsManager : MonoBehaviour
                 if (effectSlider.value < 0.02f)
                 {
                     echoOn = false;
-                    effectOnText.text = "off";
+                    //effectOnText.text = "off";
                     mixer.SetFloat("echo1", 0);
                     mixer.SetFloat("echo2", 0);
 
@@ -151,7 +155,7 @@ public class EffectsManager : MonoBehaviour
                 else
                 {
                     echoOn = true;
-                    effectOnText.text = "on";
+                    //effectOnText.text = "on";
                     mixer.SetFloat("echo2", 1);
 
                     float remappedHighPass = remapRange(effectSlider.value, 0f, 1f, 0f, 2000f);
@@ -164,14 +168,14 @@ public class EffectsManager : MonoBehaviour
                 if (effectSlider.value < 0.02f)
                 {
                     reverbFilterOn = false;
-                    effectOnText.text = "off";
+                    //effectOnText.text = "off";
                     reverb.reverbPreset = AudioReverbPreset.Off;
 
                 }
                 else
                 {
                     reverbFilterOn = true;
-                    effectOnText.text = "on";
+                    //effectOnText.text = "on";
 
                     if (effectSlider.value < 0.2f)
                         reverb.reverbPreset = AudioReverbPreset.Cave;
@@ -258,7 +262,7 @@ public class EffectsManager : MonoBehaviour
                 {
 
                     if (!reverbFilterOn)
-                        line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+                        line.transform.localScale = originalLineScale;
                 }
 
 
@@ -300,27 +304,27 @@ public class EffectsManager : MonoBehaviour
                 {
                     if (reverb.reverbPreset == AudioReverbPreset.Cave)
                     {
-                        line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+                        //line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
                         line.transform.localEulerAngles += new Vector3(0, 0, Time.deltaTime * 20);
                     }
                     if (reverb.reverbPreset == AudioReverbPreset.Psychotic)
                     {
-                        line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+                        //line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
                         line.transform.localEulerAngles += new Vector3(0, 0, Time.deltaTime * -30);
                     }
                     if (reverb.reverbPreset == AudioReverbPreset.Underwater)
                     {
-                        line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+                        //line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
                         line.transform.localEulerAngles += new Vector3(0, 0, Time.deltaTime * 40);
                     }
                     if (reverb.reverbPreset == AudioReverbPreset.Drugged)
                     {
-                        line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+                        //line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
                         line.transform.localEulerAngles += new Vector3(0, 0, Time.deltaTime * -50);
                     }
                     if (reverb.reverbPreset == AudioReverbPreset.SewerPipe)
                     {
-                        line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+                        //line.transform.localScale = new Vector3(0.3f, 0.3f, 1);
                         line.transform.localEulerAngles += new Vector3(0, 0, Time.deltaTime * 60);
 
                     }
@@ -328,7 +332,7 @@ public class EffectsManager : MonoBehaviour
                 else
                 {
                     if (!flangeOn)
-                        line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+                        line.transform.localScale = originalLineScale;
                     line.transform.localEulerAngles = new Vector3(line.transform.localEulerAngles.x, line.transform.localEulerAngles.y, 0);
                 }
             }
@@ -339,9 +343,9 @@ public class EffectsManager : MonoBehaviour
                 line.widthMultiplier = 0.02f;
                 line.endColor = new Color(line.endColor.r, line.endColor.g, line.endColor.b, 1);
                 line.startColor = new Color(line.endColor.r, line.endColor.g, line.endColor.b, 1);
-                line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+                line.transform.localScale = originalLineScale;
                 echoLine.gameObject.SetActive(false);
-                line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+                line.transform.localScale = originalLineScale;
                 line.transform.localEulerAngles = new Vector3(line.transform.localEulerAngles.x, line.transform.localEulerAngles.y, 0);
             }
         }
@@ -352,9 +356,9 @@ public class EffectsManager : MonoBehaviour
             line.widthMultiplier = 0.02f;
             line.endColor = new Color(line.endColor.r, line.endColor.g, line.endColor.b, 1);
             line.startColor = new Color(line.endColor.r, line.endColor.g, line.endColor.b, 1);
-            line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            line.transform.localScale = originalLineScale;
             echoLine.gameObject.SetActive(false);
-            line.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            line.transform.localScale = originalLineScale;
             line.transform.localEulerAngles = new Vector3(line.transform.localEulerAngles.x, line.transform.localEulerAngles.y, 0);
         }
 
@@ -379,11 +383,11 @@ public class EffectsManager : MonoBehaviour
                     float currentPitch;
                     mixer.GetFloat("pitch", out currentPitch);
                     effectSlider.value = currentPitch / 2;
-                    effectOnText.text = "on";
+                    //effectOnText.text = "on";
                 }
                 else
                 {
-                    effectOnText.text = "off";
+                    //effectOnText.text = "off";
                     effectSlider.value = 0;
                 }
 
@@ -396,11 +400,11 @@ public class EffectsManager : MonoBehaviour
                     float currentLowPass;
                     mixer.GetFloat("lowpass", out currentLowPass);
                     effectSlider.value = 1 - remapRange(currentLowPass, 10f, 22000f, 0f, 1f);//1- to reverse it on the slider!
-                    effectOnText.text = "on";
+                    //effectOnText.text = "on";
                 }
                 else
                 {
-                    effectOnText.text = "off";
+                    //effectOnText.text = "off";
                     effectSlider.value = 0;
                 }
 
@@ -413,11 +417,11 @@ public class EffectsManager : MonoBehaviour
                     float currentHighPass;
                     mixer.GetFloat("highpass", out currentHighPass);
                     effectSlider.value = remapRange(currentHighPass, 10f, 22000f, 0f, 1f);
-                    effectOnText.text = "on";
+                    //effectOnText.text = "on";
                 }
                 else
                 {
-                    effectOnText.text = "off";
+                    //effectOnText.text = "off";
                     effectSlider.value = 0;
                 }
 
@@ -430,11 +434,11 @@ public class EffectsManager : MonoBehaviour
                     float currentFlange;
                     mixer.GetFloat("flange", out currentFlange);
                     effectSlider.value = remapRange(currentFlange, 0f, 20f, 0f, 1f);
-                    effectOnText.text = "on";
+                    //effectOnText.text = "on";
                 }
                 else
                 {
-                    effectOnText.text = "off";
+                    //effectOnText.text = "off";
                     effectSlider.value = 0;
                 }
 
@@ -447,11 +451,11 @@ public class EffectsManager : MonoBehaviour
                     float currentEcho;
                     mixer.GetFloat("echo1", out currentEcho);
                     effectSlider.value = remapRange(currentEcho, 0f, 2000f, 0f, 1f);
-                    effectOnText.text = "on";
+                    //effectOnText.text = "on";
                 }
                 else
                 {
-                    effectOnText.text = "off";
+                    //effectOnText.text = "off";
                     effectSlider.value = 0;
                 }
 
@@ -474,11 +478,11 @@ public class EffectsManager : MonoBehaviour
                         currentReverb = 0.9f;
 
                     effectSlider.value = currentReverb;
-                    effectOnText.text = "on";
+                    //effectOnText.text = "on";
                 }
                 else
                 {
-                    effectOnText.text = "off";
+                    //effectOnText.text = "off";
                     effectSlider.value = 0;
                 }
 

@@ -242,6 +242,8 @@ ModelImporter:
     100472: mainMesh4
     100474: nextEffect
     100476: mainMesh5
+    100478: effectLight
+    100480: topModule1
     400000: imagePlane1
     400002: //RootNode
     400004: pCube1
@@ -481,6 +483,8 @@ ModelImporter:
     400472: mainMesh4
     400474: nextEffect
     400476: mainMesh5
+    400478: effectLight
+    400480: topModule1
     2100000: lambert1
     2300000: pCube1
     2300002: pCube10
@@ -686,6 +690,7 @@ ModelImporter:
     2300402: mainMesh4
     2300404: nextEffect
     2300406: mainMesh5
+    2300408: effectLight
     3300000: pCube1
     3300002: pCube10
     3300004: pCube3
@@ -890,6 +895,7 @@ ModelImporter:
     3300402: mainMesh4
     3300404: nextEffect
     3300406: mainMesh5
+    3300408: effectLight
     4300000: pCube1
     4300002: pCube3
     4300004: pCube4
@@ -1094,8 +1100,14 @@ ModelImporter:
     4300402: effectSlider
     4300404: mainMesh4
     4300406: mainMesh5
+    4300408: effectLight
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: a3c415f94038a4f55938fe55ce381ebb, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -7,7 +7,7 @@ using UnityEngine.Audio;
 public class LocalClipPlayer : MonoBehaviour
 {
     public Transform player;
-    public camMouseLook mouseLook;
+
 
 
     loadAudioClips l;
@@ -59,22 +59,11 @@ public class LocalClipPlayer : MonoBehaviour
         delButt.onClick.AddListener(DeleteButton);
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(player.position, transform.position) < 5)
-        {
-            mouseLook.isActive = false;
-            songNamesText.gameObject.SetActive(true);
 
-            Cursor.lockState = CursorLockMode.Confined;
-        }
-        else
-        {
-            mouseLook.isActive = true;
-            songNamesText.gameObject.SetActive(false);
-
-        }
 
         switch (fileType)
         {

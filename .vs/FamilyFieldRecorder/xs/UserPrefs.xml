@@ -1,16 +1,20 @@
 ﻿<Properties StartupConfiguration="{F7EA9806-F9EC-1E41-13AE-3D4D1AAF79E6}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/computerConsole/EffectsManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/computerConsole/ConsoleManager.cs">
     <Files>
       <File FileName="Assets/Scripts/camMouseLook.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/computerConsole/SimpleClock.cs" Line="612" Column="9" />
       <File FileName="Assets/Scripts/Recording Device/SaveSound.cs" Line="208" Column="1" />
-      <File FileName="Assets/Scripts/computerConsole/loadAudioClips.cs" Line="82" Column="82" />
-      <File FileName="Assets/Scripts/computerConsole/songArchive/LocalClipPlayer.cs" Line="280" Column="12" />
+      <File FileName="Assets/Scripts/computerConsole/loadAudioClips.cs" Line="82" Column="45" />
+      <File FileName="Assets/Scripts/computerConsole/songArchive/LocalClipPlayer.cs" Line="62" Column="5" />
       <File FileName="Assets/Scripts/computerConsole/Sequencer.cs" Line="240" Column="6" />
       <File FileName="Assets/Scripts/computerConsole/Sampler.cs" Line="44" Column="20" />
       <File FileName="Assets/Scripts/computerConsole/SequenceRecorder.cs" Line="40" Column="26" />
-      <File FileName="Assets/Scripts/computerConsole/EffectsManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/computerConsole/EffectsManager.cs" Line="267" Column="17" />
+      <File FileName="Assets/Scripts/computerConsole/clipVisualizer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/computerConsole/ButtonHover.cs" Line="18" Column="49" />
+      <File FileName="Assets/Scripts/computerConsole/scrollerMoving.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/computerConsole/ConsoleManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

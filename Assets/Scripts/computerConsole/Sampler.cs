@@ -25,7 +25,7 @@ public class Sampler : MonoBehaviour
     private FileStream fileStream;
 
     public InputField enterSampleName;
-    public Text sampleInstructions;
+
 
     //public bool newRec = false;
     private AudioListener recListener, cameraListener;
@@ -76,7 +76,8 @@ public class Sampler : MonoBehaviour
                     StartWriting(fileName);
                     recOutput = true;
                     //  print("recording sample start");
-                    sampleInstructions.text = "touch to stop recording sample";
+
+                    enterSampleName.placeholder.GetComponent<Text>().text = "press to stop sampling";
 
                     if (!audioSource.isPlaying)
                         localClipPlayer.PlayButton();
@@ -99,8 +100,9 @@ public class Sampler : MonoBehaviour
     void RenameSample()
     {
         isWritingName = true;
-        sampleInstructions.text = "name sample:";
-        enterSampleName.gameObject.SetActive(true);
+
+        enterSampleName.placeholder.GetComponent<Text>().text = "name it";
+        //enterSampleName.gameObject.SetActive(true);
         enterSampleName.text = "";
         enterSampleName.ActivateInputField();
     }
@@ -113,7 +115,7 @@ public class Sampler : MonoBehaviour
             if (recordingTimer < sampleMaxLength)
             {
                 recordingTimer += Time.deltaTime;
-                sampleRecordProgress.rectTransform.sizeDelta = new Vector2(recordingTimer * (100 / sampleMaxLength), 10);//should reach 100
+                sampleRecordProgress.rectTransform.sizeDelta = new Vector2(recordingTimer * (100 / sampleMaxLength), 25);//should reach 100
             }
             else
             {
@@ -132,7 +134,7 @@ public class Sampler : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 fileName = enterSampleName.text + ".wav";
-                enterSampleName.gameObject.SetActive(false);
+                //enterSampleName.gameObject.SetActive(false);
                 sampleSavePath = Application.dataPath + "/Resources/savedSamples/" + fileName;
 
                 System.IO.File.Move(Application.dataPath + "/Resources/savedSamples/test.wav", sampleSavePath);//make it add copy if it already exists!
@@ -140,9 +142,11 @@ public class Sampler : MonoBehaviour
 
                 StartCoroutine(loader.LoadNewSample());
 
-                sampleRecordProgress.rectTransform.sizeDelta = new Vector2(0, 10);
+                sampleRecordProgress.rectTransform.sizeDelta = new Vector2(0, 25);
 
-                sampleInstructions.text = "touch to record sample";
+
+                enterSampleName.text = "";
+                enterSampleName.placeholder.GetComponent<Text>().text = "press to sample";
 
 
 
