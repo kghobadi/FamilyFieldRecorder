@@ -18,7 +18,10 @@ public class LocalClipPlayer : MonoBehaviour
     public Text songNamesText;
 
     public Button rButt, lButt, playButt, seqOnButt, clipButt, sampButt, seqButt, delButt;
+
     public Slider clipScroller;
+    public Transform scrollerMesh;
+
     public bool scrollBarValueIsChanging;
 
     AudioSource audioSource;
@@ -39,6 +42,9 @@ public class LocalClipPlayer : MonoBehaviour
     public FileType fileType;
 
     public AudioMixerGroup effectMixer, normalMixer;
+
+    public ButtonPressFeedback buttonPressFeedback;
+    bool startFrame = true;
 
     // Use this for initialization
     void Start()
@@ -63,7 +69,7 @@ public class LocalClipPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        buttonPressFeedback.SliderFeedback(scrollerMesh, clipScroller, 2.4f, 0.9f);
 
         switch (fileType)
         {
@@ -173,6 +179,8 @@ public class LocalClipPlayer : MonoBehaviour
 
         audioSource.Stop();
         audioSource.time = 0;
+        StartCoroutine(buttonPressFeedback.NormalPress(buttonPressFeedback.rButtObj));
+        //ADD A TEXT FLASH FOR A FRAME TO SHOW THE CHANGE (JUST AN IMAGE ON TOP)
     }
     void LeftButton()
     {
@@ -206,6 +214,7 @@ public class LocalClipPlayer : MonoBehaviour
 
         audioSource.Stop();
         audioSource.time = 0;
+        StartCoroutine(buttonPressFeedback.NormalPress(buttonPressFeedback.lButtObj));
     }
 
     public void PlayButton()
@@ -242,6 +251,7 @@ public class LocalClipPlayer : MonoBehaviour
 
             audioSource.Play();
         }
+        StartCoroutine(buttonPressFeedback.NormalPress(buttonPressFeedback.playButtObj));
     }
 
     void ClipButton()
@@ -251,6 +261,21 @@ public class LocalClipPlayer : MonoBehaviour
         clipButt.interactable = false;
         sampButt.interactable = true;
         seqButt.interactable = true;
+
+        if (!startFrame)
+        {
+            StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.clipButtObj, true));
+            StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.sampButtObj, false));
+            StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.seqButtObj, false));
+        }
+        else
+        {
+            //this is so clips button starts pressed
+            Vector3 originalPos = buttonPressFeedback.clipButtObj.originalPosition;
+            Vector3 targetPos = originalPos - (buttonPressFeedback.clipButtObj.buttonObject.up * 0.1f);
+            buttonPressFeedback.clipButtObj.buttonObject.position = Vector3.Lerp(originalPos, targetPos, 0.8f);
+        }
+        startFrame = false;
 
         audioSource.Stop();
         audioSource.time = 0;
@@ -263,6 +288,10 @@ public class LocalClipPlayer : MonoBehaviour
         sampButt.interactable = false;
         seqButt.interactable = true;
 
+        StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.clipButtObj, false));
+        StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.sampButtObj, true));
+        StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.seqButtObj, false));
+
         audioSource.Stop();
         audioSource.time = 0;
     }
@@ -273,6 +302,10 @@ public class LocalClipPlayer : MonoBehaviour
         clipButt.interactable = true;
         sampButt.interactable = true;
         seqButt.interactable = false;
+
+        StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.clipButtObj, false));
+        StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.sampButtObj, false));
+        StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.seqButtObj, true));
 
         audioSource.Stop();
         audioSource.time = 0;
@@ -296,6 +329,7 @@ public class LocalClipPlayer : MonoBehaviour
             seqOnButt.GetComponentInChildren<Text>().text = "on";
             sequencer.sequencerPlaying = true;
         }
+        StartCoroutine(buttonPressFeedback.NormalPress(buttonPressFeedback.seqOnButtObj));
     }
 
     void DeleteButton()// add an "are you sure you want to delete?
@@ -326,11 +360,8 @@ public class LocalClipPlayer : MonoBehaviour
                     sequenceIndex--;
 
                 break;
-
         }
-
-
-
+        StartCoroutine(buttonPressFeedback.NormalPress(buttonPressFeedback.delButtObj));
         //delete file & remove from list
     }
 

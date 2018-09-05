@@ -10,13 +10,19 @@ public class clipVisualizer : MonoBehaviour
 
     AudioSpectrum spectrum;
 
-    float multiplier;
+    float multiplier = 1;
+    public float constant = 30;
+
+    AudioSource clipPlayerSource;
+    public Sequencer seq;
 
     // Use this for initialization
     void Start()
     {
         spectrum = GetComponent<AudioSpectrum>();
         lineR.positionCount = spectrum.Levels.Length;
+
+        clipPlayerSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,31 +30,34 @@ public class clipVisualizer : MonoBehaviour
     {
 
 
-        //float[] spectrum = new float[64];
-
-        //AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
-
-        multiplier = 1;//this is in to adjust for the spectrum returning smaller numbers for higher frequencies
-
-        for (int i = 0; i < spectrum.Levels.Length; i++)
+        if (clipPlayerSource.isPlaying || seq.sequencerPlaying)
         {
+            multiplier = 1;//this is in to adjust for the spectrum returning smaller numbers for higher frequencies
 
-            xPos = Mathf.Sin(Mathf.Deg2Rad * (360 / spectrum.Levels.Length) * i) * ((spectrum.MeanLevels[i] * 100 * multiplier) + 0.01f);
-            xPos = Mathf.Clamp(xPos, -1, 1);
-            yPos = Mathf.Cos(Mathf.Deg2Rad * (360 / spectrum.Levels.Length) * i) * ((spectrum.MeanLevels[i] * 100 * multiplier) + 0.01f);
-            yPos = Mathf.Clamp(yPos, -1, 1);
+            for (int i = 0; i < spectrum.Levels.Length; i++)
+            {
 
-            lineR.SetPosition(i, new Vector3(xPos, yPos, 0));
+                xPos = Mathf.Sin(Mathf.Deg2Rad * (360 / spectrum.Levels.Length) * i) * ((spectrum.MeanLevels[i] * constant * multiplier) + 0.01f);
+                xPos = Mathf.Clamp(xPos, -1, 1);
+                yPos = Mathf.Cos(Mathf.Deg2Rad * (360 / spectrum.Levels.Length) * i) * ((spectrum.MeanLevels[i] * constant * multiplier) + 0.01f);
+                yPos = Mathf.Clamp(yPos, -1, 1);
 
-            multiplier *= 1.1f;
+                lineR.SetPosition(i, new Vector3(xPos, yPos, 0));
+
+                multiplier *= 1.1f;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < spectrum.Levels.Length; i++)
+            {
+
+                lineR.SetPosition(i, Vector3.Lerp(lineR.GetPosition(i), new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), 0), 0.4f));
+
+            }
         }
 
 
-        //Debug.Log(spectrum[i]);
-        //Debug.DrawLine(new Vector3(i - 1, spectrum[i] + 10, 0), new Vector3(i, spectrum[i + 1] + 10, 0), Color.red);
-        //Debug.DrawLine(new Vector3(i - 1, Mathf.Log(spectrum[i - 1]) + 10, 2), new Vector3(i, Mathf.Log(spectrum[i]) + 10, 2), Color.cyan);
-        //Debug.DrawLine(new Vector3(Mathf.Log(i - 1), spectrum[i - 1] - 10, 1), new Vector3(Mathf.Log(i), spectrum[i] - 10, 1), Color.green);
-        //Debug.DrawLine(new Vector3(Mathf.Log(i - 1), Mathf.Log(spectrum[i - 1]), 3), new Vector3(Mathf.Log(i), Mathf.Log(spectrum[i]), 3), Color.blue);
     }
 
 }

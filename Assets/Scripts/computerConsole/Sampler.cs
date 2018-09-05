@@ -43,6 +43,8 @@ public class Sampler : MonoBehaviour
 
     float sampleMaxLength = 3;
 
+    public ButtonPressFeedback buttonPressFeedback;
+
     void Awake()
     {
         AudioSettings.outputSampleRate = outputRate;
@@ -65,7 +67,7 @@ public class Sampler : MonoBehaviour
 
     void RecordingFunction()
     {
-        if (localClipPlayer.fileType == LocalClipPlayer.FileType.clip)
+        if (localClipPlayer.fileType != LocalClipPlayer.FileType.sample)
         {
             if (!isWritingName)
             {
@@ -81,6 +83,8 @@ public class Sampler : MonoBehaviour
 
                     if (!audioSource.isPlaying)
                         localClipPlayer.PlayButton();
+
+                    StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.sampleRecButtObj, true));
                 }
                 else
                 {
@@ -92,6 +96,7 @@ public class Sampler : MonoBehaviour
                     RenameSample();
                     audioSource.Pause();
 
+                    StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.sampleRecButtObj, false));
                 }
             }
         }

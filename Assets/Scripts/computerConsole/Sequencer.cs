@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-struct sequenceKey
+[System.Serializable]
+public struct sequenceKey
 {
+    [HideInInspector]
     public Transform keyNum;
+    [HideInInspector]
     public AudioSource[] slots;
+    [HideInInspector]
     public Image keyImage;
+    [HideInInspector]
     public Button[] slotsImage;
+
+    public MeshRenderer keyLightMesh;
+    public MeshRenderer[] slotMesh;
 }
 
 public class Sequencer : MonoBehaviour
@@ -31,7 +38,7 @@ public class Sequencer : MonoBehaviour
 
 
     public Transform canvasSequencer;
-    sequenceKey[] sequenceKeys;
+    public sequenceKey[] sequenceKeys;
 
     public Button[] sequencerButts;
 
@@ -39,6 +46,12 @@ public class Sequencer : MonoBehaviour
 
     LocalClipPlayer clipPlayerScript;
     loadAudioClips l;
+
+    public ButtonPressFeedback buttonPressFeedback;
+
+    public Color whiteSlot, blueSlot;
+
+    public MeshRenderer seqOnLight;
 
     // Use this for initialization
     void Awake()
@@ -50,7 +63,7 @@ public class Sequencer : MonoBehaviour
 
     void Start()
     {
-        sequenceKeys = new sequenceKey[transform.childCount];
+        //sequenceKeys = new sequenceKey[transform.childCount];
 
         for (int i = 0; i < sequenceKeys.Length; i++)
         {
@@ -131,7 +144,20 @@ public class Sequencer : MonoBehaviour
     void Update()
     {
         if (sequencerPlaying)
+        {
             ActualSequencer();
+            seqOnLight.material.color = new Color(seqOnLight.material.color.r,
+                                            seqOnLight.material.color.g,
+                                            seqOnLight.material.color.b,
+                                            0.9f);
+        }
+        else
+        {
+            seqOnLight.material.color = new Color(seqOnLight.material.color.r,
+                                            seqOnLight.material.color.g,
+                                            seqOnLight.material.color.b,
+                                            0.1f);
+        }
 
     }
 
@@ -164,6 +190,7 @@ public class Sequencer : MonoBehaviour
             }
         }
         SequenceChange();
+        StartCoroutine(buttonPressFeedback.NormalPress(buttonPressFeedback.seqButtonsObj[index]));
     }
 
     void RemoveSampleFromSlot(int index, int slot)
@@ -171,6 +198,7 @@ public class Sequencer : MonoBehaviour
         //        Debug.Log("index = " + index + " || slot = " + slot);
         sequenceKeys[index].slots[slot].clip = null;
         SequenceChange();
+        StartCoroutine(buttonPressFeedback.NormalPress(buttonPressFeedback.slotButtObj[index + slot + index]));
     }
 
 
@@ -216,7 +244,11 @@ public class Sequencer : MonoBehaviour
             {
                 if (i == sequencerIndex)
                 {//play stuff here
-                    sequenceKeys[i].keyImage.color = Color.black;
+                    //sequenceKeys[i].keyImage.color = Color.black;
+                    sequenceKeys[i].keyLightMesh.material.color = new Color(sequenceKeys[i].keyLightMesh.material.color.r,
+                                                                            sequenceKeys[i].keyLightMesh.material.color.g,
+                                                                            sequenceKeys[i].keyLightMesh.material.color.b,
+                                                                            0.9f);
                     //                    Debug.Log(sequencerIndex);
                     for (int slotNum = 0; slotNum < sequenceKeys[i].slots.Length; slotNum++)
                     {
@@ -226,8 +258,11 @@ public class Sequencer : MonoBehaviour
                 }
                 else
                 {
-                    if (sequenceKeys[i].keyImage.color != Color.white)
-                        sequenceKeys[i].keyImage.color = Color.white;
+                    //if (sequenceKeys[i].keyImage.color != Color.white)
+                    sequenceKeys[i].keyLightMesh.material.color = new Color(sequenceKeys[i].keyLightMesh.material.color.r,
+                                                                        sequenceKeys[i].keyLightMesh.material.color.g,
+                                                                        sequenceKeys[i].keyLightMesh.material.color.b,
+                                                                        0.1f);
                 }
             }
 
@@ -258,9 +293,17 @@ public class Sequencer : MonoBehaviour
             for (int ii = 0; ii < sequenceKeys[i].slotsImage.Length; ii++)
             {
                 if (sequenceKeys[i].slots[ii].clip == null)
-                    sequenceKeys[i].slotsImage[ii].GetComponent<Image>().color = Color.white;
+                {
+                    //sequenceKeys[i].slotsImage[ii].GetComponent<Image>().color = Color.white;
+                    sequenceKeys[i].slotMesh[ii].material.color = whiteSlot;
+                    sequenceKeys[i].slotsImage[ii].interactable = false;
+                }
                 else
-                    sequenceKeys[i].slotsImage[ii].GetComponent<Image>().color = Color.blue;
+                {
+                    //sequenceKeys[i].slotsImage[ii].GetComponent<Image>().color = Color.blue;
+                    sequenceKeys[i].slotMesh[ii].material.color = blueSlot;
+                    sequenceKeys[i].slotsImage[ii].interactable = true;
+                }
 
             }
         }

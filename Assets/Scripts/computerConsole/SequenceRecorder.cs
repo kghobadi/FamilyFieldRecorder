@@ -41,6 +41,8 @@ public class SequenceRecorder : MonoBehaviour
 
     float sequenceMaxLength = 60;
 
+    public ButtonPressFeedback buttonPressFeedback;
+
     void Awake()
     {
         AudioSettings.outputSampleRate = outputRate;
@@ -78,6 +80,8 @@ public class SequenceRecorder : MonoBehaviour
 
                 if (!localClipPlayer.sequencer.sequencerPlaying)
                     localClipPlayer.SequencerOnButton();
+
+                StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.seqRecButtObj, true));
             }
             else
             {
@@ -89,6 +93,7 @@ public class SequenceRecorder : MonoBehaviour
                 RenameSequence();
                 localClipPlayer.SequencerOnButton();
 
+                StartCoroutine(buttonPressFeedback.PressAndStick(buttonPressFeedback.sampleRecButtObj, false));
             }
         }
         //}

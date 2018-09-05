@@ -36,6 +36,12 @@ public class EffectsManager : MonoBehaviour
 
     Vector3 originalLineScale;
 
+    public ButtonPressFeedback buttonPressFeedback;
+    bool startFrame = true;
+
+    public Transform sliderObj;
+    bool lightOn;
+    public MeshRenderer effectOnLight;
 
     //ADD MASTER VOLUME CONTROLLER FOR THE ENTIRE CONSOLE (AND PUT SEQUENCER IN THE MIXER SO IT ALSO GETS AFFECTED)
 
@@ -61,6 +67,22 @@ public class EffectsManager : MonoBehaviour
     {
         //Debug.Log(line.colorGradient.alphaKeys.Length);
 
+        buttonPressFeedback.SliderFeedback(sliderObj, effectSlider, 0.2f, -0.63f);
+        if (lightOn)
+        {
+            effectOnLight.material.color = new Color(effectOnLight.material.color.r,
+                                                     effectOnLight.material.color.g,
+                                                     effectOnLight.material.color.b,
+                                                     0.9f);
+        }
+        else
+        {
+            effectOnLight.material.color = new Color(effectOnLight.material.color.r,
+                                                     effectOnLight.material.color.g,
+                                                     effectOnLight.material.color.b,
+                                                     0.1f);
+        }
+
         switch (effectType)
         {
             case EffectType.pitch:
@@ -68,6 +90,7 @@ public class EffectsManager : MonoBehaviour
                 if (effectSlider.value < 0.02f)
                 {
                     pitchOn = false;
+                    lightOn = false;
                     //effectOnText.text = "off";
                     mixer.SetFloat("pitch", 1);
 
@@ -76,6 +99,7 @@ public class EffectsManager : MonoBehaviour
                 {
                     pitchOn = true;
                     //effectOnText.text = "on";
+                    lightOn = true;
 
 
                     float remappedPitch = effectSlider.value * 2;
@@ -88,6 +112,7 @@ public class EffectsManager : MonoBehaviour
                 if (effectSlider.value < 0.02f)
                 {
                     lowPassOn = false;
+                    lightOn = false;
                     //effectOnText.text = "off";
                     mixer.SetFloat("lowpass", 22000);
 
@@ -96,6 +121,7 @@ public class EffectsManager : MonoBehaviour
                 {
                     lowPassOn = true;
                     //effectOnText.text = "on";
+                    lightOn = true;
 
                     float remappedLowPass = remapRange(1 - effectSlider.value, 0f, 1f, 10f, 22000f);
                     mixer.SetFloat("lowpass", remappedLowPass);
@@ -108,6 +134,7 @@ public class EffectsManager : MonoBehaviour
                 if (effectSlider.value < 0.02f)
                 {
                     highPassOn = false;
+                    lightOn = false;
                     //effectOnText.text = "off";
                     mixer.SetFloat("highpass", 10);
 
@@ -116,6 +143,7 @@ public class EffectsManager : MonoBehaviour
                 {
                     highPassOn = true;
                     //effectOnText.text = "on";
+                    lightOn = true;
 
                     float remappedHighPass = remapRange(effectSlider.value, 0f, 1f, 10f, 22000f);
                     mixer.SetFloat("highpass", remappedHighPass);
@@ -127,6 +155,7 @@ public class EffectsManager : MonoBehaviour
                 if (effectSlider.value < 0.02f)
                 {
                     flangeOn = false;
+                    lightOn = false;
                     //effectOnText.text = "off";
                     mixer.SetFloat("flange", 0);
 
@@ -135,6 +164,7 @@ public class EffectsManager : MonoBehaviour
                 {
                     flangeOn = true;
                     //effectOnText.text = "on";
+                    lightOn = true;
 
                     float remappedHighPass = remapRange(effectSlider.value, 0f, 1f, 0f, 20f);
                     mixer.SetFloat("flange", remappedHighPass);
@@ -147,6 +177,7 @@ public class EffectsManager : MonoBehaviour
                 if (effectSlider.value < 0.02f)
                 {
                     echoOn = false;
+                    lightOn = false;
                     //effectOnText.text = "off";
                     mixer.SetFloat("echo1", 0);
                     mixer.SetFloat("echo2", 0);
@@ -156,6 +187,7 @@ public class EffectsManager : MonoBehaviour
                 {
                     echoOn = true;
                     //effectOnText.text = "on";
+                    lightOn = true;
                     mixer.SetFloat("echo2", 1);
 
                     float remappedHighPass = remapRange(effectSlider.value, 0f, 1f, 0f, 2000f);
@@ -168,6 +200,7 @@ public class EffectsManager : MonoBehaviour
                 if (effectSlider.value < 0.02f)
                 {
                     reverbFilterOn = false;
+                    lightOn = false;
                     //effectOnText.text = "off";
                     reverb.reverbPreset = AudioReverbPreset.Off;
 
@@ -176,6 +209,7 @@ public class EffectsManager : MonoBehaviour
                 {
                     reverbFilterOn = true;
                     //effectOnText.text = "on";
+                    lightOn = true;
 
                     if (effectSlider.value < 0.2f)
                         reverb.reverbPreset = AudioReverbPreset.Cave;
@@ -383,10 +417,13 @@ public class EffectsManager : MonoBehaviour
                     float currentPitch;
                     mixer.GetFloat("pitch", out currentPitch);
                     effectSlider.value = currentPitch / 2;
+
                     //effectOnText.text = "on";
+                    lightOn = true;
                 }
                 else
                 {
+                    lightOn = false;
                     //effectOnText.text = "off";
                     effectSlider.value = 0;
                 }
@@ -401,9 +438,11 @@ public class EffectsManager : MonoBehaviour
                     mixer.GetFloat("lowpass", out currentLowPass);
                     effectSlider.value = 1 - remapRange(currentLowPass, 10f, 22000f, 0f, 1f);//1- to reverse it on the slider!
                     //effectOnText.text = "on";
+                    lightOn = true;
                 }
                 else
                 {
+                    lightOn = false;
                     //effectOnText.text = "off";
                     effectSlider.value = 0;
                 }
@@ -418,9 +457,11 @@ public class EffectsManager : MonoBehaviour
                     mixer.GetFloat("highpass", out currentHighPass);
                     effectSlider.value = remapRange(currentHighPass, 10f, 22000f, 0f, 1f);
                     //effectOnText.text = "on";
+                    lightOn = true;
                 }
                 else
                 {
+                    lightOn = false;
                     //effectOnText.text = "off";
                     effectSlider.value = 0;
                 }
@@ -435,9 +476,11 @@ public class EffectsManager : MonoBehaviour
                     mixer.GetFloat("flange", out currentFlange);
                     effectSlider.value = remapRange(currentFlange, 0f, 20f, 0f, 1f);
                     //effectOnText.text = "on";
+                    lightOn = true;
                 }
                 else
                 {
+                    lightOn = false;
                     //effectOnText.text = "off";
                     effectSlider.value = 0;
                 }
@@ -452,9 +495,11 @@ public class EffectsManager : MonoBehaviour
                     mixer.GetFloat("echo1", out currentEcho);
                     effectSlider.value = remapRange(currentEcho, 0f, 2000f, 0f, 1f);
                     //effectOnText.text = "on";
+                    lightOn = true;
                 }
                 else
                 {
+                    lightOn = false;
                     //effectOnText.text = "off";
                     effectSlider.value = 0;
                 }
@@ -479,9 +524,11 @@ public class EffectsManager : MonoBehaviour
 
                     effectSlider.value = currentReverb;
                     //effectOnText.text = "on";
+                    lightOn = true;
                 }
                 else
                 {
+                    lightOn = false;
                     //effectOnText.text = "off";
                     effectSlider.value = 0;
                 }
@@ -489,6 +536,10 @@ public class EffectsManager : MonoBehaviour
                 break;
 
         }
+        if (!startFrame)
+            StartCoroutine(buttonPressFeedback.NormalPress(buttonPressFeedback.effectNextButtObj));
+
+        startFrame = false;
     }
 
 
