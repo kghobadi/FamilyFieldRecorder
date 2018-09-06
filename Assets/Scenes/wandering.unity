@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &365787202
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4315308760887538, guid: 9bab5fd8efe025f46b5febacf4e4a131, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315308760887538, guid: 9bab5fd8efe025f46b5febacf4e4a131, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315308760887538, guid: 9bab5fd8efe025f46b5febacf4e4a131, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315308760887538, guid: 9bab5fd8efe025f46b5febacf4e4a131, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315308760887538, guid: 9bab5fd8efe025f46b5febacf4e4a131, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315308760887538, guid: 9bab5fd8efe025f46b5febacf4e4a131, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315308760887538, guid: 9bab5fd8efe025f46b5febacf4e4a131, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315308760887538, guid: 9bab5fd8efe025f46b5febacf4e4a131, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9bab5fd8efe025f46b5febacf4e4a131, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &483909732
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,34 +220,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &623316302
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 623316303}
-  m_Layer: 0
-  m_Name: BirdParent
-  m_TagString: Animal
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &623316303
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 623316302}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1181954292
 Prefab:
   m_ObjectHideFlags: 0
@@ -248,167 +262,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 047dedcd9a078764092d6db645dfeabb, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1230605671
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4710967710613258, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -14.526184
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710967710613258, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 5.4040823
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710967710613258, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -14.379448
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710967710613258, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710967710613258, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710967710613258, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710967710613258, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710967710613258, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114193287452110388, guid: 1f9093443b54eb64ab3a131eaac26946,
-        type: 2}
-      propertyPath: terrain
-      value: 
-      objectReference: {fileID: 1434081886}
-    - target: {fileID: 114193287452110388, guid: 1f9093443b54eb64ab3a131eaac26946,
-        type: 2}
-      propertyPath: jungleGrid
-      value: 
-      objectReference: {fileID: 1887808618}
-    - target: {fileID: 114193287452110388, guid: 1f9093443b54eb64ab3a131eaac26946,
-        type: 2}
-      propertyPath: treeParent
-      value: 
-      objectReference: {fileID: 1369387110}
-    - target: {fileID: 114193287452110388, guid: 1f9093443b54eb64ab3a131eaac26946,
-        type: 2}
-      propertyPath: birdParent
-      value: 
-      objectReference: {fileID: 623316303}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
-  m_IsPrefabParent: 0
---- !u!1 &1369387109
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1369387110}
-  m_Layer: 0
-  m_Name: TreeParent
-  m_TagString: Plant
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1369387110
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1369387109}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1434081883
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1434081886}
-  - component: {fileID: 1434081885}
-  - component: {fileID: 1434081884}
-  m_Layer: 0
-  m_Name: Terrain
-  m_TagString: Ground
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!154 &1434081884
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1434081883}
-  m_Material: {fileID: 0}
-  m_Enabled: 1
-  m_TerrainData: {fileID: 15600000, guid: 72fdb973738c7764981d6068cb47ba22, type: 2}
-  m_EnableTreeColliders: 1
---- !u!218 &1434081885
-Terrain:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1434081883}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_TerrainData: {fileID: 15600000, guid: 72fdb973738c7764981d6068cb47ba22, type: 2}
-  m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
-  m_HeightmapMaximumLOD: 0
-  m_CastShadows: 1
-  m_DrawHeightmap: 1
-  m_DrawTreesAndFoliage: 1
-  m_ReflectionProbeUsage: 1
-  m_MaterialType: 0
-  m_LegacySpecular:
-    serializedVersion: 2
-    rgba: 4286545791
-  m_LegacyShininess: 0.078125
-  m_MaterialTemplate: {fileID: 0}
-  m_BakeLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.0512
-  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
---- !u!4 &1434081886
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1434081883}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1625784198
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,34 +320,6 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.109066516, z: -0, w: 0.9940345}
   m_LocalPosition: {x: 1.69, y: 0.9699999, z: 4.64}
   m_LocalScale: {x: 0.5, y: 0.75, z: 0.09999999}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1887808617
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1887808618}
-  m_Layer: 0
-  m_Name: JungleGrid
-  m_TagString: Grid
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1887808618
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1887808617}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3

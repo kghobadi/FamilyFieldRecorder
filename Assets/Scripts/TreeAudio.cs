@@ -25,7 +25,7 @@ public class TreeAudio : MonoBehaviour {
         {
             treeNoteTimer -= Time.deltaTime;
 
-            if (treeNoteTimer < 0)
+            if (treeNoteTimer < 0 && !treeAudio.isPlaying)
             {
                 int randomNote = Random.Range(0, treeSounds.Length);
                 treeAudio.PlayOneShot(treeSounds[randomNote]);

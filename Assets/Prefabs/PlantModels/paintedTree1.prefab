@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 114728190207860896}
   m_Layer: 0
   m_Name: paintedTree1
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,10 +342,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 146778a699f6e17459308b832a5abf2d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -438,9 +438,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5854f03ce2e8840bd65f4d117c11a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeSounds: []
-  treeMixerGroup: {fileID: 0}
+  treeSounds:
+  - {fileID: 8300000, guid: 146778a699f6e17459308b832a5abf2d, type: 3}
+  treeMixerGroup: {fileID: 243933608082898768, guid: 457d012c79be5334db6ea72edd3d15e7,
+    type: 2}
   treeNoteTimer: 0
-  treeNoteTimerTotal: 0
-  randomTimeMin: 0
-  randomTimeMax: 0
+  treeNoteTimerTotal: 10
+  randomTimeMin: -5
+  randomTimeMax: 10

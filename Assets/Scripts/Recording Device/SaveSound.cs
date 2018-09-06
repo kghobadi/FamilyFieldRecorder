@@ -11,6 +11,8 @@ using UnityEngine.UI;
 
 public class SaveSound : MonoBehaviour
 {
+    GameObject player;
+    FirstPersonController fpc;
     private int bufferSize;
     private int numBuffers;
     private int outputRate = 44100;
@@ -39,6 +41,8 @@ public class SaveSound : MonoBehaviour
 
     void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        fpc = player.GetComponent<FirstPersonController>();
         AudioSettings.outputSampleRate = outputRate;
         recListener = GetComponent<AudioListener>();
         cameraListener = Camera.main.GetComponent<AudioListener>();
@@ -58,7 +62,7 @@ public class SaveSound : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isWritingName && !uploading)
+        if (Input.GetKeyDown(KeyCode.Space) && !isWritingName && !uploading && fpc.recOut)
         {
 
             if (recOutput == false)

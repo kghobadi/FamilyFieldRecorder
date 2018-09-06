@@ -13,6 +13,8 @@ TagManager:
   - Recorder
   - Ocean
   - WorldManager
+  - Water
+  - House
   layers:
   - Default
   - TransparentFX

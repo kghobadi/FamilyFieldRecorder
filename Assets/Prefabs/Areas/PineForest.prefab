@@ -1882,22 +1882,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1347050873928896
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4441749328357154}
-  - component: {fileID: 108702339777436442}
-  m_Layer: 0
-  m_Name: Sun
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1 &1347610219292092
 GameObject:
   m_ObjectHideFlags: 1
@@ -4416,7 +4400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1858639999801516
 GameObject:
   m_ObjectHideFlags: 1
@@ -5270,7 +5254,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1583984013984312}
-  m_LocalRotation: {x: 0.9546789, y: 0.29763773, z: 1.8225055e-17, w: 5.8457224e-17}
+  m_LocalRotation: {x: 0.9523105, y: 0.29689935, z: 0.067205615, w: -0.020952519}
   m_LocalPosition: {x: -0.90533966, y: 9.694237e-17, z: -9.674023e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5326,7 +5310,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1480281779296376}
-  m_LocalRotation: {x: -1.3049038e-26, y: -1.04209484e-16, z: 0.0036208355, w: 0.99999344}
+  m_LocalRotation: {x: -3.694022e-18, y: 9.159964e-16, z: 0.0036208355, w: 0.99999344}
   m_LocalPosition: {x: -1.9440768, y: -0.005462056, z: 0.1432386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5460,7 +5444,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1238154734777492}
-  m_LocalRotation: {x: 0.21045968, y: 0.52631706, z: -0.30587897, w: 0.76494133}
+  m_LocalRotation: {x: 0.15618221, y: 0.5448945, z: -0.38163185, w: 0.7301056}
   m_LocalPosition: {x: -0.01587158, y: 0.015109138, z: 0.10637353}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5559,7 +5543,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1369301149779402}
-  m_LocalRotation: {x: -1.3049038e-26, y: -1.04209484e-16, z: 0.0036208355, w: 0.99999344}
+  m_LocalRotation: {x: -3.694022e-18, y: 9.159964e-16, z: 0.0036208355, w: 0.99999344}
   m_LocalPosition: {x: -1.9440768, y: -0.005462056, z: 0.1432386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5747,7 +5731,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1357823438820956}
-  m_LocalRotation: {x: -0.7065812, y: -0.027258838, z: 0.022271039, w: 0.706756}
+  m_LocalRotation: {x: -0.70651156, y: 0.01941395, z: -0.024379356, w: 0.70701504}
   m_LocalPosition: {x: -1.9479574, y: -0.13513818, z: -0.025433317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5858,7 +5842,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1413876988358064}
-  m_LocalRotation: {x: -0.74979913, y: -0.35302016, z: 0.20235345, w: 0.5217577}
+  m_LocalRotation: {x: 0.7727531, y: 0.2994571, z: -0.23851852, w: -0.50624794}
   m_LocalPosition: {x: -0.8005212, y: -0.13158055, z: -0.009247928}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5885,7 +5869,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904924872143770}
-  m_LocalRotation: {x: -0.7065812, y: -0.027258838, z: 0.022271039, w: 0.706756}
+  m_LocalRotation: {x: -0.70651156, y: 0.01941395, z: -0.024379356, w: 0.70701504}
   m_LocalPosition: {x: -1.9479574, y: -0.13513818, z: -0.025433317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6170,7 +6154,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1495005039522730}
-  m_LocalRotation: {x: -0.17379983, y: -0.07750803, z: 0.3737067, w: 0.90781575}
+  m_LocalRotation: {x: -0.20323163, y: -0.0043997634, z: 0.35855258, w: 0.9111079}
   m_LocalPosition: {x: -0.15577585, y: -0.76705396, z: 0.16759442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6270,7 +6254,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4425730758539172}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4304105666161712
 Transform:
@@ -6457,7 +6441,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1663929244499564}
-  m_LocalRotation: {x: -1.6593648e-25, y: 9.815246e-17, z: 0.03418651, w: 0.99941546}
+  m_LocalRotation: {x: 1.2904673e-16, y: -3.674426e-15, z: 0.03418651, w: 0.99941546}
   m_LocalPosition: {x: -1.8609821, y: -4.440892e-16, z: 2.220446e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6499,7 +6483,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1684922424711936}
-  m_LocalRotation: {x: 0.9546789, y: 0.29763773, z: 1.8225055e-17, w: 5.8457224e-17}
+  m_LocalRotation: {x: 0.9523105, y: 0.29689935, z: 0.067205615, w: -0.020952519}
   m_LocalPosition: {x: -0.90533966, y: 9.694237e-17, z: -9.674023e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6781,7 +6765,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1152571264568176}
-  m_LocalRotation: {x: -0.17379983, y: -0.07750803, z: 0.3737067, w: 0.90781575}
+  m_LocalRotation: {x: -0.20323163, y: -0.0043997634, z: 0.35855258, w: 0.9111079}
   m_LocalPosition: {x: -0.15577585, y: -0.76705396, z: 0.16759442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6861,12 +6845,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1848165185174006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 271, y: 44.3, z: 233}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4547971043187120}
-  - {fileID: 4441749328357154}
   - {fileID: 4297650540081640}
   - {fileID: 4865848835294536}
   - {fileID: 4597896035017418}
@@ -6916,19 +6899,6 @@ Transform:
   m_Father: {fileID: 4857077181888358}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4441749328357154
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347050873928896}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 250, y: 50, z: 250}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4425730758539172}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!4 &4447393371645480
 Transform:
   m_ObjectHideFlags: 1
@@ -7089,7 +7059,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1074254858720060}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0052920002, w: 0.999986}
+  m_LocalRotation: {x: 0.0005114865, y: -0.09665142, z: 0.0052672247, w: 0.9953043}
   m_LocalPosition: {x: -1.7819664, y: -4.354156e-16, z: 5.5164207e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7447,7 +7417,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1897699144696868}
-  m_LocalRotation: {x: -0.36490017, y: -0.66070914, z: -0.3171368, w: 0.574226}
+  m_LocalRotation: {x: -0.6373357, y: -0.40434128, z: -0.0024559223, w: 0.6559766}
   m_LocalPosition: {x: 0.016141394, y: -0.02565442, z: -1.1168157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7558,7 +7528,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1341082694874402}
-  m_LocalRotation: {x: -0.14256507, y: -0.15730838, z: 0.1271053, w: 0.96890324}
+  m_LocalRotation: {x: -0.14256507, y: -0.15730837, z: 0.1271053, w: 0.96890324}
   m_LocalPosition: {x: 0.5681641, y: -0.5408704, z: -1.975107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7657,7 +7627,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1223742687580696}
-  m_LocalRotation: {x: 0, y: 0, z: 0.24411662, w: 0.96974593}
+  m_LocalRotation: {x: 0.018046997, y: -0.071691155, z: 0.2434486, w: 0.9670923}
   m_LocalPosition: {x: -0.3420382, y: -0.8475282, z: 8.831444e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7671,7 +7641,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062960358703514}
-  m_LocalRotation: {x: 0.21045968, y: 0.52631706, z: -0.30587897, w: 0.76494133}
+  m_LocalRotation: {x: 0.15618221, y: 0.5448945, z: -0.38163185, w: 0.7301056}
   m_LocalPosition: {x: -0.01587158, y: 0.015109138, z: 0.10637353}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7685,7 +7655,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1717663800834048}
-  m_LocalRotation: {x: -0.14256507, y: -0.15730838, z: 0.1271053, w: 0.96890324}
+  m_LocalRotation: {x: -0.14256507, y: -0.15730837, z: 0.1271053, w: 0.96890324}
   m_LocalPosition: {x: 0.5681641, y: -0.5408704, z: -1.975107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7701,7 +7671,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772206800462072}
-  m_LocalRotation: {x: 0.9546789, y: 0.29763773, z: 1.8225055e-17, w: 5.8457224e-17}
+  m_LocalRotation: {x: 0.9523105, y: 0.29689935, z: 0.067205615, w: -0.020952519}
   m_LocalPosition: {x: -0.90533966, y: 9.694237e-17, z: -9.674023e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7756,7 +7726,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1742230337714594}
-  m_LocalRotation: {x: -1.3049038e-26, y: -1.04209484e-16, z: 0.0036208355, w: 0.99999344}
+  m_LocalRotation: {x: -3.694022e-18, y: 9.159964e-16, z: 0.0036208355, w: 0.99999344}
   m_LocalPosition: {x: -1.9440768, y: -0.005462056, z: 0.1432386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7804,7 +7774,7 @@ Transform:
   - {fileID: 4526895139194020}
   - {fileID: 4796049308033232}
   m_Father: {fileID: 4425730758539172}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4599671445423964
 Transform:
@@ -7998,7 +7968,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813264052886032}
-  m_LocalRotation: {x: -1.6593648e-25, y: 9.815246e-17, z: 0.03418651, w: 0.99941546}
+  m_LocalRotation: {x: 1.2904673e-16, y: -3.674426e-15, z: 0.03418651, w: 0.99941546}
   m_LocalPosition: {x: -1.8609821, y: -4.440892e-16, z: 2.220446e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8051,7 +8021,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606240449291332}
-  m_LocalRotation: {x: -0.17379983, y: -0.07750803, z: 0.3737067, w: 0.90781575}
+  m_LocalRotation: {x: -0.20323163, y: -0.0043997634, z: 0.35855258, w: 0.9111079}
   m_LocalPosition: {x: -0.15577585, y: -0.76705396, z: 0.16759442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8136,7 +8106,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1604387173630722}
-  m_LocalRotation: {x: 0, y: 0, z: 0.24411662, w: 0.96974593}
+  m_LocalRotation: {x: 0.018046997, y: -0.071691155, z: 0.2434486, w: 0.9670923}
   m_LocalPosition: {x: -0.3420382, y: -0.8475282, z: 8.831444e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8500,7 +8470,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1268707334268424}
-  m_LocalRotation: {x: -0.14256507, y: -0.15730838, z: 0.1271053, w: 0.96890324}
+  m_LocalRotation: {x: -0.14256507, y: -0.15730837, z: 0.1271053, w: 0.96890324}
   m_LocalPosition: {x: 0.5681641, y: -0.5408704, z: -1.975107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8596,7 +8566,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1753266128616832}
-  m_LocalRotation: {x: 0, y: 0, z: 0.24411662, w: 0.96974593}
+  m_LocalRotation: {x: 0.018046997, y: -0.071691155, z: 0.2434486, w: 0.9670923}
   m_LocalPosition: {x: -0.3420382, y: -0.8475282, z: 8.831444e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8610,7 +8580,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1625790176701652}
-  m_LocalRotation: {x: -1.6593648e-25, y: 9.815246e-17, z: 0.03418651, w: 0.99941546}
+  m_LocalRotation: {x: 1.2904673e-16, y: -3.674426e-15, z: 0.03418651, w: 0.99941546}
   m_LocalPosition: {x: -1.8609821, y: -4.440892e-16, z: 2.220446e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8624,7 +8594,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1630844986397258}
-  m_LocalRotation: {x: -0.74979913, y: -0.35302016, z: 0.20235345, w: 0.5217577}
+  m_LocalRotation: {x: 0.7727531, y: 0.2994571, z: -0.23851852, w: -0.50624794}
   m_LocalPosition: {x: -0.8005212, y: -0.13158055, z: -0.009247928}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8652,7 +8622,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1837070608917724}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0052920002, w: 0.999986}
+  m_LocalRotation: {x: 0.0005114865, y: -0.09665142, z: 0.0052672247, w: 0.9953043}
   m_LocalPosition: {x: -1.7819664, y: -4.354156e-16, z: 5.5164207e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8841,7 +8811,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1127132797660938}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0052920002, w: 0.999986}
+  m_LocalRotation: {x: 0.0005114865, y: -0.09665142, z: 0.0052672247, w: 0.9953043}
   m_LocalPosition: {x: -1.7819664, y: -4.354156e-16, z: 5.5164207e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8909,7 +8879,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1986735270457438}
-  m_LocalRotation: {x: -0.7065812, y: -0.027258838, z: 0.022271039, w: 0.706756}
+  m_LocalRotation: {x: -0.70651156, y: 0.01941395, z: -0.024379356, w: 0.70701504}
   m_LocalPosition: {x: -1.9479574, y: -0.13513818, z: -0.025433317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9050,7 +9020,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4425730758539172}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4847189518752666
 Transform:
@@ -9174,7 +9144,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4425730758539172}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4869364501283256
 Transform:
@@ -9268,7 +9238,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1292544918261136}
-  m_LocalRotation: {x: -0.36490017, y: -0.66070914, z: -0.3171368, w: 0.574226}
+  m_LocalRotation: {x: -0.6373357, y: -0.40434128, z: -0.0024559223, w: 0.6559766}
   m_LocalPosition: {x: 0.016141394, y: -0.02565442, z: -1.1168157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9368,7 +9338,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1765481529961612}
-  m_LocalRotation: {x: 0.21045968, y: 0.52631706, z: -0.30587897, w: 0.76494133}
+  m_LocalRotation: {x: 0.15618221, y: 0.5448945, z: -0.38163185, w: 0.7301056}
   m_LocalPosition: {x: -0.01587158, y: 0.015109138, z: 0.10637353}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9467,7 +9437,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1036918007224046}
-  m_LocalRotation: {x: -0.36490017, y: -0.66070914, z: -0.3171368, w: 0.574226}
+  m_LocalRotation: {x: -0.6373357, y: -0.40434128, z: -0.0024559223, w: 0.6559766}
   m_LocalPosition: {x: 0.016141394, y: -0.02565442, z: -1.1168157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9507,7 +9477,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565735368283120}
-  m_LocalRotation: {x: -0.74979913, y: -0.35302016, z: 0.20235345, w: 0.5217577}
+  m_LocalRotation: {x: 0.7727531, y: 0.2994571, z: -0.23851852, w: -0.50624794}
   m_LocalPosition: {x: -0.8005212, y: -0.13158055, z: -0.009247928}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11404,42 +11374,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!108 &108702339777436442
-Light:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347050873928896}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 1
-  m_Color: {r: 0.9361371, g: 0.6084906, b: 1, a: 1}
-  m_Intensity: 50
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 2
-    m_NormalBias: 3
-    m_NearPlane: 10
-  m_Cookie: {fileID: 2800000, guid: f5b060016ba7c7248b0cb273c1e0f056, type: 3}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 12100000, guid: 975c484df49a0b64ca1dfaade5c7de3f, type: 2}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!114 &114100587827338586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11473,7 +11407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -11482,7 +11416,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -11490,7 +11424,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -11501,13 +11435,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!114 &114213939052358374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11519,7 +11455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -11528,7 +11464,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -11536,7 +11472,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -11547,13 +11483,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!114 &114218309458861640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11598,17 +11536,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c71498ee0e5eab418f62f4de47c5d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySun: {fileID: 1347050873928896}
+  sun: {fileID: 0}
+  sunColor: {r: 0.9372549, g: 0.60784316, b: 1, a: 1}
+  skyColor: {r: 0.9095198, g: 0, b: 0.9528302, a: 1}
+  equatorColor: {r: 0.764151, g: 0.025231415, b: 0.58979905, a: 1}
+  groundColor: {r: 0.3679245, g: 0, b: 0.33726424, a: 1}
+  tempSkyTint: {r: 0, g: 0, b: 0, a: 0}
+  tempSkyGround: {r: 0, g: 0, b: 0, a: 0}
+  skyBoxTint: {r: 1, g: 0.2901961, b: 0, a: 1}
+  skyboxGround: {r: 1, g: 0.10980392, b: 0.7764706, a: 1}
+  skybox: {fileID: 2100000, guid: 0df7e5f0671f044949cd407f375ad4c8, type: 2}
+  lerpStartTime: 0
+  lerpTimeTotal: 15
+  lerpSpeed: 0.25
   playerColliding: 0
   mySnapshot: {fileID: 24500006, guid: 457d012c79be5334db6ea72edd3d15e7, type: 2}
   playerFootsteps:
-  - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
-  - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
-  - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
-  - {fileID: 8300000, guid: d1aa953941aab4043a3295235a5686bf, type: 3}
-  - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
-  - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
-  - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
+  - {fileID: 8300000, guid: 280f5d407c4b18643b9f43dd75a6f557, type: 3}
+  - {fileID: 8300000, guid: dd72a23b63145854dad767546a03899f, type: 3}
+  - {fileID: 8300000, guid: 7a8edaf602b8fd0409a23e594adc3cc7, type: 3}
+  - {fileID: 8300000, guid: a1191e59c8ed33845b4eba547ac7598a, type: 3}
+  lerpingColors: 0
 --- !u!114 &114314547171318270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11620,7 +11568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -11629,7 +11577,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -11637,7 +11585,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -11648,13 +11596,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!114 &114347521526430788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11693,7 +11643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -11702,7 +11652,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -11710,7 +11660,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -11721,13 +11671,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!114 &114452208828522160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11750,7 +11702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -11759,7 +11711,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -11767,7 +11719,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -11778,13 +11730,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!114 &114485830224122202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11796,7 +11750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -11805,7 +11759,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -11813,7 +11767,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -11824,13 +11778,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!114 &114486515357179376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11853,7 +11809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -11862,7 +11818,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -11870,7 +11826,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -11881,13 +11837,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!114 &114597371248759386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11899,7 +11857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -11908,7 +11866,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -11916,7 +11874,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -11927,13 +11885,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!114 &114597494316665130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11956,7 +11916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -11965,7 +11925,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -11973,7 +11933,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -11984,13 +11944,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!114 &114677772342704188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12024,7 +11986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -12033,7 +11995,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -12041,7 +12003,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -12052,13 +12014,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!114 &114776157574206554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12081,7 +12045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -12090,7 +12054,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -12098,7 +12062,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -12109,13 +12073,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!114 &114831923069940278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12127,7 +12093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -12136,7 +12102,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -12144,7 +12110,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -12155,13 +12121,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!114 &114905481482534990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12184,7 +12152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -12193,7 +12161,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -12201,7 +12169,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -12212,13 +12180,15 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 3
-  walkTimerTotal: 1
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
+  soundTimerTotal: 0.5
+  walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
 --- !u!137 &137016576807302404
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

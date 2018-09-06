@@ -25,24 +25,42 @@ public class FirstPersonController : MonoBehaviour
     //dictionary to sort nearby audio sources by distance 
     [SerializeField]
     public Dictionary<AudioSource, float> soundCreators = new Dictionary<AudioSource, float>();
+    //to shorten if statement
+    public List<GameObject> audioObjects = new List<GameObject>();
     //listener range
     public float listeningRadius;
+    //to shorten if statement
+    public List<string> audioTags = new List<string>();
 
     public bool moving;
 
     Vector3 lastPosition;
 
+    public bool recOut = true, recMoving, inHouse;
+
+    public float recAwayTimer, recAwayTimeTotal;
+
+    public Vector3 recOutPos, recAwayPos , targetPos;
+
+    public Transform recorder;
+
+    SaveSound recordScript;
+
     void Start()
     {
         player = GetComponent<CharacterController>();
         playerAudSource = GetComponent<AudioSource>();
+
+        //for rec pos
+        recOutPos = recorder.localPosition;
+        recAwayPos = recorder.localPosition - new Vector3(0, 2, 0);
+        recAwayTimer = recAwayTimeTotal;
+
+        recordScript = recorder.GetComponent<SaveSound>();
     }
 
     void Update()
     {
-        
-            
-        
         //when hold mouse 1, you begin to move in that direction
             if (Input.GetMouseButton(0))
             {
@@ -91,6 +109,46 @@ public class FirstPersonController : MonoBehaviour
         player.Move(movement * Time.deltaTime);
 
         player.Move(new Vector3(0, -0.5f, 0));
+
+        //moves the recorder obj
+        if (recMoving)
+        {
+            recorder.localPosition = Vector3.MoveTowards(recorder.localPosition, targetPos, 3 * Time.deltaTime);
+
+            if (Vector3.Distance(recorder.localPosition, targetPos) < 0.1f)
+            {
+                recMoving = false;
+
+                if(targetPos == recAwayPos)
+                {
+                    recOut = false;
+                }
+                else
+                {
+                    recOut = true;
+                }
+            }
+        }
+
+        //count fown while player has recorder out to auto put it away
+        if (recOut)
+        {
+            if(!recordScript.isWritingName && !recordScript.uploading && !recordScript.recOutput)
+                recAwayTimer -= Time.deltaTime;
+
+            if(recAwayTimer < 0)
+            {
+                MoveRec(recAwayPos);
+            }
+        }
+
+        //Take out recorder
+        if (Input.GetKeyDown(KeyCode.Space) && !recOut)
+        {
+            recAwayTimer = recAwayTimeTotal;
+
+            MoveRec(recOutPos);
+        }
         
     }
 
@@ -104,26 +162,39 @@ public class FirstPersonController : MonoBehaviour
         currentFootsteps[0] = playerAudSource.clip;
     }
 
+    public void MoveRec(Vector3 position)
+    {
+        targetPos = position;
+        recMoving = true;
+    }
+
     //this function shifts all audio source priorities dynamically
     void ResetNearbyAudioSources()
     {
-        //empty dictionary
+        //empty dictionary and audioObjects
         soundCreators.Clear();
+        audioObjects.Clear();
         //overlap sphere to find nearby sound creators
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, listeningRadius);
         int i = 0;
         while (i < hitColliders.Length)
         {
-            //check to see if obj is plant or rock
-            if (hitColliders[i].gameObject.tag == "Plant" || hitColliders[i].gameObject.tag == "Animal")
+            GameObject audioObj = hitColliders[i].gameObject;
+
+            //check to see if obj has desired tag
+            //that the object is both active and not already part of our audioObjects list
+            //and that the object has an audio source
+            if (audioTags.Contains(audioObj.tag) &&
+                audioObj.activeSelf && !audioObjects.Contains(audioObj) &&
+                audioObj.GetComponent<AudioSource>() != null)
             {
-                if (gameObject.activeSelf)
-                {
                     //check distance and add to list
                     float distanceAway = Vector3.Distance(hitColliders[i].transform.position, transform.position);
                     //add to audiosource and distance to dictionary
-                    soundCreators.Add(hitColliders[i].gameObject.GetComponent<AudioSource>(), distanceAway);
-                }
+                    soundCreators.Add(audioObj.GetComponent<AudioSource>(), distanceAway);
+                    //add to list of objects
+                    audioObjects.Add(audioObj);
+                
             }
             i++;
         }

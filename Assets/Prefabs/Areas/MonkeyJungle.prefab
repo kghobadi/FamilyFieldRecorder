@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1560743296293712
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,13 +69,16 @@ GameObject:
   - component: {fileID: 4549937548599804}
   - component: {fileID: 218591139942190360}
   - component: {fileID: 154883373440211628}
+  - component: {fileID: 54074544649435298}
+  - component: {fileID: 65384139421505278}
+  - component: {fileID: 114512802802509116}
   m_Layer: 0
   m_Name: MonkeyJungle
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1916568706402616
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,8 +113,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1686923317593918}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -250, y: 0, z: -250}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4717494557273684}
@@ -160,6 +163,33 @@ Transform:
   m_Father: {fileID: 4549937548599804}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!54 &54074544649435298
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1686923317593918}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65384139421505278
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1686923317593918}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 500, y: 100, z: 500}
+  m_Center: {x: 250, y: 0, z: 250}
 --- !u!108 &108755495741484640
 Light:
   m_ObjectHideFlags: 1
@@ -196,6 +226,37 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114512802802509116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1686923317593918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c71498ee0e5eab418f62f4de47c5d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 0}
+  sunColor: {r: 0.6392157, g: 1, b: 0.60784316, a: 1}
+  skyColor: {r: 0.36524475, g: 0.3426486, b: 0.9433962, a: 0}
+  equatorColor: {r: 0.4141153, g: 0.5934066, b: 0.8867924, a: 0}
+  groundColor: {r: 0.31746176, g: 0.5194592, b: 0.7735849, a: 0}
+  tempSkyTint: {r: 0, g: 0, b: 0, a: 0}
+  tempSkyGround: {r: 0, g: 0, b: 0, a: 0}
+  skyBoxTint: {r: 0.43147027, g: 0.5746572, b: 0.9056604, a: 1}
+  skyboxGround: {r: 0.23380208, g: 0.6981132, b: 0.26716575, a: 1}
+  skybox: {fileID: 2100000, guid: 0df7e5f0671f044949cd407f375ad4c8, type: 2}
+  lerpStartTime: 0
+  lerpTimeTotal: 15
+  lerpSpeed: 0.25
+  playerColliding: 0
+  mySnapshot: {fileID: 245701834260004188, guid: 457d012c79be5334db6ea72edd3d15e7,
+    type: 2}
+  playerFootsteps:
+  - {fileID: 8300000, guid: c7ff55360135b564ba474a56c2ff41a5, type: 3}
+  - {fileID: 8300000, guid: 71d2069f84e521848b79d8b6ca8c0aba, type: 3}
+  lerpingColors: 0
 --- !u!114 &114926291815916326
 MonoBehaviour:
   m_ObjectHideFlags: 1

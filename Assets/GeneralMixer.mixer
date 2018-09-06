@@ -12,6 +12,8 @@ AudioMixerController:
   - {fileID: 24500006}
   - {fileID: 245098661585928634}
   - {fileID: 245701834260004188}
+  - {fileID: 245382687032554052}
+  - {fileID: 245197103256539010}
   m_StartSnapshot: {fileID: 245098661585928634}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -24,9 +26,10 @@ AudioMixerController:
     - 88c13e46b8c66f643a8b306205787a46
     - ba9278821e281b94faef8ab17ea1abd7
     - 46215300f2442334fab5a3c13ae5bcda
+    - 87cd7c5435dbeb245836cdd4a89563a9
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 245098661585928634}
+  m_TargetSnapshot: {fileID: 245701834260004188}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -40,6 +43,7 @@ AudioMixerGroupController:
   - {fileID: 243058444648370862}
   - {fileID: 243162004422273924}
   - {fileID: 243511335924305800}
+  - {fileID: 243536055631461210}
   m_Volume: f8644e33104e4cb4788622a46ffcc9e8
   m_Pitch: 4f41cbce75ddc654b832a90bc98bf4c7
   m_Effects:
@@ -126,6 +130,23 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &243536055631461210
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: House
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 87cd7c5435dbeb245836cdd4a89563a9
+  m_Children: []
+  m_Volume: 60df4a7fae5abaf429b7128d7cebcfa2
+  m_Pitch: 5ced7fd577e7e074291b740ab0b3ae40
+  m_Effects:
+  - {fileID: 244736973664080376}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &243933608082898768
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -195,6 +216,19 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &244736973664080376
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 0ce3aee3fb254d04dbdb98683190816d
+  m_EffectName: Attenuation
+  m_MixLevel: bfd01843dad8919448df8332ff0132c4
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!245 &245098661585928634
 AudioMixerSnapshotController:
   m_ObjectHideFlags: 0
@@ -207,7 +241,36 @@ AudioMixerSnapshotController:
     dbefcca22368ae7488f00de4bae38bd6: 0.13552584
     18df1e54787c12341b199324fbf51242: 0
     3984bf8e6a7904c4499c0517237d0391: 3.1596465
-    372395dffdd09144280b1234872033cb: 20
+    372395dffdd09144280b1234872033cb: 7.231059
+  m_TransitionOverrides: {}
+--- !u!245 &245197103256539010
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: House
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 79b142aca37d2c14d89e701a26ef493d
+  m_FloatValues:
+    dbefcca22368ae7488f00de4bae38bd6: 0.13552584
+    18df1e54787c12341b199324fbf51242: 0
+    3984bf8e6a7904c4499c0517237d0391: 5.024541
+    60df4a7fae5abaf429b7128d7cebcfa2: 5.67851
+    372395dffdd09144280b1234872033cb: 0.10800299
+  m_TransitionOverrides: {}
+--- !u!245 &245382687032554052
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: DeciduousForest
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 95f87fc00b5271f43ac2d22d7162c0be
+  m_FloatValues:
+    dbefcca22368ae7488f00de4bae38bd6: -0.08374828
+    18df1e54787c12341b199324fbf51242: -0.27209902
+    3984bf8e6a7904c4499c0517237d0391: 3.1596465
+    372395dffdd09144280b1234872033cb: -10.345207
   m_TransitionOverrides: {}
 --- !u!245 &245701834260004188
 AudioMixerSnapshotController:
