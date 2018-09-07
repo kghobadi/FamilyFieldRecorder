@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641234, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -164,14 +164,25 @@ MonoBehaviour:
   sprintSpeed: 15
   scrollSpeed: 2
   sprintTimerMax: 1
+  footStepTimerTotal: 0.5
   currentFootsteps:
   - {fileID: 8300000, guid: 280f5d407c4b18643b9f43dd75a6f557, type: 3}
   - {fileID: 8300000, guid: dd72a23b63145854dad767546a03899f, type: 3}
   - {fileID: 8300000, guid: 7a8edaf602b8fd0409a23e594adc3cc7, type: 3}
   - {fileID: 8300000, guid: a1191e59c8ed33845b4eba547ac7598a, type: 3}
-  indoorFootsteps: []
-  gardenFootsteps: []
-  pathFootsteps: []
+  audioObjects: []
+  listeningRadius: 0
+  audioTags: []
+  moving: 0
+  recOut: 1
+  recMoving: 0
+  inHouse: 0
+  recAwayTimer: 0
+  recAwayTimeTotal: 0
+  recOutPos: {x: 0, y: 0, z: 0}
+  recAwayPos: {x: 0, y: 0, z: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  recorder: {fileID: 570651088}
 --- !u!4 &87319264
 Transform:
   m_ObjectHideFlags: 0
@@ -649,13 +660,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: recTest.wav
+  recOutput: 0
+  uploading: 0
+  isWritingName: 0
   enterNameObj: {fileID: 1427433392}
   spaceToStopObj: {fileID: 1782821333}
   spaceToRecordObj: {fileID: 1304318793}
-  oneNewRecObj: {fileID: 1625524342}
+  uploadingObj: {fileID: 0}
+  recordingLight: {fileID: 0}
+  stopLight: {fileID: 0}
   newRec: 0
   soundSavePath: 
   loader: {fileID: 194015296}
+  popRec: 0
+  popStop: 0
 --- !u!23 &570651092
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -970,6 +988,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114193287452110388, guid: 1f9093443b54eb64ab3a131eaac26946,
+        type: 2}
+      propertyPath: treeTypes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4710967710613258, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
       propertyPath: m_LocalPosition.x
       value: -14.526184
@@ -1022,6 +1045,16 @@ Prefab:
       propertyPath: birdParent
       value: 
       objectReference: {fileID: 623316303}
+    - target: {fileID: 114193287452110388, guid: 1f9093443b54eb64ab3a131eaac26946,
+        type: 2}
+      propertyPath: treeTypes.Array.data[3]
+      value: 
+      objectReference: {fileID: 1692562426009244, guid: f8371381ef48d054d92a822c40e3fe9a,
+        type: 2}
+    - target: {fileID: 1698172340823728, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
   m_IsPrefabParent: 0
@@ -1117,7 +1150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1369387110
 Transform:
   m_ObjectHideFlags: 0
@@ -1766,7 +1799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1887808618
 Transform:
   m_ObjectHideFlags: 0

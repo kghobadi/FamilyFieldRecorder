@@ -49,7 +49,7 @@ public class ConsoleManager : MonoBehaviour
         console.SetActive(true);
         topCanvas.SetActive(true);
 
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     void TurnOff()
