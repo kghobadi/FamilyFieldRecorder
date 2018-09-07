@@ -126,7 +126,7 @@ public class SaveSound : MonoBehaviour
 
     void StartWriting(String name)
     {
-        soundSavePath = Application.dataPath + "/Resources/savedSounds/" + name;
+        soundSavePath = Application.dataPath + "/Resources/savedClips/" + name;
         fileStream = new FileStream(soundSavePath, FileMode.Create);
         byte emptyByte = new byte();
 

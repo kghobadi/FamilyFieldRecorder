@@ -42,12 +42,12 @@ public class FirstPersonController : MonoBehaviour
             ResetNearbyAudioSources();
         }
         //when hold mouse 1, you begin to move in that direction
-            if (Input.GetMouseButton(0))
-            {
+        if (Input.GetKey(KeyCode.W))//change this back to mouse click!!!!
+        {
             movement = new Vector3(0, 0, currentSpeed);
             sprintTimer += Time.deltaTime;
             //while speed is less than sprint, autoAdd
-            if(sprintTimer > sprintTimerMax && currentSpeed < sprintSpeed)
+            if (sprintTimer > sprintTimerMax && currentSpeed < sprintSpeed)
             {
                 currentSpeed += Time.deltaTime;
             }
@@ -69,13 +69,13 @@ public class FirstPersonController : MonoBehaviour
                 footStepTimer = footStepTimerTotal;
             }
         }
-            //when not moving
-            else
-            {
-                movement = Vector3.zero;
+        //when not moving
+        else
+        {
+            movement = Vector3.zero;
             currentSpeed = walkSpeed;
-            }
-        
+        }
+
 
 
         movement = transform.rotation * movement;
