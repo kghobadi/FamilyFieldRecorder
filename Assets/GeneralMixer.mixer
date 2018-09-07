@@ -1,0 +1,209 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: GeneralMixer
+  m_OutputGroup: {fileID: 0}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 24500006}
+  - {fileID: 245098661585928634}
+  m_StartSnapshot: {fileID: 24500006}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_UpdateMode: 0
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - b5cf8fc8e52ab9f409719065b2da463b
+    - 1f480f028a743ee43a967db05ed1de04
+    - 88c13e46b8c66f643a8b306205787a46
+    - ba9278821e281b94faef8ab17ea1abd7
+    - 46215300f2442334fab5a3c13ae5bcda
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 24500006}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: b5cf8fc8e52ab9f409719065b2da463b
+  m_Children:
+  - {fileID: 243933608082898768}
+  - {fileID: 243058444648370862}
+  - {fileID: 243162004422273924}
+  - {fileID: 243511335924305800}
+  m_Volume: f8644e33104e4cb4788622a46ffcc9e8
+  m_Pitch: 4f41cbce75ddc654b832a90bc98bf4c7
+  m_Effects:
+  - {fileID: 24400004}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: b27f22bb462a5024db6dc5909bb01ba8
+  m_EffectName: Attenuation
+  m_MixLevel: dd7172e27c1a0df499fbb20bb04f8c59
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PineForest
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 9ded7a6fece996a4dbc6f38eb852f99e
+  m_FloatValues:
+    dbefcca22368ae7488f00de4bae38bd6: -4.560346
+    18df1e54787c12341b199324fbf51242: -0.16685188
+    3984bf8e6a7904c4499c0517237d0391: 3.1596465
+  m_TransitionOverrides: {}
+--- !u!243 &243058444648370862
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Animals
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 88c13e46b8c66f643a8b306205787a46
+  m_Children: []
+  m_Volume: 18df1e54787c12341b199324fbf51242
+  m_Pitch: 1f84bc6717cc56c4197971ba1fe258b3
+  m_Effects:
+  - {fileID: 244469701665087210}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &243162004422273924
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Player
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: ba9278821e281b94faef8ab17ea1abd7
+  m_Children: []
+  m_Volume: 3984bf8e6a7904c4499c0517237d0391
+  m_Pitch: b96930a6c88d7f044b3793b5765e3cc2
+  m_Effects:
+  - {fileID: 244591689164184914}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &243511335924305800
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Ocean
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 46215300f2442334fab5a3c13ae5bcda
+  m_Children: []
+  m_Volume: 372395dffdd09144280b1234872033cb
+  m_Pitch: 1e7ccf640a7b33742864caad95d948c2
+  m_Effects:
+  - {fileID: 244128343702882774}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &243933608082898768
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Plants
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 1f480f028a743ee43a967db05ed1de04
+  m_Children: []
+  m_Volume: dbefcca22368ae7488f00de4bae38bd6
+  m_Pitch: a74b82d4d113c2242bb26b2af5e3d342
+  m_Effects:
+  - {fileID: 244076863123806472}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &244076863123806472
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: be1bad4c667a746488bfab2fef7a6e8d
+  m_EffectName: Attenuation
+  m_MixLevel: a73a25e63e2b0384f889cb0c81a1ab73
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244128343702882774
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 0015cce84c49f6a4d8663a639a24e06b
+  m_EffectName: Attenuation
+  m_MixLevel: cd2b459b2fb026845bcd84a7605d5f3f
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244469701665087210
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: b4c4614f0df607f49b094e16ba3f31e8
+  m_EffectName: Attenuation
+  m_MixLevel: a31b74f4c9d94e5469ce3413d2ae356f
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244591689164184914
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: fc7102446663e8048823df37050e5623
+  m_EffectName: Attenuation
+  m_MixLevel: 98590b741374c754c87cbfe517052a01
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &245098661585928634
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: TheBeach
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 7471a06f4af5de84993037cf6db626a8
+  m_FloatValues:
+    dbefcca22368ae7488f00de4bae38bd6: 0.13552584
+    18df1e54787c12341b199324fbf51242: 0
+    3984bf8e6a7904c4499c0517237d0391: 3.1596465
+    372395dffdd09144280b1234872033cb: 20
+  m_TransitionOverrides: {}

@@ -254,6 +254,11 @@ MonoBehaviour:
   birdSounds:
   - {fileID: 8300000, guid: 23069de1cf57b0c40ae85d9453b02088, type: 3}
   - {fileID: 8300000, guid: b9328fa5b1a1b3a46ab8495bcf705a37, type: 3}
+  - {fileID: 8300000, guid: a92975bac1d5bc34f8fa9903e4d2f7a7, type: 3}
+  - {fileID: 8300000, guid: b9e2584ddcb028f4aa976b65b7ac7e46, type: 3}
+  - {fileID: 8300000, guid: 62d6732b93452b94e9b28d20dc355e40, type: 3}
+  - {fileID: 8300000, guid: 4d2d622d7533f5f488261a54f440e6f3, type: 3}
+  - {fileID: 8300000, guid: e0c70380394aff940ba7fd94461b225f, type: 3}
   singingDist: 50
   singTimer: 0
 --- !u!114 &114951542428762452

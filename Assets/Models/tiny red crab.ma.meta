@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: 589383b1a9c071943af2fd5926f6383e
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: back_left_leg
+    100002: back_middle_leg
+    100004: back_right_leg
+    100006: front_left_leg
+    100008: front_middle_leg
+    100010: front_right_leg
+    100012: joint10
+    100014: joint12
+    100016: joint13
+    100018: joint14
+    100020: joint15
+    100022: joint17
+    100024: joint18
+    100026: joint20
+    100028: joint21
+    100030: joint23
+    100032: joint24
+    100034: joint26
+    100036: joint27
+    100038: joint29
+    100040: joint3
+    100042: joint30
+    100044: joint32
+    100046: joint33
+    100048: joint4
+    100050: joint5
+    100052: joint6
+    100054: joint8
+    100056: left_arm
+    100058: left_eye
+    100060: main_joint
+    100062: pCube1
+    100064: right_arm
+    100066: right_eye
+    100068: //RootNode
+    400000: back_left_leg
+    400002: back_middle_leg
+    400004: back_right_leg
+    400006: front_left_leg
+    400008: front_middle_leg
+    400010: front_right_leg
+    400012: joint10
+    400014: joint12
+    400016: joint13
+    400018: joint14
+    400020: joint15
+    400022: joint17
+    400024: joint18
+    400026: joint20
+    400028: joint21
+    400030: joint23
+    400032: joint24
+    400034: joint26
+    400036: joint27
+    400038: joint29
+    400040: joint3
+    400042: joint30
+    400044: joint32
+    400046: joint33
+    400048: joint4
+    400050: joint5
+    400052: joint6
+    400054: joint8
+    400056: left_arm
+    400058: left_eye
+    400060: main_joint
+    400062: pCube1
+    400064: right_arm
+    400066: right_eye
+    400068: //RootNode
+    2100000: lambert1
+    4300000: pCube1
+    7400000: CrabbyIdle
+    7400002: CrabWalking
+    9500000: //RootNode
+    13700000: pCube1
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: CrabbyIdle
+      takeName: Take 001
+      firstFrame: 2
+      lastFrame: 2
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CrabWalking
+      takeName: Take 001
+      firstFrame: 4
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.25
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

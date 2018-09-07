@@ -19,13 +19,14 @@ public class SaveSound : MonoBehaviour
     private int headerSize = 44;
     //default for uncompressed wav
 
-    private bool recOutput;
-    bool isWritingName = false;
+    public bool recOutput, uploading;
+    float uploadTimer, uploadTotal = 2.5f;
+    public bool isWritingName = false;
 
     private FileStream fileStream;
     //we should allow player to view and listen to their songs as AudioClips in game
 
-    public GameObject enterNameObj, spaceToStopObj, spaceToRecordObj, oneNewRecObj;
+    public GameObject enterNameObj, spaceToStopObj, spaceToRecordObj, uploadingObj, recordingLight, stopLight;
     InputField enterName;
 
     public bool newRec = false;
@@ -33,6 +34,8 @@ public class SaveSound : MonoBehaviour
 
     public string soundSavePath;
     public loadAudioClips loader;
+
+    public bool popRec, popStop;
 
     void Awake()
     {
@@ -50,20 +53,22 @@ public class SaveSound : MonoBehaviour
         if (GetComponent<AudioListener>() == null)
             print("put audiolistener on recorder!");
 
-
+        uploadTimer = uploadTotal;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !isWritingName)
+        if (Input.GetKeyDown(KeyCode.Space) && !isWritingName && !uploading)
         {
 
             if (recOutput == false)
             {
                 //enternamehere
+                popRec = true;
                 spaceToRecordObj.SetActive(false);
                 enterNameObj.SetActive(true);
                 enterName.ActivateInputField();
+                enterName.text = "Enter file name...";
                 isWritingName = true;
 
                 //enterName.placeholder = "name it";
@@ -71,12 +76,16 @@ public class SaveSound : MonoBehaviour
             }
             else
             {
+                popStop = true;
                 recOutput = false;
                 WriteHeader();
                 print("rec stop");
                 spaceToStopObj.SetActive(false);
-                StartCoroutine(loader.LoadNewClip());
-                oneNewRecObj.SetActive(true);
+                //StartCoroutine(loader.LoadNewSound());
+                uploading = true;
+                uploadingObj.SetActive(true);
+                recordingLight.SetActive(false);
+                stopLight.SetActive(true);
                 recListener.enabled = false;
                 cameraListener.enabled = true;
             }
@@ -91,6 +100,7 @@ public class SaveSound : MonoBehaviour
                 fileName = enterName.text + ".wav";
                 StartWriting(fileName);
                 recOutput = true;
+                recordingLight.SetActive(true);
                 print("rec");
                 enterNameObj.SetActive(false);
                 spaceToStopObj.SetActive(true);
@@ -98,7 +108,19 @@ public class SaveSound : MonoBehaviour
             }
         }
 
+        if (uploading)
+        {
+            uploadTimer -= Time.deltaTime;
 
+            if (uploadTimer < 0)
+            {
+                uploading = false;
+                uploadingObj.SetActive(false);
+                spaceToRecordObj.SetActive(true);
+                stopLight.SetActive(false);
+                uploadTimer = uploadTotal;
+            }
+        }
 
     }
 
