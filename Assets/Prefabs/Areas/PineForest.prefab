@@ -7757,7 +7757,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443394377256530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 196, y: 5.15, z: 73.3}
+  m_LocalPosition: {x: 196, y: 7.6, z: 73.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4153541635535664}
@@ -11550,6 +11550,7 @@ MonoBehaviour:
   lerpTimeTotal: 15
   lerpSpeed: 0.25
   playerColliding: 0
+  hasTransitioned: 0
   mySnapshot: {fileID: 24500006, guid: 457d012c79be5334db6ea72edd3d15e7, type: 2}
   playerFootsteps:
   - {fileID: 8300000, guid: 280f5d407c4b18643b9f43dd75a6f557, type: 3}

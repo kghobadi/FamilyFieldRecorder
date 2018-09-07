@@ -24,6 +24,7 @@ public class WorldManager : MonoBehaviour
     public bool seasonChanged, countsUp;
     public Door doorScript;
 
+
     void Start()
     {
         //player refs
@@ -114,7 +115,7 @@ public class WorldManager : MonoBehaviour
 
         //season has changed so we reset timer for next house entrance
         // Rebake navmesh data
-        //NavMeshBuilder.BuildNavMesh();
+        //NavMeshBuilder.BuildNavMeshData();
         theRegions[regionCounter].GetComponent<TerrainManager>().hasTransitioned = false;
         seasonChanged = true;
         changeSeasonTimer = changeSeasonTimerTotal;

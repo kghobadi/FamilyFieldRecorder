@@ -173,5 +173,6 @@ public abstract class Animal : MonoBehaviour {
     {
         int randomSound = Random.Range(0, animalSounds.Length);
         animalAudio.PlayOneShot(animalSounds[randomSound]);
+        animalAudio.clip = animalSounds[randomSound];
     }
 }

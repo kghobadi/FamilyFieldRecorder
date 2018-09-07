@@ -43945,7 +43945,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1759228137417486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -45, z: -9}
+  m_LocalPosition: {x: 0, y: -45, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4183379565914022}
@@ -55535,6 +55535,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114029942828716234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55603,6 +55605,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114053567662337932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55660,6 +55664,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114068724936743466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55717,6 +55723,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114092375351741110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55763,6 +55771,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114098907810469342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55820,6 +55830,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114103173033508540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55866,6 +55878,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114106868221797260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55912,6 +55926,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114109139160392016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55958,6 +55974,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114110376878290126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56015,6 +56033,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114140737546475916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56040,6 +56060,7 @@ MonoBehaviour:
   lerpTimeTotal: 15
   lerpSpeed: 0.25
   playerColliding: 0
+  hasTransitioned: 0
   mySnapshot: {fileID: 245098661585928634, guid: 457d012c79be5334db6ea72edd3d15e7,
     type: 2}
   playerFootsteps:
@@ -56127,6 +56148,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114184418698161100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56228,6 +56251,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114274525717813122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56274,6 +56299,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114284628560171444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56331,6 +56358,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114293291411855558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56443,6 +56472,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114333780440768588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56489,6 +56520,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114354184618595808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56546,6 +56579,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114364697341820306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56592,6 +56627,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114372552324457812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56649,6 +56686,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114392464107272756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56728,6 +56767,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114421965580197212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56800,6 +56841,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114457928861275154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56846,6 +56889,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114486908133054234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56914,6 +56959,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114543993877095392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56940,6 +56987,8 @@ MonoBehaviour:
   runTimerTotal: 0.5
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 0
+  originalPitch: 1
 --- !u!114 &114546116846358372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56997,6 +57046,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114568053028035358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57095,6 +57146,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114607493632480928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57141,6 +57194,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114627396568311918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57198,6 +57253,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114637799416651874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57244,6 +57301,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114656175032787704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57290,6 +57349,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114662470076098856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57347,6 +57408,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114673103810750240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57404,6 +57467,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114679003024039256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57494,6 +57559,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114708266525894632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57540,6 +57607,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114710638041911308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57586,6 +57655,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114730307477529194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57632,6 +57703,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114741818928100354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57689,6 +57762,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114754102366063450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57735,6 +57810,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114757633514785184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57792,6 +57869,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114762714610310032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57849,6 +57928,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114790710355774654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57906,6 +57987,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114837545681219066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57952,6 +58035,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114867506968165034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58020,6 +58105,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114909471930019062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58066,6 +58153,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114941215785150466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58123,6 +58212,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114964071224761542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58169,6 +58260,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114966090110933272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58215,6 +58308,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114967665734583012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58261,6 +58356,8 @@ MonoBehaviour:
   runTimerTotal: 0.25
   spookDistance: 10
   stopMovingDistance: 5
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114970061454898474
 MonoBehaviour:
   m_ObjectHideFlags: 1

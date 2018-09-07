@@ -251,6 +251,7 @@ MonoBehaviour:
   lerpTimeTotal: 15
   lerpSpeed: 0.25
   playerColliding: 0
+  hasTransitioned: 0
   mySnapshot: {fileID: 245701834260004188, guid: 457d012c79be5334db6ea72edd3d15e7,
     type: 2}
   playerFootsteps:
