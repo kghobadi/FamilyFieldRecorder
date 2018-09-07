@@ -69,7 +69,7 @@ public class FirstPersonController : MonoBehaviour
             movement = new Vector3(0, 0, currentSpeed);
             sprintTimer += Time.deltaTime;
             //while speed is less than sprint, autoAdd
-            if(sprintTimer > sprintTimerMax && currentSpeed < sprintSpeed)
+            if (sprintTimer > sprintTimerMax && currentSpeed < sprintSpeed)
             {
                 currentSpeed += Time.deltaTime;
             }
