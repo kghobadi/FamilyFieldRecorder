@@ -39,6 +39,13 @@ public class SaveSound : MonoBehaviour
 
     public bool popRec, popStop;
 
+    //timers for recOutput and length limiting
+    public float recordingTimer, recordingLimit = 30;
+    public GameObject recordingText;
+    public Text recordingTextTimer;
+
+    public GameObject pressEnterObj;
+
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -46,6 +53,7 @@ public class SaveSound : MonoBehaviour
         AudioSettings.outputSampleRate = outputRate;
         recListener = GetComponent<AudioListener>();
         cameraListener = Camera.main.GetComponent<AudioListener>();
+        recordingText.SetActive(false);
     }
 
     void Start()
@@ -64,7 +72,7 @@ public class SaveSound : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isWritingName && !uploading && fpc.recOut)
         {
-
+            //called on first press of space to record
             if (recOutput == false)
             {
                 //enternamehere
@@ -78,26 +86,34 @@ public class SaveSound : MonoBehaviour
                 //enterName.placeholder = "name it";
 
             }
+            //called when player decidedly ends recording
             else
             {
-                popStop = true;
-                recOutput = false;
-                WriteHeader();
-                print("rec stop");
-                spaceToStopObj.SetActive(false);
-                //StartCoroutine(loader.LoadNewSound());
-                uploading = true;
-                uploadingObj.SetActive(true);
-                recordingLight.SetActive(false);
-                stopLight.SetActive(true);
-                recListener.enabled = false;
-                cameraListener.enabled = true;
+                StopRecording();
             }
         }
 
+        //called while we are recording
+        if (recOutput)
+        {
+            recordingTimer += Time.deltaTime;
+            recordingTextTimer.text = recordingTimer.ToString("n1") + "s";
+
+            if(recordingTimer >= 3)
+            {
+                spaceToStopObj.SetActive(true);
+            }
+
+            if(recordingTimer >= recordingLimit)
+            {
+                StopRecording();
+            }
+        }
+
+        //check for input while player is writing name
         if (isWritingName)
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Return) )
             {
                 cameraListener.enabled = false;
                 recListener.enabled = true;
@@ -107,11 +123,14 @@ public class SaveSound : MonoBehaviour
                 recordingLight.SetActive(true);
                 print("rec");
                 enterNameObj.SetActive(false);
-                spaceToStopObj.SetActive(true);
                 isWritingName = false;
+
+                recordingText.SetActive(true);
+                pressEnterObj.SetActive(false);
             }
         }
 
+        //called when sound is being sent to console/sequencer
         if (uploading)
         {
             uploadTimer -= Time.deltaTime;
@@ -126,6 +145,28 @@ public class SaveSound : MonoBehaviour
             }
         }
 
+    }
+
+    void StopRecording()
+    {
+        popStop = true;
+        recOutput = false;
+        WriteHeader();
+        print("rec stop");
+        spaceToStopObj.SetActive(false);
+        //StartCoroutine(loader.LoadNewSound());
+        uploading = true;
+        uploadingObj.SetActive(true);
+        recordingLight.SetActive(false);
+        stopLight.SetActive(true);
+        recListener.enabled = false;
+        cameraListener.enabled = true;
+
+        recordingTimer = 0;
+        recordingText.SetActive(false);
+
+        if (!fpc.hasRecorded)
+            fpc.hasRecorded = true;
     }
 
     void StartWriting(String name)

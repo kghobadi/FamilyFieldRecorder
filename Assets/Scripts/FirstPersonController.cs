@@ -36,7 +36,7 @@ public class FirstPersonController : MonoBehaviour
 
     Vector3 lastPosition;
 
-    public bool recOut = true, recMoving, inHouse;
+    public bool recOut = true, recMoving, inHouse, hasRecorded;
 
     public float recAwayTimer, recAwayTimeTotal;
 
@@ -133,7 +133,9 @@ public class FirstPersonController : MonoBehaviour
         //count fown while player has recorder out to auto put it away
         if (recOut)
         {
-            if(!recordScript.isWritingName && !recordScript.uploading && !recordScript.recOutput)
+            //checks that we are not doing anything with the recorder
+            if(!recordScript.isWritingName && !recordScript.uploading
+                && !recordScript.recOutput && hasRecorded)
                 recAwayTimer -= Time.deltaTime;
 
             if(recAwayTimer < 0)
