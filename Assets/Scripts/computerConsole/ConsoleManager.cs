@@ -13,7 +13,7 @@ public class ConsoleManager : MonoBehaviour
     public Transform playerConsolePosition;
 
     //can use these to transition audio in turnOff and turnOn
-    public AudioMixer exploration, sequencer;
+    public AudioMixer explorationMix;
 
     bool exitting;
 
@@ -50,6 +50,7 @@ public class ConsoleManager : MonoBehaviour
         //put away recorder
         firstPersonController.MoveRec(firstPersonController.recAwayPos);
         //turn volume of exploration mixer down 
+        explorationMix.SetFloat("masterVol", -80);
         Cursor.lockState = CursorLockMode.None;
     }
 
@@ -59,6 +60,8 @@ public class ConsoleManager : MonoBehaviour
         mouseLook.isActive = true;
         firstPersonController.enabled = true;
         topCanvas.SetActive(false);
+        //kas mixer back to normal
+        explorationMix.SetFloat("masterVol", 0);
     }
 
     void LerpToPos()
