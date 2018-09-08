@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1027449079}
-  m_IndirectSpecularColor: {r: 0.8593695, g: 0.22698855, b: 0.7151322, a: 1}
+  m_IndirectSpecularColor: {r: 0.8590906, g: 0.22674361, b: 0.7150663, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -270,6 +270,26 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114474232348730564, guid: 9bab5fd8efe025f46b5febacf4e4a131,
+        type: 2}
+      propertyPath: xPosMin
+      value: -245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114474232348730564, guid: 9bab5fd8efe025f46b5febacf4e4a131,
+        type: 2}
+      propertyPath: xPosMax
+      value: 245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114474232348730564, guid: 9bab5fd8efe025f46b5febacf4e4a131,
+        type: 2}
+      propertyPath: zPosMin
+      value: -245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114474232348730564, guid: 9bab5fd8efe025f46b5febacf4e4a131,
+        type: 2}
+      propertyPath: zPosMax
+      value: 245
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9bab5fd8efe025f46b5febacf4e4a131, type: 2}
   m_IsPrefabParent: 0
@@ -454,6 +474,26 @@ Prefab:
       propertyPath: m_Volume
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114312031233917762, guid: 1063c9f05f7c40e4fa8b2b5ae7877253,
+        type: 2}
+      propertyPath: xPosMin
+      value: -245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114312031233917762, guid: 1063c9f05f7c40e4fa8b2b5ae7877253,
+        type: 2}
+      propertyPath: xPosMax
+      value: 245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114312031233917762, guid: 1063c9f05f7c40e4fa8b2b5ae7877253,
+        type: 2}
+      propertyPath: zPosMin
+      value: -245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114312031233917762, guid: 1063c9f05f7c40e4fa8b2b5ae7877253,
+        type: 2}
+      propertyPath: zPosMax
+      value: 245
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1063c9f05f7c40e4fa8b2b5ae7877253, type: 2}
   m_IsPrefabParent: 0
@@ -591,6 +631,26 @@ Prefab:
     - target: {fileID: 1686923317593918, guid: 915e3f2b788f8894a8379e2ea6b0a926, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114512802802509116, guid: 915e3f2b788f8894a8379e2ea6b0a926,
+        type: 2}
+      propertyPath: xPosMin
+      value: -245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114512802802509116, guid: 915e3f2b788f8894a8379e2ea6b0a926,
+        type: 2}
+      propertyPath: xPosMax
+      value: 245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114512802802509116, guid: 915e3f2b788f8894a8379e2ea6b0a926,
+        type: 2}
+      propertyPath: zPosMin
+      value: -245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114512802802509116, guid: 915e3f2b788f8894a8379e2ea6b0a926,
+        type: 2}
+      propertyPath: zPosMax
+      value: 245
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 915e3f2b788f8894a8379e2ea6b0a926, type: 2}
@@ -806,6 +866,26 @@ Prefab:
     - target: {fileID: 1759228137417486, guid: 8ffe86a8d30e8f744945ed7be08afd19, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114140737546475916, guid: 8ffe86a8d30e8f744945ed7be08afd19,
+        type: 2}
+      propertyPath: xPosMin
+      value: -245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114140737546475916, guid: 8ffe86a8d30e8f744945ed7be08afd19,
+        type: 2}
+      propertyPath: xPosMax
+      value: 245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114140737546475916, guid: 8ffe86a8d30e8f744945ed7be08afd19,
+        type: 2}
+      propertyPath: zPosMin
+      value: -245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114140737546475916, guid: 8ffe86a8d30e8f744945ed7be08afd19,
+        type: 2}
+      propertyPath: zPosMax
+      value: 245
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ffe86a8d30e8f744945ed7be08afd19, type: 2}
