@@ -15,6 +15,7 @@ TagManager:
   - WorldManager
   - Water
   - House
+  - RenderCam
   layers:
   - Default
   - TransparentFX
