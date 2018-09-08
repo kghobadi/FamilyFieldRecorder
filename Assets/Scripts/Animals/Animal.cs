@@ -140,7 +140,8 @@ public abstract class Animal : MonoBehaviour {
 
         for(int i = 0; i < collisions.Length; i++)
         {
-            if(collisions[i].gameObject.tag == "Plant")
+            if(collisions[i].gameObject.tag == "Plant" || collisions[i].gameObject.tag == "House" ||
+                collisions[i].gameObject.tag == "Animal")
             {
                 colCounter++;
             }
