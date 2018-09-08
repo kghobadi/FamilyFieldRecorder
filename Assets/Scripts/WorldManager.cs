@@ -12,24 +12,28 @@ public class WorldManager : MonoBehaviour
     public float activationDistance = 75f;
 
     //player variables
-    GameObject _player;
+    GameObject player;
     FirstPersonController fpc;
 
     //all the individual areas as GameObjects grouped under their terrains
     public List<GameObject> theRegions = new List<GameObject>();
     public int regionCounter;
+    public bool chooseStartingRegion;
 
     //timers for changing season while the player is in the house
     public float changeSeasonTimer, changeSeasonTimerTotal = 5;
     public bool seasonChanged, countsUp;
     public Door doorScript;
 
+    //for pacmaning player view trick
+    public Camera renderCamera;
+    public float xPosMin, xPosMax, zPosMin, zPosMax;
 
     void Start()
     {
         //player refs
-        _player = GameObject.FindGameObjectWithTag("Player");
-        fpc = _player.GetComponent<FirstPersonController>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        fpc = player.GetComponent<FirstPersonController>();
 
         //set timers
         changeSeasonTimer = changeSeasonTimerTotal;
@@ -40,9 +44,17 @@ public class WorldManager : MonoBehaviour
             theRegions[i].SetActive(false);
         }
 
-        //start with a random region
-        regionCounter = Random.Range(0, theRegions.Count);
-        theRegions[regionCounter].SetActive(true);
+        //i wanted to go somewhere specific at start
+        if (chooseStartingRegion)
+        {
+            theRegions[regionCounter].SetActive(true);
+        }
+        else
+        {
+            //start with a random region
+            regionCounter = Random.Range(0, theRegions.Count);
+            theRegions[regionCounter].SetActive(true);
+        }
 
         //do we cycle up or down through the regions list
         float randomCount = Random.Range(0f, 100f);
@@ -62,6 +74,7 @@ public class WorldManager : MonoBehaviour
         if (fpc.moving)
         {
             StoreDeactiveObjects();
+            PacmanPlayer();
         }
 
         //if we are in the house and the season has not changed yet, we start the countdown
@@ -86,6 +99,32 @@ public class WorldManager : MonoBehaviour
         
     }
 
+    //this function handles the map boundaries and teleports player to the opposite end when they go too far
+    void PacmanPlayer()
+    {
+        //for east boundary
+        if(player.transform.position.x >= xPosMax)
+        {
+            player.transform.position = new Vector3(xPosMin + 3, player.transform.position.y, player.transform.position.z);
+        }
+        //for west boundary
+        else if(player.transform.position.x <= xPosMin)
+        {
+            player.transform.position = new Vector3(xPosMax - 3, player.transform.position.y, player.transform.position.z);
+        }
+        //for north boundary
+        else if (player.transform.position.z >= zPosMax)
+        {
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, zPosMin + 3);
+        }
+        //for south boundary
+        else if (player.transform.position.z <= zPosMin)
+        {
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, zPosMax - 3);
+        }
+    }
+
+    //this function is called in order to cycle the regions
     void ChangeRegion()
     {
         if (countsUp)
@@ -128,7 +167,7 @@ public class WorldManager : MonoBehaviour
         {
             if (allInactiveObjects[i] != null)
             {
-                float distanceFromPlayer = Vector3.Distance(allInactiveObjects[i].transform.position, _player.transform.position);
+                float distanceFromPlayer = Vector3.Distance(allInactiveObjects[i].transform.position, player.transform.position);
 
                 if (distanceFromPlayer < (activationDistance + 5))
                 {

@@ -6,6 +6,7 @@ using UnityEngine.Audio;
 public class TerrainManager : MonoBehaviour {
     GameObject player;
     FirstPersonController fpc;
+    WorldManager worldMan;
 
     public Light sun;
 
@@ -24,9 +25,13 @@ public class TerrainManager : MonoBehaviour {
 
     public bool lerpingColors;
 
+    //for map boundaires
+    public float xPosMin, xPosMax, zPosMin, zPosMax;
+
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
         fpc = player.GetComponent<FirstPersonController>();
+        worldMan = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
     }
 
     void Update()
@@ -62,6 +67,12 @@ public class TerrainManager : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player" && !hasTransitioned)
         {
+            //set map boundaries to this one
+            worldMan.xPosMax = xPosMax;
+            worldMan.xPosMin = xPosMin;
+            worldMan.zPosMax = zPosMax;
+            worldMan.zPosMin = zPosMin;
+
             //change audio mixer and footstep sounds
             playerColliding = true;
             mySnapshot.TransitionTo(1f);
@@ -84,15 +95,6 @@ public class TerrainManager : MonoBehaviour {
             }
         }
     }
-
-    //may not need this
-    //void OnTriggerStay(Collider col)
-    //{
-    //    if (col.gameObject.tag == "Player")
-    //    {
-    //        fpc.currentFootsteps = playerFootsteps;
-    //    }
-    //}
 
     void OnTriggerExit(Collider col)
     {
