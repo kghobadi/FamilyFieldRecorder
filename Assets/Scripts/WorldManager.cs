@@ -18,6 +18,7 @@ public class WorldManager : MonoBehaviour
     //all the individual areas as GameObjects grouped under their terrains
     public List<GameObject> theRegions = new List<GameObject>();
     public int regionCounter;
+    public bool chooseStartingRegion;
 
     //timers for changing season while the player is in the house
     public float changeSeasonTimer, changeSeasonTimerTotal = 5;
@@ -40,9 +41,18 @@ public class WorldManager : MonoBehaviour
             theRegions[i].SetActive(false);
         }
 
-        //start with a random region
-        regionCounter = Random.Range(0, theRegions.Count);
-        theRegions[regionCounter].SetActive(true);
+        //i wanted to go somewhere specific at start
+        if (chooseStartingRegion)
+        {
+            theRegions[regionCounter].SetActive(true);
+            Debug.Log("did it right!");
+        }
+        else
+        {
+            //start with a random region
+            regionCounter = Random.Range(0, theRegions.Count);
+            theRegions[regionCounter].SetActive(true);
+        }
 
         //do we cycle up or down through the regions list
         float randomCount = Random.Range(0f, 100f);

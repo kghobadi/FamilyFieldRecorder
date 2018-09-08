@@ -795,7 +795,7 @@ GameObject:
   - component: {fileID: 114161688641677792}
   m_Layer: 0
   m_Name: deeelk (9)
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1434,7 +1434,7 @@ GameObject:
   - component: {fileID: 114710643639149936}
   m_Layer: 0
   m_Name: deeelk (5)
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1772,7 +1772,7 @@ GameObject:
   - component: {fileID: 114267913517159438}
   m_Layer: 0
   m_Name: deeelk (1)
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1973,7 +1973,7 @@ GameObject:
   - component: {fileID: 114486515357179376}
   m_Layer: 0
   m_Name: deeelk (8)
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2431,7 +2431,7 @@ GameObject:
   - component: {fileID: 114100587827338586}
   m_Layer: 9
   m_Name: deeelk
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2632,7 +2632,7 @@ GameObject:
   - component: {fileID: 114347521526430788}
   m_Layer: 0
   m_Name: deeelk (11)
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3059,7 +3059,7 @@ GameObject:
   - component: {fileID: 114677772342704188}
   m_Layer: 0
   m_Name: deeelk (10)
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3305,7 +3305,7 @@ GameObject:
   - component: {fileID: 114268000578412164}
   m_Layer: 0
   m_Name: deeelk (3)
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3461,7 +3461,7 @@ GameObject:
   - component: {fileID: 114776157574206554}
   m_Layer: 0
   m_Name: deeelk (7)
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3782,7 +3782,7 @@ GameObject:
   - component: {fileID: 114452208828522160}
   m_Layer: 0
   m_Name: deeelk (12)
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4135,7 +4135,7 @@ GameObject:
   - component: {fileID: 114218309458861640}
   m_Layer: 0
   m_Name: deeelk (2)
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4899,7 +4899,7 @@ GameObject:
   - component: {fileID: 114905481482534990}
   m_Layer: 0
   m_Name: deeelk (6)
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5071,7 +5071,7 @@ GameObject:
   - component: {fileID: 114597494316665130}
   m_Layer: 0
   m_Name: deeelk (4)
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5619,8 +5619,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1472175275268792}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.316467, y: 0, z: 269.96924}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 57.316467, y: 0, z: 383.4}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4559492387632384}
   - {fileID: 4615456309813476}
@@ -5760,8 +5760,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1639136160629232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.3, y: 0, z: 202.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 182.4, y: 0, z: 215.3}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4511748626068152}
   - {fileID: 4815264244309424}
@@ -5910,8 +5910,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1802656056950120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 127.7, y: 0, z: 202.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 119.8, y: 0, z: -6.5}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4027111180949480}
   - {fileID: 4089585809683424}
@@ -7336,8 +7336,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1524029441889336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.3, y: 0, z: 151.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 136.7, y: 0, z: 367.1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4960190497130206}
   - {fileID: 4051959538972846}
@@ -7351,8 +7351,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958580987817840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 153}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -61.7, y: 0, z: 153}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4340482868908766}
   - {fileID: 4838397382039766}
@@ -7514,8 +7514,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1271029465723334}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 304.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 298.7}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4074875528036552}
   - {fileID: 4267665229438486}
@@ -7586,8 +7586,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1999163298690410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.3, y: 0, z: 304.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -84.4, y: 0, z: 304.7}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4707564153953426}
   - {fileID: 4856115891773674}
@@ -7924,8 +7924,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1377337457857612}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.3, y: 0, z: 49.699997}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 66.3, y: 0, z: -9.3}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4648651243366230}
   - {fileID: 4207118084744444}
@@ -8121,8 +8121,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1603640005046948}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 127.7, y: 0, z: 49.699997}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 231.2, y: 0, z: 49.699997}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4117185045796870}
   - {fileID: 4713611814024556}
@@ -8698,8 +8698,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1727821738015322}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -84.3, y: 0, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4817917348047518}
   - {fileID: 4533167632100180}
@@ -8741,8 +8741,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1332997023502326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 127.7, y: 0, z: 269.96924}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 202.5, y: 0, z: 277.6}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4687176619074764}
   - {fileID: 4751411710539152}
@@ -9125,8 +9125,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1670400945797488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 127.7, y: 0, z: 116.96922}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 209.4, y: 0, z: 116.96922}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4437142113426468}
   - {fileID: 4496909219581684}
@@ -9560,8 +9560,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1159358697581726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 151.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -145.1, y: 0, z: 130.2}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4124573823298522}
   - {fileID: 4718271397318506}
@@ -9904,7 +9904,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9912,7 +9912,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2
@@ -10000,7 +10000,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10008,7 +10008,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2
@@ -10096,7 +10096,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10104,7 +10104,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2
@@ -10192,7 +10192,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10200,7 +10200,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2
@@ -10288,7 +10288,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10296,7 +10296,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2
@@ -10384,7 +10384,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10392,7 +10392,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2
@@ -10480,7 +10480,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10488,7 +10488,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 111
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2
@@ -10576,7 +10576,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10584,7 +10584,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2
@@ -10672,7 +10672,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10680,7 +10680,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2
@@ -10768,7 +10768,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10776,7 +10776,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2
@@ -10864,7 +10864,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10872,7 +10872,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2
@@ -10960,7 +10960,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10968,7 +10968,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2
@@ -11056,7 +11056,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11064,7 +11064,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 5
+  MinDistance: 20
   MaxDistance: 150
   Pan2D: 0
   rolloffMode: 2

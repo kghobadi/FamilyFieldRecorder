@@ -50,6 +50,8 @@ public abstract class Animal : MonoBehaviour {
         origPosition = transform.position;
         animator.speed = 1f;
         myNavMesh.speed = walkSpeed;
+
+        RandomizeSize();
     }
 
     public virtual void Update () {
@@ -167,6 +169,19 @@ public abstract class Animal : MonoBehaviour {
             }
         }
        
+    }
+
+    public virtual void RandomizeSize()
+    {
+        //animal's original size
+        Vector3 origScale = transform.localScale;
+
+        //alter the scale
+        float randomScale = Random.Range(0.5f, 2f);
+
+        //multiply scale AND volume by our random vals
+        transform.localScale *= randomScale;
+        animalAudio.volume *= randomScale;
     }
 
     //Actually plays the animal's audio with random sound selection
