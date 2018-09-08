@@ -8,12 +8,12 @@ public class AudioGeneration : MonoBehaviour {
 
     public List<GameObject> treeAudioSources = new List<GameObject>();
 
-    Terrain terrain;
+    public Terrain terrain;
 
     // Use this for initialization
     void Start() {
 
-        terrain = GameObject.FindGameObjectWithTag("Ground").GetComponent<Terrain>();
+        terrain = transform.parent.GetComponent<Terrain>();
 
         for (int i = 0; i < terrain.terrainData.treeInstances.Length; i++)
         {
