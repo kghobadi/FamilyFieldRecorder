@@ -164,14 +164,13 @@ MonoBehaviour:
   sprintSpeed: 15
   scrollSpeed: 2
   sprintTimerMax: 1
+  footStepTimerTotal: 0.5
   currentFootsteps:
   - {fileID: 8300000, guid: 280f5d407c4b18643b9f43dd75a6f557, type: 3}
   - {fileID: 8300000, guid: dd72a23b63145854dad767546a03899f, type: 3}
   - {fileID: 8300000, guid: 7a8edaf602b8fd0409a23e594adc3cc7, type: 3}
   - {fileID: 8300000, guid: a1191e59c8ed33845b4eba547ac7598a, type: 3}
-  indoorFootsteps: []
-  gardenFootsteps: []
-  pathFootsteps: []
+  listeningRadius: 0
 --- !u!4 &87319264
 Transform:
   m_ObjectHideFlags: 0
@@ -649,13 +648,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: recTest.wav
+  recOutput: 0
+  uploading: 0
+  isWritingName: 0
   enterNameObj: {fileID: 1427433392}
   spaceToStopObj: {fileID: 1782821333}
   spaceToRecordObj: {fileID: 1304318793}
-  oneNewRecObj: {fileID: 1625524342}
+  uploadingObj: {fileID: 0}
+  recordingLight: {fileID: 0}
+  stopLight: {fileID: 0}
   newRec: 0
   soundSavePath: 
   loader: {fileID: 194015296}
+  popRec: 0
+  popStop: 0
 --- !u!23 &570651092
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1117,7 +1123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1369387110
 Transform:
   m_ObjectHideFlags: 0
@@ -1517,26 +1523,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114434795061357976, guid: 24f4839d91a9b4131967d9bff7113ac0,
-        type: 2}
-      propertyPath: saveSoundScript
-      value: 
-      objectReference: {fileID: 570651091}
-    - target: {fileID: 114649793964668190, guid: 24f4839d91a9b4131967d9bff7113ac0,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 87319264}
-    - target: {fileID: 223577740408158110, guid: 24f4839d91a9b4131967d9bff7113ac0,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2029682355}
-    - target: {fileID: 223439041406342890, guid: 24f4839d91a9b4131967d9bff7113ac0,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2029682355}
     - target: {fileID: 114498670079422154, guid: 24f4839d91a9b4131967d9bff7113ac0,
         type: 2}
       propertyPath: player
@@ -1552,6 +1538,26 @@ Prefab:
       propertyPath: firstPersonController
       value: 
       objectReference: {fileID: 87319263}
+    - target: {fileID: 223439041406342890, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2029682355}
+    - target: {fileID: 223577740408158110, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2029682355}
+    - target: {fileID: 114649793964668190, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 87319264}
+    - target: {fileID: 114434795061357976, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: saveSoundScript
+      value: 
+      objectReference: {fileID: 570651091}
     - target: {fileID: 224595434558633798, guid: 24f4839d91a9b4131967d9bff7113ac0,
         type: 2}
       propertyPath: m_AnchorMax.y
