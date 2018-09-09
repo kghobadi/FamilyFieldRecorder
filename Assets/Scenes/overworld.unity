@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1027449079}
-  m_IndirectSpecularColor: {r: 0.8903606, g: 0.58496034, b: 0.26528957, a: 1}
+  m_IndirectSpecularColor: {r: 0.891693, g: 0.5928923, b: 0.26082808, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -219,6 +219,17 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114004544901561674, guid: 77a32167edb1f114f85b9d1aa759eaa1,
+        type: 2}
+      propertyPath: explorationMix
+      value: 
+      objectReference: {fileID: 24100000, guid: 457d012c79be5334db6ea72edd3d15e7,
+        type: 2}
+    - target: {fileID: 114635597118710590, guid: 77a32167edb1f114f85b9d1aa759eaa1,
+        type: 2}
+      propertyPath: saveSoundScript
+      value: 
+      objectReference: {fileID: 1022847694}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77a32167edb1f114f85b9d1aa759eaa1, type: 2}
   m_IsPrefabParent: 0
@@ -497,6 +508,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1063c9f05f7c40e4fa8b2b5ae7877253, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &673195355 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114635597118710590, guid: 77a32167edb1f114f85b9d1aa759eaa1,
+    type: 2}
+  m_PrefabInternal: {fileID: 90808365}
+  m_Script: {fileID: 11500000, guid: aca8705fa93cd234f98ee9292b1ef445, type: 3}
 --- !u!1001 &706704361
 Prefab:
   m_ObjectHideFlags: 0
@@ -680,6 +697,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1759228137417486, guid: 8ffe86a8d30e8f744945ed7be08afd19,
     type: 2}
   m_PrefabInternal: {fileID: 2124749632}
+--- !u!114 &1022847694 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114431583714892602, guid: c3677880339f95940a7bd0f02039e69e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1502685911}
+  m_Script: {fileID: 11500000, guid: 73faa3f631482b24e98172bf04651d1b, type: 3}
 --- !u!108 &1027449079
 Light:
   m_ObjectHideFlags: 0
@@ -785,6 +808,11 @@ Prefab:
       propertyPath: m_ClearFlags
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114431583714892602, guid: c3677880339f95940a7bd0f02039e69e,
+        type: 2}
+      propertyPath: loader
+      value: 
+      objectReference: {fileID: 673195355}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3677880339f95940a7bd0f02039e69e, type: 2}
   m_IsPrefabParent: 0
