@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class camMouseLook : MonoBehaviour
 {
-
+    GameObject character;
+    Transform player;
     Vector2 mouseLook;
     Vector2 smoothV;
     public float sensitivityX;
@@ -13,22 +14,25 @@ public class camMouseLook : MonoBehaviour
 
     public bool isActive;
 
-    GameObject character;
+    WorldManager worldMan;
+    public Camera renderCamera;
+    public float rayDistance;
+
+    public LayerMask renderMask;
+    public GameObject renderPlane;
 
     void Start()
     {
         character = transform.parent.gameObject;
         isActive = true;
-
-
-
+        player = transform.parent;
+        worldMan = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
     }
 
     void Update()
     {
         if (isActive)
         {
-
             Cursor.lockState = CursorLockMode.Locked;
 
             var newRotate = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
@@ -42,6 +46,85 @@ public class camMouseLook : MonoBehaviour
 
             transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
             character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
+
+            //SetRenderCamera();
+        }
+    }
+
+    //this function moves the render cameras in relation to the players position near the map's boundaries
+    void SetRenderCamera()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance, renderMask))
+        {
+            Debug.Log(hit.transform.gameObject);
+            if (hit.transform.gameObject.tag == "RenderWall")
+            {
+                Debug.Log(hit.point);
+
+                RenderWall rw = hit.transform.gameObject.GetComponent<RenderWall>();
+
+                renderPlane.transform.position = new Vector3(hit.point.x, transform.position.y, hit.point.z);
+
+                if (rw.renderWallType == RenderWall.WallType.N)
+                {
+                    renderCamera.transform.position = new Vector3(hit.point.x, transform.position.y, -hit.point.z);
+                    renderCamera.transform.localEulerAngles = new Vector3(0,0,0);
+
+                    renderPlane.transform.localEulerAngles = new Vector3(90, 0, 180);
+                }
+                else if(rw.renderWallType == RenderWall.WallType.E)
+                {
+                    renderCamera.transform.position = new Vector3(-hit.point.x, transform.position.y, hit.point.z);
+                    renderCamera.transform.localEulerAngles = new Vector3(0, 90, 0);
+
+                    renderPlane.transform.localEulerAngles = new Vector3(90, 0, 90);
+                }
+                else if (rw.renderWallType == RenderWall.WallType.S)
+                {
+                    renderCamera.transform.position = new Vector3(hit.point.x, transform.position.y, -hit.point.z);
+                    renderCamera.transform.localEulerAngles = new Vector3(0, 180, 0);
+
+                    renderPlane.transform.localEulerAngles = new Vector3(90, 0, 0);
+                }
+                else if (rw.renderWallType == RenderWall.WallType.W)
+                {
+                    renderCamera.transform.position = new Vector3(-hit.point.x, transform.position.y, hit.point.z);
+                    renderCamera.transform.localEulerAngles = new Vector3(0, -90, 0);
+
+                    renderPlane.transform.localEulerAngles = new Vector3(90, 0, -90);
+                }
+
+                else if (rw.renderWallType == RenderWall.WallType.NW)
+                {
+                    renderCamera.transform.position = new Vector3(-hit.point.x, transform.position.y, -hit.point.z);
+                    renderCamera.transform.localEulerAngles = new Vector3(0, -45, 0);
+
+                    renderPlane.transform.localEulerAngles = new Vector3(90, 0, 215);
+                }
+                else if (rw.renderWallType == RenderWall.WallType.NE)
+                {
+                    renderCamera.transform.position = new Vector3(-hit.point.x, transform.position.y, -hit.point.z);
+                    renderCamera.transform.localEulerAngles = new Vector3(0, 45, 0);
+
+                    renderPlane.transform.localEulerAngles = new Vector3(90, 0, 135);
+                }
+                else if (rw.renderWallType == RenderWall.WallType.SW)
+                {
+                    renderCamera.transform.position = new Vector3(-hit.point.x, transform.position.y, -hit.point.z);
+                    renderCamera.transform.localEulerAngles = new Vector3(0, 215, 0);
+
+                    renderPlane.transform.localEulerAngles = new Vector3(90, 0, -45);
+                }
+                else if (rw.renderWallType == RenderWall.WallType.SE)
+                {
+                    renderCamera.transform.position = new Vector3(-hit.point.x, transform.position.y, -hit.point.z);
+                    renderCamera.transform.localEulerAngles = new Vector3(0, 135, 0);
+
+                    renderPlane.transform.localEulerAngles = new Vector3(90, 0, 45);
+                }
+            }
         }
     }
 

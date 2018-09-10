@@ -208,8 +208,6 @@ public class FirstPersonController : MonoBehaviour
             // do something with item.Key and item.Value
             item.Key.priority = priority;
             priority++;
-
-            Debug.Log("reseting");
         }
     }
 

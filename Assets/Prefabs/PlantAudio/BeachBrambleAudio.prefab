@@ -162,10 +162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeSounds:
-  - {fileID: 8300000, guid: 670e4935c00f2a94aa1538d0ac7a9fb2, type: 3}
-  - {fileID: 8300000, guid: d54e512bd3bf01c4d80452a7f42d8871, type: 3}
-  - {fileID: 8300000, guid: 77135277a191cfe4dbc6cf503d4e59c4, type: 3}
-  - {fileID: 8300000, guid: 33cc3015fc08eaf44b2e3827fb4d80a3, type: 3}
+  - {fileID: 8300000, guid: 20de429ca2c584548958c5017b978e27, type: 3}
+  - {fileID: 8300000, guid: 664570a33dfde83409e2e6eeae240ef5, type: 3}
+  - {fileID: 8300000, guid: 8d093c123fd18664da75a5c980b01ce6, type: 3}
   treeMixerGroup: {fileID: 243933608082898768, guid: 457d012c79be5334db6ea72edd3d15e7,
     type: 2}
   treeNoteTimer: 0
