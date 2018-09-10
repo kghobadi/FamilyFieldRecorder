@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641234, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -976,6 +976,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114193287452110388, guid: 1f9093443b54eb64ab3a131eaac26946,
+        type: 2}
+      propertyPath: treeTypes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4710967710613258, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
       propertyPath: m_LocalPosition.x
       value: -14.526184
@@ -1028,6 +1033,16 @@ Prefab:
       propertyPath: birdParent
       value: 
       objectReference: {fileID: 623316303}
+    - target: {fileID: 114193287452110388, guid: 1f9093443b54eb64ab3a131eaac26946,
+        type: 2}
+      propertyPath: treeTypes.Array.data[3]
+      value: 
+      objectReference: {fileID: 1692562426009244, guid: f8371381ef48d054d92a822c40e3fe9a,
+        type: 2}
+    - target: {fileID: 1698172340823728, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
   m_IsPrefabParent: 0
@@ -1772,7 +1787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1887808618
 Transform:
   m_ObjectHideFlags: 0

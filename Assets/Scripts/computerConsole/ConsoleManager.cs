@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class ConsoleManager : MonoBehaviour
 {
@@ -11,12 +12,14 @@ public class ConsoleManager : MonoBehaviour
     public FirstPersonController firstPersonController;
     public Transform playerConsolePosition;
 
+    //can use these to transition audio in turnOff and turnOn
+    public AudioMixer explorationMix;
+
     bool exitting;
 
     // Use this for initialization
     void Start()
     {
-
         TurnOff();
     }
 
@@ -38,27 +41,27 @@ public class ConsoleManager : MonoBehaviour
             exitting = true;
             TurnOff();
         }
-
-
-
-
     }
 
     void TurnOn()
     {
         console.SetActive(true);
         topCanvas.SetActive(true);
-
-        Cursor.lockState = CursorLockMode.Confined;
+        //put away recorder
+        firstPersonController.MoveRec(firstPersonController.recAwayPos);
+        //turn volume of exploration mixer down 
+        explorationMix.SetFloat("masterVol", -80);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     void TurnOff()
     {
-
         console.SetActive(false);
         mouseLook.isActive = true;
         firstPersonController.enabled = true;
         topCanvas.SetActive(false);
+        //kas mixer back to normal
+        explorationMix.SetFloat("masterVol", 0);
     }
 
     void LerpToPos()

@@ -364,37 +364,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &25858674
 AudioSource:
@@ -755,37 +747,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &37458428
 AudioSource:
@@ -1146,37 +1130,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &44975971
 AudioSource:
@@ -1537,37 +1513,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &51038194
 AudioSource:
@@ -1928,37 +1896,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &98569639
 AudioSource:
@@ -2319,37 +2279,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &130633323
 AudioSource:
@@ -2710,37 +2662,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &180942915
 AudioSource:
@@ -3101,37 +3045,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &245146867
 AudioSource:
@@ -3492,37 +3428,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &259503236
 AudioSource:
@@ -3925,37 +3853,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &472673279
 AudioSource:
@@ -4316,37 +4236,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &494378585
 AudioSource:
@@ -4960,37 +4872,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &785586900
 AudioSource:
@@ -5351,37 +5255,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &796154087
 AudioSource:
@@ -5742,37 +5638,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &847775817
 AudioSource:
@@ -6133,37 +6021,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &909127369
 AudioSource:
@@ -6524,37 +6404,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &912132422
 AudioSource:
@@ -6986,37 +6858,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &982211422
 AudioSource:
@@ -7377,37 +7241,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &992319708
 AudioSource:
@@ -7768,37 +7624,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1013153182
 AudioSource:
@@ -8164,37 +8012,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1072918679
 AudioSource:
@@ -8555,37 +8395,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1087643166
 AudioSource:
@@ -9022,37 +8854,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1150162366
 AudioSource:
@@ -9455,37 +9279,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1186607748
 AudioSource:
@@ -9846,37 +9662,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1220243058
 AudioSource:
@@ -10237,37 +10045,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1246745945
 AudioSource:
@@ -10828,37 +10628,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1264577211
 AudioSource:
@@ -10975,6 +10767,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1146897433}
     m_Modifications:
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabIdle.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabRunning.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabWalking.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4943640738706726, guid: ad1be81d25445504fb3eb1df0a35b587, type: 2}
       propertyPath: m_LocalPosition.x
       value: -969.3958
@@ -11006,6 +10813,141 @@ Prefab:
     - target: {fileID: 4943640738706726, guid: ad1be81d25445504fb3eb1df0a35b587, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabIdle.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a57e800628baf744b79f5c8d85260e9, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabIdle.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9274a049c9a1b1a4dab5e365fca3d055, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabIdle.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: aadbb8b8bb66f9b489dd0c0f9a43e570, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabIdle.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 37cc55f4ea4e06a40ab368dd3f8a6061, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabIdle.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabIdle.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabIdle.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 70a3c3a6f2ed42e46a130c390026f4a2, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabIdle.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 37cc55f4ea4e06a40ab368dd3f8a6061, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabRunning.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabRunning.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabRunning.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabRunning.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabRunning.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabRunning.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabRunning.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: b3b5b59876d3fa14fb32e780e1a009c0, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabRunning.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabRunning.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabWalking.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabWalking.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabWalking.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabWalking.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabWalking.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabWalking.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: crabWalking.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: soundTimerTotal
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: runTimerTotal
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114344930291741362, guid: ad1be81d25445504fb3eb1df0a35b587,
+        type: 2}
+      propertyPath: walkTimerTotal
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1be81d25445504fb3eb1df0a35b587, type: 2}
@@ -11266,37 +11208,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1285223666
 AudioSource:
@@ -11657,37 +11591,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1322742744
 AudioSource:
@@ -12048,37 +11974,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1329860981
 AudioSource:
@@ -12439,37 +12357,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1350582369
 AudioSource:
@@ -13003,37 +12913,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1422541296
 AudioSource:
@@ -13394,37 +13296,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1444605258
 AudioSource:
@@ -13785,37 +13679,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1503898389
 AudioSource:
@@ -14176,37 +14062,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1537477681
 AudioSource:
@@ -14567,37 +14445,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1616748229
 AudioSource:
@@ -14958,37 +14828,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1663676315
 AudioSource:
@@ -15349,37 +15211,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1664812363
 AudioSource:
@@ -15740,37 +15594,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1750775265
 AudioSource:
@@ -16131,37 +15977,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1761868544
 AudioSource:
@@ -16278,6 +16116,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114221444983853134, guid: 047dedcd9a078764092d6db645dfeabb,
+        type: 2}
+      propertyPath: currentFootsteps.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4118045810133984, guid: 047dedcd9a078764092d6db645dfeabb, type: 2}
       propertyPath: m_LocalPosition.x
       value: -25.324158
@@ -16310,6 +16153,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114221444983853134, guid: 047dedcd9a078764092d6db645dfeabb,
+        type: 2}
+      propertyPath: currentFootsteps.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9274a049c9a1b1a4dab5e365fca3d055, type: 3}
+    - target: {fileID: 114221444983853134, guid: 047dedcd9a078764092d6db645dfeabb,
+        type: 2}
+      propertyPath: currentFootsteps.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: aadbb8b8bb66f9b489dd0c0f9a43e570, type: 3}
+    - target: {fileID: 114221444983853134, guid: 047dedcd9a078764092d6db645dfeabb,
+        type: 2}
+      propertyPath: currentFootsteps.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 37cc55f4ea4e06a40ab368dd3f8a6061, type: 3}
+    - target: {fileID: 114221444983853134, guid: 047dedcd9a078764092d6db645dfeabb,
+        type: 2}
+      propertyPath: currentFootsteps.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9274a049c9a1b1a4dab5e365fca3d055, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 047dedcd9a078764092d6db645dfeabb, type: 2}
   m_IsPrefabParent: 0
@@ -16564,37 +16427,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &1893698830
 AudioSource:
@@ -16955,37 +16810,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &2002317175
 AudioSource:
@@ -17346,37 +17193,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &2007528586
 AudioSource:
@@ -17737,37 +17576,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &2037873144
 AudioSource:
@@ -18128,37 +17959,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &2077016021
 AudioSource:
@@ -18519,37 +18342,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &2088974248
 AudioSource:
@@ -18910,37 +18725,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &2107801776
 AudioSource:
@@ -19301,37 +19108,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crabWalking:
-  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
-  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
-  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
-  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
-  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
-  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
-  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
   crabIdle:
-  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
-  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
-  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
-  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
+  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
   crabRunning:
-  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
-  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
-  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
-  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
-  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
-  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
-  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
-  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
-  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
+  moveTimerTotal: 5
   moving: 0
   running: 0
-  soundTimer: 0.25
-  soundTimerTotal: 0.25
-  walkTimerTotal: 0.5
-  runTimerTotal: 0.25
+  nextNoteIn: 0.25
+  soundTimerTotal: 3
+  walkTimerTotal: 1
+  runTimerTotal: 0.5
   spookDistance: 10
 --- !u!82 &2129763574
 AudioSource:

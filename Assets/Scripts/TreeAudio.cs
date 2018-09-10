@@ -9,19 +9,29 @@ public class TreeAudio : MonoBehaviour {
     public AudioClip[] treeSounds;
     public AudioMixerGroup treeMixerGroup;
 
+    public float treeNoteTimer, treeNoteTimerTotal, randomTimeMin, randomTimeMax;
+
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
         treeAudio = GetComponent<AudioSource>();
         int randomSound = Random.Range(0, treeSounds.Length);
         treeAudio.clip = treeSounds[randomSound];
         treeAudio.outputAudioMixerGroup = treeMixerGroup;
+        treeNoteTimer = Random.Range(0.5f, randomTimeMax);
 	}
 	
 	void Update () {
 		if(Vector3.Distance(transform.position, player.transform.position) < (treeAudio.maxDistance))
         {
-            if(!treeAudio.isPlaying)
-                treeAudio.Play();
+            treeNoteTimer -= Time.deltaTime;
+
+            if (treeNoteTimer < 0 && !treeAudio.isPlaying)
+            {
+                int randomNote = Random.Range(0, treeSounds.Length);
+                treeAudio.PlayOneShot(treeSounds[randomNote]);
+
+                treeNoteTimer = treeNoteTimerTotal + Random.Range(randomTimeMin, randomTimeMax);
+            }
         }
         else
         {

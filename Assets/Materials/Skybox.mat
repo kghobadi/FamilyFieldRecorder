@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Skybox
+  m_Shader: {fileID: 4800000, guid: 6111aa5b90d424e6ab8cced5721af950, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 1000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 11703868, guid: c634422be87864f349241d30749ea0c2, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex1:
+        m_Texture: {fileID: 11728776, guid: f93fa8e00a05b48b0a3ae3348c573981, type: 2}
+        m_Scale: {x: 3, y: 1}
+        m_Offset: {x: 1, y: 0}
+    - _NoiseTex2:
+        m_Texture: {fileID: 11760204, guid: 8e30fd58b269d403f8200b53e595bdbe, type: 2}
+        m_Scale: {x: 3, y: 1}
+        m_Offset: {x: 1, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Altitude0: 1500
+    - _Altitude1: 10000
+    - _AtmosphereThickness: 1
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _Exposure: 1.3
+    - _Extinct: 0.00253
+    - _FarDist: 15000
+    - _Glossiness: 0.5
+    - _HGCoeff: 0.251
+    - _Metallic: 0
+    - _Mode: 0
+    - _NoiseAmp1: -8
+    - _NoiseAmp2: 1.9
+    - _NoiseAmplitude: 5
+    - _NoiseBias: 2.32
+    - _NoiseFreq: 3
+    - _NoiseFreq1: 1.45
+    - _NoiseFreq2: 5
+    - _NoiseOffset: -0.2
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SampleCount0: 40
+    - _SampleCount1: 88
+    - _SampleCountL: 40
+    - _Scatter: 0.1117
+    - _SrcBlend: 1
+    - _SunSize: 0.5
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 0.9999999, g: 0.29019618, b: 2.7493535e-32, a: 0.99999994}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GroundColor: {r: 0.9999997, g: 0.67097133, b: 0.058613364, a: 1}
+    - _Scroll1: {r: 0.01, g: 0.08, b: 0.06, a: 0}
+    - _Scroll2: {r: 0.01, g: 0.05, b: 0.03, a: 0}
+    - _SkyTint: {r: 0.77407515, g: 0.9242424, b: 0.16762157, a: 1}
