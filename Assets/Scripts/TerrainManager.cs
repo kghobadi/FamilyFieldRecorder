@@ -26,7 +26,7 @@ public class TerrainManager : MonoBehaviour {
     public bool lerpingColors;
 
     //for map boundaires
-    public float xPosMin, xPosMax, zPosMin, zPosMax;
+    public float myxPosMin, myxPosMax, myzPosMin, myzPosMax;
 
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -68,10 +68,21 @@ public class TerrainManager : MonoBehaviour {
         if (col.gameObject.tag == "Player" && !hasTransitioned)
         {
             //set map boundaries to this one
-            worldMan.xPosMax = xPosMax;
-            worldMan.xPosMin = xPosMin;
-            worldMan.zPosMax = zPosMax;
-            worldMan.zPosMin = zPosMin;
+            if (worldMan == null)
+            {
+                worldMan = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
+            }
+            worldMan.xPosMax = myxPosMax;
+            worldMan.xPosMin = myxPosMin;
+            worldMan.zPosMax = myzPosMax;
+            worldMan.zPosMin = myzPosMin;
+            
+            //player ref if null
+            if(fpc == null)
+            {
+                player = GameObject.FindGameObjectWithTag("Player");
+                fpc = player.GetComponent<FirstPersonController>();
+            }
 
             //change audio mixer and footstep sounds
             playerColliding = true;

@@ -9,7 +9,7 @@ public class ForestGen : MonoBehaviour {
     GameObject[] grid;
     public GameObject gridSpot;
 
-    GameObject[] trees;
+    public List<GameObject> trees = new List<GameObject>();
     public GameObject[] treeTypes;
 
     public List<GameObject> birds = new List<GameObject>();
@@ -21,11 +21,6 @@ public class ForestGen : MonoBehaviour {
 	void Awake () {
 
         GenerateForestGrid();
-        GenerateTrees();
-        GenerateBirds();
-
-       
-   
     }
 
     void GenerateForestGrid()
@@ -41,16 +36,17 @@ public class ForestGen : MonoBehaviour {
                 grid[i] = Instantiate(gridSpot, new Vector3(x * gridSpot.transform.localScale.x,
                     terrain.position.y, y * gridSpot.transform.localScale.x), Quaternion.identity, jungleGrid);
             }
+
+
         }
 
         jungleGrid.transform.localPosition = gridOffset;
+        GenerateTrees();
     }
 
     void GenerateTrees()
     {
-        trees = new GameObject[grid.Length];
-
-        for (int i = 0; i < trees.Length; i++)
+        for (int i = 0; i < grid.Length; i++)
         {
             //check if player or house is in this gridSpot
             bool canGenerate = true;
@@ -70,45 +66,72 @@ public class ForestGen : MonoBehaviour {
             {
                 //generate random tree type
                 int randomTree = Random.Range(0, treeTypes.Length);
-                trees[i] = Instantiate(treeTypes[randomTree], grid[i].transform.position, Quaternion.identity, treeParent);
+                GameObject treeClone = Instantiate(treeTypes[randomTree], grid[i].transform.position, Quaternion.identity, treeParent);
+                trees.Add(treeClone);
 
                 //alter the scale
                 float randomScaleX = Random.Range(0.5f, 2f);
                 float randomScaleY = Random.Range(0.5f, 2f);
                 float randomScaleZ = Random.Range(0.5f, 2f);
-                trees[i].transform.localScale = new Vector3(trees[i].transform.localScale.x * randomScaleX,
-                    trees[i].transform.localScale.y * randomScaleY, trees[i].transform.localScale.z * randomScaleZ);
+                treeClone.transform.localScale = new Vector3(treeClone.transform.localScale.x * randomScaleX,
+                    treeClone.transform.localScale.y * randomScaleY, treeClone.transform.localScale.z * randomScaleZ);
 
                 //alter the position
                 float randomX = Random.Range(0f, 5f);
                 float randomZ = Random.Range(0f, 5f);
-                float yOffset = -trees[i].transform.localScale.y / 2;
+                float yOffset = -treeClone.transform.localScale.y / 2;
 
-                trees[i].transform.Translate(randomX, yOffset, randomZ);
+                treeClone.transform.Translate(randomX, yOffset, randomZ);
             }
         }
+
+        GenerateBirds();
     }
 
 
     //Basically will want to decide which type of bird to generate based on which tree type
-    //Will also
     void GenerateBirds()
     {
-        for (int i = 0; i < trees.Length; i++)
+        for (int i = 0; i < trees.Count; i++)
         {
-            for(int j = 2; j < trees[i].transform.childCount; j++)
+            TreeAudio treeScript;
+            //get Tree component
+            if (trees[i].GetComponent<TreeAudio>() != null)
             {
-                float randomChance = Random.Range(0, 100);
-                if (randomChance < 10)
-                {
-                    Vector3 posInTree = trees[i].transform.GetChild(j).position;
+                treeScript = trees[i].GetComponent<TreeAudio>();
 
-                    //generate random bird type
-                    int randomBird = Random.Range(0, birdTypes.Length);
-                    birds.Add(Instantiate(birdTypes[randomBird], posInTree, Quaternion.identity, birdParent));
+                //generate birds in painted trees
+                if (treeScript.treeSpecie == TreeAudio.TreeType.PAINTEDTREE)
+                {
+                    for (int j = 2; j < trees[i].transform.childCount; j++)
+                    {
+                        float randomChance = Random.Range(0, 100);
+                        if (randomChance < 10)
+                        {
+                            Vector3 posInTree = trees[i].transform.GetChild(j).position;
+
+                            //generate red bird
+                            birds.Add(Instantiate(birdTypes[1], posInTree, Quaternion.identity, birdParent));
+                        }
+                    }
                 }
-            }
-            
+
+                //generate birds in purple trees
+                if (treeScript.treeSpecie == TreeAudio.TreeType.PURPLETREE)
+                {
+                    for (int j = 1; j < trees[i].transform.childCount; j++)
+                    {
+                        float randomChance = Random.Range(0, 100);
+                        if (randomChance < 10)
+                        {
+                            Vector3 posInTree = trees[i].transform.GetChild(j).position;
+
+                            //generate blue bird
+                            birds.Add(Instantiate(birdTypes[0], posInTree, Quaternion.identity, birdParent));
+                        }
+                    }
+                }
+            } 
         }
     }
 }
