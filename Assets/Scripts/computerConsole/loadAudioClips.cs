@@ -39,7 +39,7 @@ public class loadAudioClips : MonoBehaviour
 
     public IEnumerator LoadNewClip()
     {
-        WWW www = new WWW("file://" + saveSoundScript.soundSavePath);
+        WWW www = new WWW("file://" + saveSoundScript.clipSavePath);
         yield return www;
 
         AudioClip file = www.GetAudioClip();

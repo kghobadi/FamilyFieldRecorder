@@ -26,14 +26,11 @@ public class WorldManager : MonoBehaviour
     public Door doorScript;
 
     //for pacmaning player view trick
-    public Camera renderCamera, mainCamera;
-    public GameObject renderPlane;
     public float xPosMin, xPosMax, zPosMin, zPosMax;
 
     void Start()
     {
         //player refs
-        mainCamera = Camera.main;
         player = GameObject.FindGameObjectWithTag("Player");
         fpc = player.GetComponent<FirstPersonController>();
 
@@ -77,7 +74,6 @@ public class WorldManager : MonoBehaviour
         {
             StoreDeactiveObjects();
             PacmanPlayer();
-            SetRenderCamera();
         }
 
         //if we are in the house and the season has not changed yet, we start the countdown
@@ -127,37 +123,7 @@ public class WorldManager : MonoBehaviour
         }
     }
 
-    //this function moves the render cameras in relation to the players position near the map's boundaries
-    void SetRenderCamera()
-    {
-        //renderCamera.transform.localEulerAngles = mainCamera.transform.localEulerAngles;
-
-
-        /*
-        //for east boundary
-        if (player.transform.position.x >= (xPosMax - 50))
-        {
-            renderCamera.transform.position = new Vector3(xPosMin, player.transform.position.y, player.transform.position.z);
-        }
-
-        //for west boundary
-        else if (player.transform.position.x <= (xPosMin + 50))
-        {
-            renderCamera.transform.position = new Vector3(xPosMax, player.transform.position.y, player.transform.position.z);
-        }
-
-        //for north boundary
-        else if (player.transform.position.z <= (zPosMax - 50))
-        {
-            renderCamera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, zPosMin);
-        }
-
-        //for south boundary
-        else if (player.transform.position.z <= (zPosMin + 50))
-        {
-            renderCamera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, zPosMax);
-        }*/
-    }
+    
 
     //this function is called in order to cycle the regions
     void ChangeRegion()

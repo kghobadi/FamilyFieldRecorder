@@ -34,7 +34,7 @@ public class SaveSound : MonoBehaviour
     public bool newRec = false;
     private AudioListener recListener, cameraListener;
 
-    public string soundSavePath;
+   
     public loadAudioClips loader;
 
     public bool popRec, popStop;
@@ -45,6 +45,8 @@ public class SaveSound : MonoBehaviour
     public Text recordingTextTimer;
 
     public GameObject pressEnterObj;
+
+    public string clipSavePath;
 
     void Awake()
     {
@@ -68,28 +70,86 @@ public class SaveSound : MonoBehaviour
         uploadTimer = uploadTotal;
     }
 
+    void RecordingFunction()
+    {
+        if (!isWritingName)
+        {
+            //first press
+            if (!recOutput)
+            {
+                spaceToRecordObj.SetActive(false);
+                cameraListener.enabled = false;
+                recListener.enabled = true;
+                StartWriting();
+                recOutput = true;
+                recordingLight.SetActive(true);
+                print("rec");
+                enterNameObj.SetActive(false);
+                recordingText.SetActive(true);
+                pressEnterObj.SetActive(false);
+            }
+            else//end recording, start typing name
+            {
+                recOutput = false;
+                WriteHeader();
+                //                    print("recording sample stop");
+                recListener.enabled = false;
+                cameraListener.enabled = true;
+                RenameClip();
+                spaceToStopObj.SetActive(false);
+                recordingLight.SetActive(false);
+                stopLight.SetActive(true);
+                recordingTimer = 0;
+                recordingText.SetActive(false);
+            }
+        }
+    }
+
+    void RenameClip()
+    {
+        isWritingName = true;
+
+        popRec = true;
+        spaceToRecordObj.SetActive(false);
+        enterNameObj.SetActive(true);
+        enterName.ActivateInputField();
+        enterName.text = "Enter file name...";
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isWritingName && !uploading && fpc.recOut)
+        if (Input.GetKeyDown(KeyCode.Space))// && !isWritingName && !uploading && fpc.recOut)
         {
-            //called on first press of space to record
-            if (recOutput == false)
-            {
-                //enternamehere
-                popRec = true;
-                spaceToRecordObj.SetActive(false);
-                enterNameObj.SetActive(true);
-                enterName.ActivateInputField();
-                enterName.text = "Enter file name...";
-                isWritingName = true;
+            RecordingFunction();
+        }
 
-                //enterName.placeholder = "name it";
-
-            }
-            //called when player decidedly ends recording
-            else
+        //called after you have finished recording
+        if (isWritingName)
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                StopRecording();
+                fileName = enterName.text + ".wav";
+                enterNameObj.SetActive(false);
+                clipSavePath = Application.dataPath + "/Resources/savedClips/" + fileName;
+
+                System.IO.File.Move(Application.dataPath + "/Resources/savedClips/test.wav", clipSavePath);//make it add copy if it already exists!
+
+
+                StartCoroutine(loader.LoadNewClip());
+
+                //clipRecordProgress.rectTransform.sizeDelta = new Vector2(0, 10);
+
+                recordingTimer = 0;
+                isWritingName = false;
+
+                popStop = true;
+                
+                uploading = true;
+                pressEnterObj.SetActive(false);
+                uploadingObj.SetActive(true);
+
+                if (!fpc.hasRecorded)
+                    fpc.hasRecorded = true;
             }
         }
 
@@ -106,27 +166,7 @@ public class SaveSound : MonoBehaviour
 
             if(recordingTimer >= recordingLimit)
             {
-                StopRecording();
-            }
-        }
-
-        //check for input while player is writing name
-        if (isWritingName)
-        {
-            if (Input.GetKeyDown(KeyCode.Return) )
-            {
-                cameraListener.enabled = false;
-                recListener.enabled = true;
-                fileName = enterName.text + ".wav";
-                StartWriting(fileName);
-                recOutput = true;
-                recordingLight.SetActive(true);
-                print("rec");
-                enterNameObj.SetActive(false);
-                isWritingName = false;
-
-                recordingText.SetActive(true);
-                pressEnterObj.SetActive(false);
+                RecordingFunction();
             }
         }
 
@@ -147,32 +187,11 @@ public class SaveSound : MonoBehaviour
 
     }
 
-    void StopRecording()
+
+    void StartWriting()
     {
-        popStop = true;
-        recOutput = false;
-        WriteHeader();
-        print("rec stop");
-        spaceToStopObj.SetActive(false);
-        //StartCoroutine(loader.LoadNewSound());
-        uploading = true;
-        uploadingObj.SetActive(true);
-        recordingLight.SetActive(false);
-        stopLight.SetActive(true);
-        recListener.enabled = false;
-        cameraListener.enabled = true;
 
-        recordingTimer = 0;
-        recordingText.SetActive(false);
-
-        if (!fpc.hasRecorded)
-            fpc.hasRecorded = true;
-    }
-
-    void StartWriting(String name)
-    {
-        soundSavePath = Application.dataPath + "/Resources/savedClips/" + name;
-        fileStream = new FileStream(soundSavePath, FileMode.Create);
+        fileStream = new FileStream(Application.dataPath + "/Resources/savedClips/test.wav", FileMode.Create);
         byte emptyByte = new byte();
 
         for (int i = 0; i < headerSize; i++)

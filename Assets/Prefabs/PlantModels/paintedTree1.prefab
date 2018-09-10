@@ -446,3 +446,4 @@ MonoBehaviour:
   treeNoteTimerTotal: 10
   randomTimeMin: -5
   randomTimeMax: 10
+  treeSpecie: 1

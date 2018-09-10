@@ -11,6 +11,13 @@ public class TreeAudio : MonoBehaviour {
 
     public float treeNoteTimer, treeNoteTimerTotal, randomTimeMin, randomTimeMax;
 
+    public TreeType treeSpecie;
+
+    public enum TreeType
+    {
+        EVERGREENE, PAINTEDTREE, PURPLETREE,
+    }
+
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
         treeAudio = GetComponent<AudioSource>();
