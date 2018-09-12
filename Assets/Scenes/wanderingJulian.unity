@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641234, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -671,7 +671,6 @@ MonoBehaviour:
   recordingLight: {fileID: 0}
   stopLight: {fileID: 0}
   newRec: 0
-  soundSavePath: 
   loader: {fileID: 194015296}
   popRec: 0
   popStop: 0
@@ -680,6 +679,7 @@ MonoBehaviour:
   recordingText: {fileID: 0}
   recordingTextTimer: {fileID: 0}
   pressEnterObj: {fileID: 0}
+  clipSavePath: 
 --- !u!23 &570651092
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1541,21 +1541,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114649793964668190, guid: 24f4839d91a9b4131967d9bff7113ac0,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 87319264}
-    - target: {fileID: 223577740408158110, guid: 24f4839d91a9b4131967d9bff7113ac0,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2029682355}
-    - target: {fileID: 223439041406342890, guid: 24f4839d91a9b4131967d9bff7113ac0,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2029682355}
     - target: {fileID: 114498670079422154, guid: 24f4839d91a9b4131967d9bff7113ac0,
         type: 2}
       propertyPath: player
@@ -1571,6 +1556,21 @@ Prefab:
       propertyPath: firstPersonController
       value: 
       objectReference: {fileID: 87319263}
+    - target: {fileID: 223439041406342890, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2029682355}
+    - target: {fileID: 223577740408158110, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2029682355}
+    - target: {fileID: 114649793964668190, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 87319264}
     - target: {fileID: 114434795061357976, guid: 24f4839d91a9b4131967d9bff7113ac0,
         type: 2}
       propertyPath: saveSoundScript
@@ -1902,6 +1902,12 @@ MonoBehaviour:
   sensitivityY: 1.5
   smoothing: 2
   isActive: 0
+  renderCamera: {fileID: 0}
+  rayDistance: 0
+  renderMask:
+    serializedVersion: 2
+    m_Bits: 0
+  renderPlane: {fileID: 0}
 --- !u!1 &2064031790
 GameObject:
   m_ObjectHideFlags: 0
