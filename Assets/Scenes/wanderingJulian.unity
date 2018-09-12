@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -177,12 +177,13 @@ MonoBehaviour:
   recOut: 1
   recMoving: 0
   inHouse: 0
+  hasRecorded: 0
   recAwayTimer: 0
   recAwayTimeTotal: 0
   recOutPos: {x: 0, y: 0, z: 0}
   recAwayPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
-  recorder: {fileID: 570651088}
+  recorder: {fileID: 0}
 --- !u!4 &87319264
 Transform:
   m_ObjectHideFlags: 0
@@ -670,10 +671,15 @@ MonoBehaviour:
   recordingLight: {fileID: 0}
   stopLight: {fileID: 0}
   newRec: 0
-  soundSavePath: 
   loader: {fileID: 194015296}
   popRec: 0
   popStop: 0
+  recordingTimer: 0
+  recordingLimit: 30
+  recordingText: {fileID: 0}
+  recordingTextTimer: {fileID: 0}
+  pressEnterObj: {fileID: 0}
+  clipSavePath: 
 --- !u!23 &570651092
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -988,11 +994,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114193287452110388, guid: 1f9093443b54eb64ab3a131eaac26946,
-        type: 2}
-      propertyPath: treeTypes.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4710967710613258, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
       propertyPath: m_LocalPosition.x
       value: -14.526184
@@ -1045,16 +1046,6 @@ Prefab:
       propertyPath: birdParent
       value: 
       objectReference: {fileID: 623316303}
-    - target: {fileID: 114193287452110388, guid: 1f9093443b54eb64ab3a131eaac26946,
-        type: 2}
-      propertyPath: treeTypes.Array.data[3]
-      value: 
-      objectReference: {fileID: 1692562426009244, guid: f8371381ef48d054d92a822c40e3fe9a,
-        type: 2}
-    - target: {fileID: 1698172340823728, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f9093443b54eb64ab3a131eaac26946, type: 2}
   m_IsPrefabParent: 0
@@ -1550,26 +1541,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114434795061357976, guid: 24f4839d91a9b4131967d9bff7113ac0,
-        type: 2}
-      propertyPath: saveSoundScript
-      value: 
-      objectReference: {fileID: 570651091}
-    - target: {fileID: 114649793964668190, guid: 24f4839d91a9b4131967d9bff7113ac0,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 87319264}
-    - target: {fileID: 223577740408158110, guid: 24f4839d91a9b4131967d9bff7113ac0,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2029682355}
-    - target: {fileID: 223439041406342890, guid: 24f4839d91a9b4131967d9bff7113ac0,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2029682355}
     - target: {fileID: 114498670079422154, guid: 24f4839d91a9b4131967d9bff7113ac0,
         type: 2}
       propertyPath: player
@@ -1585,6 +1556,26 @@ Prefab:
       propertyPath: firstPersonController
       value: 
       objectReference: {fileID: 87319263}
+    - target: {fileID: 223439041406342890, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2029682355}
+    - target: {fileID: 223577740408158110, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2029682355}
+    - target: {fileID: 114649793964668190, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 87319264}
+    - target: {fileID: 114434795061357976, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: saveSoundScript
+      value: 
+      objectReference: {fileID: 570651091}
     - target: {fileID: 224595434558633798, guid: 24f4839d91a9b4131967d9bff7113ac0,
         type: 2}
       propertyPath: m_AnchorMax.y
@@ -1799,7 +1790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1887808618
 Transform:
   m_ObjectHideFlags: 0
@@ -1911,6 +1902,12 @@ MonoBehaviour:
   sensitivityY: 1.5
   smoothing: 2
   isActive: 0
+  renderCamera: {fileID: 0}
+  rayDistance: 0
+  renderMask:
+    serializedVersion: 2
+    m_Bits: 0
+  renderPlane: {fileID: 0}
 --- !u!1 &2064031790
 GameObject:
   m_ObjectHideFlags: 0
