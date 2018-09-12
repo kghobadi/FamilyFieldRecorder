@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{F7EA9806-F9EC-1E41-13AE-3D4D1AAF79E6}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/computerConsole/ConsoleManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Recording Device/SaveSound.cs">
     <Files>
       <File FileName="Assets/Scripts/camMouseLook.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/computerConsole/SimpleClock.cs" Line="612" Column="9" />
-      <File FileName="Assets/Scripts/Recording Device/SaveSound.cs" Line="208" Column="1" />
-      <File FileName="Assets/Scripts/computerConsole/loadAudioClips.cs" Line="82" Column="45" />
+      <File FileName="Assets/Scripts/Recording Device/SaveSound.cs" Line="173" Column="6" />
+      <File FileName="Assets/Scripts/computerConsole/loadAudioClips.cs" Line="46" Column="31" />
       <File FileName="Assets/Scripts/computerConsole/Sequencer.cs" Line="152" Column="51" />
       <File FileName="Assets/Scripts/computerConsole/Sampler.cs" Line="90" Column="18" />
       <File FileName="Assets/Scripts/computerConsole/SequenceRecorder.cs" Line="90" Column="70" />
@@ -13,10 +13,9 @@
       <File FileName="Assets/Scripts/computerConsole/clipVisualizer.cs" Line="14" Column="26" />
       <File FileName="Assets/Scripts/computerConsole/ButtonHover.cs" Line="14" Column="9" />
       <File FileName="Assets/Scripts/computerConsole/scrollerMoving.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/computerConsole/ConsoleManager.cs" Line="54" Column="5" />
-      <File FileName="Assets/Scripts/FirstPersonController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/computerConsole/ConsoleManager.cs" Line="53" Column="1" />
+      <File FileName="Assets/Scripts/FirstPersonController.cs" Line="137" Column="1" />
       <File FileName="Assets/Scripts/computerConsole/songArchive/LocalClipPlayer.cs" Line="68" Column="5" />
-      <File FileName="Assets/ButtonPressFeedback.cs" Line="142" Column="148" />
       <File FileName="Assets/Scripts/TreeAudio.cs" Line="16" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

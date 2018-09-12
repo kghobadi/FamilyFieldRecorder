@@ -13805,6 +13805,7 @@ MonoBehaviour:
   mouseLook: {fileID: 0}
   firstPersonController: {fileID: 0}
   playerConsolePosition: {fileID: 4274057433441116}
+  explorationMix: {fileID: 0}
 --- !u!114 &114499980654490970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16191,7 +16192,7 @@ MonoBehaviour:
   - buttonObject: {fileID: 4656565155017820}
     originalPosition: {x: 0, y: 0, z: 0}
   clipScrollerObj: {fileID: 4439455382731604}
-  buttonClick: {fileID: 8300000, guid: 2079f0a8e1b401c49882ae786d0637dc, type: 3}
+  buttonClick: {fileID: 8300000, guid: 711d9e85eaf381e44bcbf2ddc74797f9, type: 3}
 --- !u!114 &114996896691690114
 MonoBehaviour:
   m_ObjectHideFlags: 1
