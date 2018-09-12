@@ -222,6 +222,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7a8edaf602b8fd0409a23e594adc3cc7, type: 3}
   - {fileID: 8300000, guid: a1191e59c8ed33845b4eba547ac7598a, type: 3}
   lerpingColors: 0
+  myxPosMin: -247
+  myxPosMax: 247
+  myzPosMin: -247
+  myzPosMax: 247
 --- !u!114 &114730343776216372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,6 +244,7 @@ MonoBehaviour:
   gridSizeX: 20
   gridSizeY: 20
   gridSpot: {fileID: 1154226289551040, guid: 5896835fbea96af41b825363e64bca86, type: 2}
+  trees: []
   treeTypes:
   - {fileID: 1958085601736110, guid: 9ba2237d57de1504e84718589c5fd022, type: 2}
   - {fileID: 1975380764392272, guid: fea7ab595dc338447b6025beb80482da, type: 2}

@@ -37,6 +37,8 @@ public abstract class Animal : MonoBehaviour {
     public float  spookDistance = 15, stopMovingDistance = 5;
     NavMeshAgent myNavMesh;
 
+    public float randomScaleMin = 0.5f, randomScaleMax = 2;
+
 	public virtual void Start () {
         //find our player!
         player = GameObject.FindGameObjectWithTag("Player");
@@ -117,15 +119,21 @@ public abstract class Animal : MonoBehaviour {
         //getting spooked check
         if(Vector3.Distance(transform.position, player.transform.position) < spookDistance && !isRunning)
         {
-            isRunning = true;
-            soundTimerTotal = runTimerTotal;
-            myNavMesh.speed = runSpeed;
-            animator.SetBool("walking", false);
-            animator.SetBool("running", true);
-            animator.SetBool("idle", false);
-            SetDestination();
+            RunAway();
         }
 	}
+
+    //called to set running away from player state
+    public virtual void RunAway()
+    {
+        isRunning = true;
+        soundTimerTotal = runTimerTotal;
+        myNavMesh.speed = runSpeed;
+        animator.SetBool("walking", false);
+        animator.SetBool("running", true);
+        animator.SetBool("idle", false);
+        SetDestination();
+    }
 
     //this function sets a random point as the nav mesh destination
     //checks if the animal can walk there before setting it
@@ -177,7 +185,7 @@ public abstract class Animal : MonoBehaviour {
         Vector3 origScale = transform.localScale;
 
         //alter the scale
-        float randomScale = Random.Range(0.5f, 2f);
+        float randomScale = Random.Range(randomScaleMin, randomScaleMax);
 
         //multiply scale AND volume by our random vals
         transform.localScale *= randomScale;

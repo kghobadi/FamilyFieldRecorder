@@ -16,7 +16,6 @@ public class WaterSound : MonoBehaviour {
         if (!waterSource.isPlaying)
         {
             PlaySound();
-            Debug.Log("wave ");
         }
     }
 

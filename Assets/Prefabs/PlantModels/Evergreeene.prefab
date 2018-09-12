@@ -202,6 +202,7 @@ MonoBehaviour:
   treeNoteTimerTotal: 10
   randomTimeMin: -5
   randomTimeMax: 10
+  treeSpecie: 0
 --- !u!193 &193490984912140776
 Tree:
   m_ObjectHideFlags: 1
