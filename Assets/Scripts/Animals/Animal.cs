@@ -54,6 +54,12 @@ public abstract class Animal : MonoBehaviour {
         myNavMesh.speed = walkSpeed;
 
         RandomizeSize();
+
+        float randomStartMove = Random.Range(0, 100);
+        if(randomStartMove > 50)
+        {
+            isMoving = true;
+        }
     }
 
     public virtual void Update () {

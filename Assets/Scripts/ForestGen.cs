@@ -106,12 +106,17 @@ public class ForestGen : MonoBehaviour {
                     for (int j = 2; j < trees[i].transform.childCount; j++)
                     {
                         float randomChance = Random.Range(0, 100);
-                        if (randomChance < 10)
+                        if (randomChance < 7)
                         {
                             Vector3 posInTree = trees[i].transform.GetChild(j).position;
 
                             //generate red bird
-                            birds.Add(Instantiate(birdTypes[1], posInTree, Quaternion.identity, birdParent));
+                            GameObject birdClone = Instantiate(birdTypes[1], posInTree, Quaternion.identity, birdParent);
+                            birds.Add(birdClone);
+
+                            //randomize bird scale
+                            float randomScale = Random.Range(0.5f, 1f);
+                            birdClone.transform.localScale *= randomScale;
                         }
                     }
                 }
@@ -122,12 +127,38 @@ public class ForestGen : MonoBehaviour {
                     for (int j = 1; j < trees[i].transform.childCount; j++)
                     {
                         float randomChance = Random.Range(0, 100);
-                        if (randomChance < 10)
+                        if (randomChance < 5)
                         {
                             Vector3 posInTree = trees[i].transform.GetChild(j).position;
 
                             //generate blue bird
-                            birds.Add(Instantiate(birdTypes[0], posInTree, Quaternion.identity, birdParent));
+                            GameObject birdClone = Instantiate(birdTypes[0], posInTree, Quaternion.identity, birdParent);
+                            birds.Add(birdClone);
+
+                            //randomize bird scale
+                            float randomScale = Random.Range(0.5f, 1f);
+                            birdClone.transform.localScale *= randomScale;
+                        }
+                    }
+                }
+
+                //generate birds in purple trees
+                if (treeScript.treeSpecie == TreeAudio.TreeType.EVERGREENE)
+                {
+                    for (int j = 0; j < trees[i].transform.childCount; j++)
+                    {
+                        float randomChance = Random.Range(0, 100);
+                        if (randomChance < 5)
+                        {
+                            Vector3 posInTree = trees[i].transform.GetChild(j).position;
+
+                            //generate blue bird
+                            GameObject birdClone = Instantiate(birdTypes[2], posInTree, Quaternion.identity, birdParent);
+                            birds.Add(birdClone);
+
+                            //randomize bird scale
+                            float randomScale = Random.Range(0.5f, 1f);
+                            birdClone.transform.localScale *= randomScale;
                         }
                     }
                 }
