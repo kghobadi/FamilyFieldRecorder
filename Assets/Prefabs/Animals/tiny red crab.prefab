@@ -998,7 +998,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1061645474036816}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -969.3958, y: 748.7, z: -1914.195}
+  m_LocalPosition: {x: 7.014805, y: 3.8017852, z: 12.283434}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4737634238860058}
@@ -1170,31 +1170,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f53a3000509a914092f4d8a6c8bcbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crabWalking:
-  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
-  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
-  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
-  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
-  crabIdle:
-  - {fileID: 8300000, guid: 04e2a54d380ce6c4c9cca98cefb2bdc7, type: 3}
-  - {fileID: 8300000, guid: 489cdb582c7da2140b947f15f9615764, type: 3}
-  crabRunning:
-  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
-  - {fileID: 8300000, guid: 6387926adcca484428268b8431ad778c, type: 3}
-  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
-  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
-  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
+  walking:
+  - {fileID: 8300000, guid: c11b8d4c7b6a0a54292688809448ab25, type: 3}
+  - {fileID: 8300000, guid: c6f6589dbc2e9e14eb7cb6e73a07abab, type: 3}
+  - {fileID: 8300000, guid: aa5fbc9871009e54a881cad06a3885e2, type: 3}
+  - {fileID: 8300000, guid: 160c593a6953f814bb55ef7f4997e139, type: 3}
+  - {fileID: 8300000, guid: e2e9dfd7c853e034499d59e97ad0bb1a, type: 3}
+  - {fileID: 8300000, guid: 3f1754a990c98f341b1393fe2ed14408, type: 3}
+  - {fileID: 8300000, guid: 94cfb9cce9d10b14598331e2e67f8df6, type: 3}
+  idle:
+  - {fileID: 8300000, guid: 1c1b3d75d01bb3d468554ad6fb5fde40, type: 3}
+  - {fileID: 8300000, guid: 24f74f0521e1dd84a94d45f105866f82, type: 3}
+  - {fileID: 8300000, guid: a9e22ea33f2058f43ab2bc03e35b33ee, type: 3}
+  - {fileID: 8300000, guid: adfd6bd905c8c2542bf18b105cadb2e8, type: 3}
+  running:
+  - {fileID: 8300000, guid: d4a9711eee4ffec4bbb1e5293e671db3, type: 3}
+  - {fileID: 8300000, guid: 1f589131e70cbc94ea08fa98fed6fe93, type: 3}
+  - {fileID: 8300000, guid: 24c917eb9079aea439bfff0cbcb07c74, type: 3}
+  - {fileID: 8300000, guid: eebb2c838ec143c4d8df78b1c65d74af, type: 3}
+  - {fileID: 8300000, guid: 6647cc605b2bbd449957da4555a148ed, type: 3}
+  - {fileID: 8300000, guid: 42be5d730c337634fb075681cb9ce28f, type: 3}
+  - {fileID: 8300000, guid: 157e065ca3ff01b4dae777311a8fd42c, type: 3}
+  - {fileID: 8300000, guid: 932d5666a248b094493eac8286d2bf34, type: 3}
+  - {fileID: 8300000, guid: 1a6e2a12c57196447805c01cf4581855, type: 3}
   movementRadius: 20
   walkSpeed: 3
   runSpeed: 15
   moveTimerTotal: 5
-  moving: 0
-  running: 0
+  isMoving: 0
+  isRunning: 0
   nextNoteIn: 0.25
-  soundTimerTotal: 3
-  walkTimerTotal: 1
-  runTimerTotal: 0.5
+  soundTimerTotal: 5
+  walkTimerTotal: 0.5
+  runTimerTotal: 0.25
   spookDistance: 10
+  stopMovingDistance: 5
+  randomScaleMin: 0.5
+  randomScaleMax: 2
+  myMR: {fileID: 137484333790987874}
+  idleSilent: {r: 0.9528302, g: 0.05842829, b: 0.05842829, a: 1}
+  idleAudible: {r: 1, g: 0.33490568, b: 0.33490568, a: 1}
+  walkingSilent: {r: 1, g: 0.6234569, b: 0.08018869, a: 1}
+  walkingAudible: {r: 1, g: 0.37376454, b: 0, a: 1}
+  runningSilent: {r: 1, g: 0.0141509175, b: 0.2504489, a: 1}
+  runningAudible: {r: 1, g: 0, b: 0.57442236, a: 1}
+  desiredPitch: 1.05
+  originalPitch: 1
 --- !u!114 &114780763801649662
 MonoBehaviour:
   m_ObjectHideFlags: 1
