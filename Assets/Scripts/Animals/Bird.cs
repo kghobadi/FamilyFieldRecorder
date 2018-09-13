@@ -64,9 +64,18 @@ public class Bird : MonoBehaviour {
         desiredAnim.SetActive(true);
     }
 
+    //bird sings a new call out
     void Serenade()
     {
         int randomCall = Random.Range(0, birdSounds.Length);
-        birdAudio.PlayOneShot(birdSounds[randomCall]);
+        if(birdAudio.clip != birdSounds[randomCall])
+        {
+            birdAudio.PlayOneShot(birdSounds[randomCall]);
+            birdAudio.clip = birdSounds[randomCall];
+        }
+        else
+        {
+            Serenade();
+        }
     }
 }
