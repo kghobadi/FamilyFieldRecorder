@@ -28,6 +28,11 @@ public class WorldManager : MonoBehaviour
     //for pacmaning player view trick
     public float xPosMin, xPosMax, zPosMin, zPosMax;
 
+    //for random rains
+    public bool isRaining;
+    public int rainType;
+    Rain rainScript;
+
     void Start()
     {
         //player refs
@@ -65,6 +70,8 @@ public class WorldManager : MonoBehaviour
         {
             countsUp = true;
         }
+
+        rainScript = GameObject.FindGameObjectWithTag("Rain").GetComponent<Rain>();
     }
 
     void Update()
@@ -128,6 +135,7 @@ public class WorldManager : MonoBehaviour
     //this function is called in order to cycle the regions
     void ChangeRegion()
     {
+        isRaining = false;
         if (countsUp)
         {
             theRegions[regionCounter].SetActive(false);
@@ -159,6 +167,23 @@ public class WorldManager : MonoBehaviour
         theRegions[regionCounter].GetComponent<TerrainManager>().hasTransitioned = false;
         seasonChanged = true;
         changeSeasonTimer = changeSeasonTimerTotal;
+
+        //chance to rain in jungle and deciduous forest
+        if(regionCounter == 0 || regionCounter == 3)
+        {
+            float randomRain = Random.Range(0f, 100f);
+
+            if(randomRain < 25)
+            {
+                isRaining = true;
+
+                int randomType = Random.Range(1, 4);
+
+                rainType = randomType;
+
+                rainScript.RainType();
+            }
+        }
     }
 
     void StoreDeactiveObjects()
