@@ -19,6 +19,7 @@ TagManager:
   - RenderWall
   - Rain
   - WorldCanvas
+  - Clock
   layers:
   - Default
   - TransparentFX

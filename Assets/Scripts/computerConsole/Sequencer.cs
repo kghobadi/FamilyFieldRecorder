@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Beat;
 
 [System.Serializable]
 public struct sequenceKey
@@ -21,6 +22,7 @@ public struct sequenceKey
 
 public class Sequencer : MonoBehaviour
 {
+    Clock clockScript;
     public AudioClip[] basicBeats;
 
     public bool sequencerPlaying;
@@ -56,10 +58,19 @@ public class Sequencer : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-
-        SimpleClock.ThirtySecond += OnThirtySecond;
-
+        clockScript = GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
+        //SimpleClock.ThirtySecond += OnThirtySecond;
+        //Clock.BeatValue += OnThirtySecond;
+        //Clock.ThirtySecond += OnThirtySecond;
     }
+
+    //void OnThirtySecond(Clock.BeatArgs e)
+    //{
+    //    if (e.BeatMask[(int)Clock.BeatValue.ThirtySecond])
+    //    {
+    //        showRhythm = true;
+    //    }
+    //}
 
     void Start()
     {
@@ -131,11 +142,7 @@ public class Sequencer : MonoBehaviour
         sequenceKeys[7].slotsImage[1].onClick.AddListener(delegate { RemoveSampleFromSlot(7, 1); });
 
     }
-
-    void OnDestroy()
-    {
-        SimpleClock.ThirtySecond -= OnThirtySecond;
-    }
+    
 
 
 
@@ -227,8 +234,8 @@ public class Sequencer : MonoBehaviour
 
         if (showRhythm)
         {
-
-
+            Debug.Log("showing my got damn rhtytm");
+            
             if (sequencerIndex == 7)
             {
                 sequencerIndex = 0;
@@ -254,6 +261,7 @@ public class Sequencer : MonoBehaviour
                     {
                         if (sequenceKeys[i].slots[slotNum].clip != null)
                             sequenceKeys[i].slots[slotNum].Play();
+                        //sequenceKeys[i].slots[slotNum].Play();
                     }
                 }
                 else
@@ -313,118 +321,7 @@ public class Sequencer : MonoBehaviour
     }
 
 
-    void OnThirtySecond(BeatArgs e)
-    {
-        if (e.TickMask[TickValue.Eighth])
-        {
-            // rhythm creation / beat visual
 
-
-            //showRhythm = true;//TURN THIS ON WHEN CLOCK IS WORKING
-
-
-        }
-        //switch (timeScale)
-        //{
-        //    case 0:
-        //        if (e.TickMask[TickValue.Measure])
-        //        {
-        //            // rhythm creation / beat visual
-        //            showRhythm = true;
-        //        }
-        //        break;
-        //    case 1:
-        //        if (e.TickMask[TickValue.Quarter])
-        //        {
-        //            // rhythm creation / beat visual
-        //            showRhythm = true;
-        //        }
-        //        break;
-        //    case 2:
-        //        if (e.TickMask[TickValue.Eighth])
-        //        {
-        //            // rhythm creation / beat visual
-        //            showRhythm = true;
-        //        }
-        //        break;
-        //    case 3:
-        //        if (e.TickMask[TickValue.Sixteenth])
-        //        {
-        //            // rhythm creation / beat visual
-        //            showRhythm = true;
-        //        }
-        //        break;
-        //    case 4:
-        //        if (e.TickMask[TickValue.ThirtySecond])
-        //        {
-        //            // rhythm creation / beat visual
-        //            showRhythm = true;
-        //        }
-        //        break;
-        //}
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    void AudioRhythm()
-    {
-        //if (!playedAudio)
-        //{
-        SwitchTimeScale();
-        //    playedAudio = true;
-        //}
-        //else
-        //{
-        //    if (!beatSource.isPlaying)
-        //    {
-        //        SwitchTimeScale();
-        //        playedAudio = false;
-
-        //    }
-        //}
-    }
-
-    void SwitchTimeScale()
-    {
-
-        //beatSource.PlayScheduled(SimpleClock.AtNextEighth());
-
-
-
-
-
-
-
-        //switch (timeScale)
-        //{
-        //    case 0:
-        //        beatSource.PlayScheduled(SimpleClock.AtNextMeasure());
-
-        //        break;
-        //    case 1:
-        //        beatSource.PlayScheduled(SimpleClock.AtNextQuarter());
-        //        break;
-        //    case 2:
-        //        beatSource.PlayScheduled(SimpleClock.AtNextEighth());
-        //        break;
-        //    case 3:
-        //        beatSource.PlayScheduled(SimpleClock.AtNextSixteenth());
-        //        break;
-        //    case 4:
-        //        beatSource.PlayScheduled(SimpleClock.AtNextThirtySecond());
-        //        break;
-        //}
-    }
+    
 }
 

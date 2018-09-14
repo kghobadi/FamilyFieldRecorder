@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1027449079}
-  m_IndirectSpecularColor: {r: 0.2689595, g: 0.64903975, b: 0.32245034, a: 1}
+  m_IndirectSpecularColor: {r: 0.29483822, g: 0.60488343, b: 0.4158813, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 254221950}
   m_Layer: 0
   m_Name: Clock
-  m_TagString: Untagged
+  m_TagString: Clock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -430,21 +430,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 254221949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1feb6165a1cd64702be8a321be1a6a7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ac64016c3f22744b82c62dc7e07db24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BPM: 10
+  MBT: 
   StartDelay: 0
-  Measures: 0
-  Beats: 0
-  Ticks: 0
-  BPM: 0
-  beatsPerMeasure: 0
-  ThirtySecondMessage: 0
-  SixteenthMessage: 0
-  EighthMessage: 0
-  BeatMessage: 0
-  HalfMessage: 0
-  MeasureMessage: 0
+  LatencyCompensation: 0
+  _secondsPerMeasure: 4
 --- !u!82 &254221951
 AudioSource:
   m_ObjectHideFlags: 0
