@@ -6,6 +6,7 @@ public class camMouseLook : MonoBehaviour
 {
     GameObject character;
     Transform player;
+    FirstPersonController fpc;
     Vector2 mouseLook;
     Vector2 smoothV;
     public float sensitivityX;
@@ -24,13 +25,20 @@ public class camMouseLook : MonoBehaviour
     void Start()
     {
         character = transform.parent.gameObject;
-        isActive = true;
+        isActive = false;
         player = transform.parent;
+        fpc = player.GetComponent<FirstPersonController>();
         worldMan = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
     }
 
     void Update()
     {
+        //only set active once start menu disappears
+        if(fpc.hasStarted && !isActive)
+        {
+            isActive = true;
+        }
+
         if (isActive)
         {
             Cursor.lockState = CursorLockMode.Locked;

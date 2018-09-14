@@ -32,7 +32,7 @@ public class Sampler : MonoBehaviour
 
     public string sampleSavePath;
     public loadAudioClips loader;
-    LocalClipPlayer localClipPlayer;
+    public LocalClipPlayer localClipPlayer;
 
     public Button startRecordingButt;
     public Image sampleRecordProgress;
@@ -44,6 +44,8 @@ public class Sampler : MonoBehaviour
     float sampleMaxLength = 3;
 
     public ButtonPressFeedback buttonPressFeedback;
+
+    public GameObject blockImage1, blockImage2;
 
     void Awake()
     {
@@ -60,7 +62,7 @@ public class Sampler : MonoBehaviour
         //if (GetComponent<AudioListener>() == null)
         //print("put audiolistener on recorder!");
 
-        localClipPlayer = loader.GetComponent<LocalClipPlayer>();
+        //localClipPlayer = loader.GetComponent<LocalClipPlayer>();
 
         startRecordingButt.onClick.AddListener(RecordingFunction);
     }
@@ -135,6 +137,9 @@ public class Sampler : MonoBehaviour
 
         if (isWritingName)
         {
+            blockImage1.SetActive(true);
+            blockImage2.SetActive(true);
+
             if (!enterSampleName.isFocused)
                 enterSampleName.ActivateInputField();
 
@@ -159,6 +164,9 @@ public class Sampler : MonoBehaviour
 
                 recordingTimer = 0;
                 isWritingName = false;
+
+                blockImage1.SetActive(false);
+                blockImage2.SetActive(false);
             }
         }
 

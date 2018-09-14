@@ -10,7 +10,7 @@ public class LocalClipPlayer : MonoBehaviour
 
 
 
-    loadAudioClips l;
+    public loadAudioClips l;
 
     [HideInInspector]
     public int clipIndex, sampleIndex, sequenceIndex;
@@ -49,7 +49,7 @@ public class LocalClipPlayer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        l = GetComponent<loadAudioClips>();
+       
         audioSource = GetComponent<AudioSource>();
 
         ClipButton();
@@ -134,7 +134,12 @@ public class LocalClipPlayer : MonoBehaviour
             if (scrollBarValueIsChanging)
             {
                 audioSource.Pause();
+                if(clipScroller.value !=1)
                 audioSource.time = clipScroller.value * audioSource.clip.length;
+                else
+                {
+                    audioSource.time = 0.99f * audioSource.clip.length;
+                }
             }
             else
             {
@@ -355,7 +360,7 @@ public class LocalClipPlayer : MonoBehaviour
             case FileType.sequence:
 
                 System.IO.File.Delete(Application.dataPath + "/Resources/savedSequences/" + l.sequenceFiles[sequenceIndex].name + ".wav");
-                l.sampleFiles.RemoveAt(sampleIndex);
+                l.sequenceFiles.RemoveAt(sequenceIndex);
                 if (sequenceIndex > l.sequenceFiles.Count - 1)
                     sequenceIndex--;
 

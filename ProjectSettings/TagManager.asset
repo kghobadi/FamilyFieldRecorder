@@ -17,6 +17,8 @@ TagManager:
   - House
   - RenderCam
   - RenderWall
+  - Rain
+  - WorldCanvas
   layers:
   - Default
   - TransparentFX

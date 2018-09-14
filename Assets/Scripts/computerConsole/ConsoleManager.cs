@@ -17,6 +17,8 @@ public class ConsoleManager : MonoBehaviour
 
     bool exitting;
 
+    public SaveSound s;
+
     // Use this for initialization
     void Start()
     {
@@ -26,20 +28,23 @@ public class ConsoleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(player.position, transform.position) < 5 && player.position != playerConsolePosition.position && !exitting)
+        if (!s.doingRecordingThingFull)
         {
-            LerpToPos();
+            if (Vector3.Distance(player.position, transform.position) < 5 && player.position != playerConsolePosition.position && !exitting)
+            {
+                LerpToPos();
 
-        }
-        else if (Vector3.Distance(player.position, transform.position) > 5)
-        {
-            exitting = false;
-        }
+            }
+            else if (Vector3.Distance(player.position, transform.position) > 5)
+            {
+                exitting = false;
+            }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            exitting = true;
-            TurnOff();
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                exitting = true;
+                TurnOff();
+            }
         }
     }
 
@@ -48,15 +53,19 @@ public class ConsoleManager : MonoBehaviour
         console.SetActive(true);
         topCanvas.SetActive(true);
         //put away recorder
-        firstPersonController.MoveRec(firstPersonController.recAwayPos);
+        firstPersonController.enabled = false;
+        //firstPersonController.MoveRec(firstPersonController.recAwayPos);
         //turn volume of exploration mixer down 
         explorationMix.SetFloat("masterVol", -80);
         Cursor.lockState = CursorLockMode.None;
+        mouseLook.enabled = false;
+        mouseLook.isActive = false;
     }
 
     void TurnOff()
     {
         console.SetActive(false);
+        mouseLook.enabled = true;
         mouseLook.isActive = true;
         firstPersonController.enabled = true;
         topCanvas.SetActive(false);
@@ -70,6 +79,7 @@ public class ConsoleManager : MonoBehaviour
         {
             firstPersonController.enabled = false;
             mouseLook.isActive = false;
+            Debug.Log("turn off kass sucks");
             player.position = Vector3.Lerp(player.position, playerConsolePosition.position, 0.2f);
 
         }

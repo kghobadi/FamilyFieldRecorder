@@ -32,7 +32,7 @@ public class SequenceRecorder : MonoBehaviour
 
     public string sequenceSavePath;
     public loadAudioClips loader;
-    LocalClipPlayer localClipPlayer;
+    public LocalClipPlayer localClipPlayer;
 
     public Button startRecordingButt;
     public Image sequenceRecordProgress;
@@ -42,6 +42,8 @@ public class SequenceRecorder : MonoBehaviour
     float sequenceMaxLength = 60;
 
     public ButtonPressFeedback buttonPressFeedback;
+
+    public GameObject blockImage1, blockImage2;
 
     void Awake()
     {
@@ -58,7 +60,7 @@ public class SequenceRecorder : MonoBehaviour
         //if (GetComponent<AudioListener>() == null)
         //print("put audiolistener on recorder!");
 
-        localClipPlayer = loader.GetComponent<LocalClipPlayer>();
+        //localClipPlayer = loader.GetComponent<LocalClipPlayer>();
 
         startRecordingButt.onClick.AddListener(RecordingFunction);
     }
@@ -130,6 +132,9 @@ public class SequenceRecorder : MonoBehaviour
 
         if (isWritingName)
         {
+            blockImage1.SetActive(true);
+            blockImage2.SetActive(true);
+
             if (!enterSequenceName.isFocused)
                 enterSequenceName.ActivateInputField();
 
@@ -150,6 +155,9 @@ public class SequenceRecorder : MonoBehaviour
 
                 recordingTimer = 0;
                 isWritingName = false;
+
+                blockImage1.SetActive(false);
+                blockImage2.SetActive(false);
             }
         }
     }

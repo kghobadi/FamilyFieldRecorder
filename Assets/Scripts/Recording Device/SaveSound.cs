@@ -7,6 +7,8 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
+using UnityEngine.SceneManagement;
+
 //Need ability to delete exported audio files within unity/ on recording device
 
 public class SaveSound : MonoBehaviour
@@ -29,7 +31,7 @@ public class SaveSound : MonoBehaviour
     //we should allow player to view and listen to their songs as AudioClips in game
 
     public GameObject enterNameObj, spaceToStopObj, spaceToRecordObj, 
-        uploadingObj, uploadingBar, recordingLight, stopLight;
+        uploadingObj, uploadingBar, recordingLight, stopLight, transformReader;
     InputField enterName;
 
     public bool newRec = false;
@@ -38,7 +40,7 @@ public class SaveSound : MonoBehaviour
    
     public loadAudioClips loader;
 
-    public bool popRec, popStop;
+    public bool popRec, popStop, paused;
 
     //timers for recOutput and length limiting
     public float recordingTimer, recordingLimit = 30;
@@ -48,6 +50,11 @@ public class SaveSound : MonoBehaviour
     public GameObject pressEnterObj;
 
     public string clipSavePath;
+
+    public bool doingRecordingThingFull;
+
+    //pause menu buttons
+    public GameObject resumeButton, quitButton, restartButton;
 
     void Awake()
     {
@@ -88,6 +95,8 @@ public class SaveSound : MonoBehaviour
                 enterNameObj.SetActive(false);
                 recordingText.SetActive(true);
                 pressEnterObj.SetActive(false);
+
+                doingRecordingThingFull = true;
             }
             else//end recording, start typing name
             {
@@ -119,82 +128,136 @@ public class SaveSound : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))// && !isWritingName && !uploading && fpc.recOut)
+        if (!paused)
         {
-            RecordingFunction();
-        }
-
-        //called after you have finished recording
-        if (isWritingName)
-        {
-            if (!enterName.isFocused)
-                enterName.ActivateInputField();
-
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                fileName = enterName.text + ".wav";
-                enterNameObj.SetActive(false);
-                clipSavePath = Application.dataPath + "/Resources/savedClips/" + fileName;
-
-                System.IO.File.Move(Application.dataPath + "/Resources/savedClips/test.wav", clipSavePath);//make it add copy if it already exists!
-
-
-                StartCoroutine(loader.LoadNewClip());
-
-                //clipRecordProgress.rectTransform.sizeDelta = new Vector2(0, 10);
-
-                recordingTimer = 0;
-                isWritingName = false;
-
-                popStop = true;
-                
-                uploading = true;
-                pressEnterObj.SetActive(false);
-                uploadingObj.SetActive(true);
-                uploadingBar.SetActive(true);
-
-                if (!fpc.hasRecorded)
-                    fpc.hasRecorded = true;
-            }
-        }
-
-        //called while we are recording
-        if (recOutput)
-        {
-            recordingTimer += Time.deltaTime;
-            recordingTextTimer.text = recordingTimer.ToString("n1") + "s";
-
-            if(recordingTimer >= 3)
-            {
-                spaceToStopObj.SetActive(true);
-            }
-
-            if(recordingTimer >= recordingLimit)
+            if (Input.GetKeyDown(KeyCode.Space) && fpc.hasStarted && fpc.recOut)
             {
                 RecordingFunction();
             }
-        }
 
-        //called when sound is being sent to console/sequencer
-        if (uploading)
-        {
-            uploadTimer -= Time.deltaTime;
-            uploadingBar.GetComponent<Image>().fillAmount += Time.deltaTime / 2.8f;
-
-            if (uploadTimer < 0)
+            //called after you have finished recording
+            if (isWritingName)
             {
-                uploading = false;
-                uploadingObj.SetActive(false);
-                uploadingBar.GetComponent<Image>().fillAmount = 0;
-                uploadingBar.SetActive(false);
-                spaceToRecordObj.SetActive(true);
-                stopLight.SetActive(false);
-                uploadTimer = uploadTotal;
+                if (!enterName.isFocused)
+                    enterName.ActivateInputField();
+
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    fileName = enterName.text + ".wav";
+                    enterNameObj.SetActive(false);
+                    clipSavePath = Application.dataPath + "/Resources/savedClips/" + fileName;
+
+                    System.IO.File.Move(Application.dataPath + "/Resources/savedClips/test.wav", clipSavePath);//make it add copy if it already exists!
+
+
+                    StartCoroutine(loader.LoadNewClip());
+
+                    //clipRecordProgress.rectTransform.sizeDelta = new Vector2(0, 10);
+
+                    recordingTimer = 0;
+                    isWritingName = false;
+
+                    popStop = true;
+
+                    uploading = true;
+                    pressEnterObj.SetActive(false);
+                    uploadingObj.SetActive(true);
+                    uploadingBar.SetActive(true);
+
+                    doingRecordingThingFull = false;
+                }
+            }
+
+            //called while we are recording
+            if (recOutput)
+            {
+                recordingTimer += Time.deltaTime;
+                recordingTextTimer.text = recordingTimer.ToString("n1") + "s";
+
+                if (recordingTimer >= 3)
+                {
+                    spaceToStopObj.SetActive(true);
+                }
+
+                if (recordingTimer >= recordingLimit)
+                {
+                    RecordingFunction();
+                }
+            }
+
+            //called when sound is being sent to console/sequencer
+            if (uploading)
+            {
+                uploadTimer -= Time.deltaTime;
+                uploadingBar.GetComponent<Image>().fillAmount += Time.deltaTime / 2.8f;
+
+                if (uploadTimer < 0)
+                {
+                    uploading = false;
+                    uploadingObj.SetActive(false);
+                    uploadingBar.GetComponent<Image>().fillAmount = 0;
+                    uploadingBar.SetActive(false);
+                    spaceToRecordObj.SetActive(true);
+                    stopLight.SetActive(false);
+                    uploadTimer = uploadTotal;
+                }
             }
         }
-
+        //if paused, and press escape, resume game
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Resume();
+            }
+        }
     }
 
+    public void PauseMenu()
+    {
+        spaceToRecordObj.SetActive(false);
+        transformReader.SetActive(false);
+        paused = true;
+
+        //activate cursor
+        Cursor.lockState = CursorLockMode.None;
+        //resume button
+        resumeButton.SetActive(true);
+        //audio settings
+        //restart button
+        restartButton.SetActive(true);
+        //quit button
+        quitButton.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        spaceToRecordObj.SetActive(true);
+        transformReader.SetActive(true);
+        fpc.DisablePauseMenu();
+
+        //disable cursor
+        Cursor.lockState = CursorLockMode.Locked;
+        //disable resume  button
+        resumeButton.SetActive(false);
+        //disable audio settings
+        // disable restart button
+        restartButton.SetActive(false);
+        //disable quit button
+        quitButton.SetActive(false);
+    }
+
+    //called from pause menu button
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    //called from pause menu button
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 
     void StartWriting()
     {

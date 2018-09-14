@@ -45,7 +45,7 @@ public class Sequencer : MonoBehaviour
     public AudioSource clipPlayerSource;
 
     LocalClipPlayer clipPlayerScript;
-    loadAudioClips l;
+    public loadAudioClips l;
 
     public ButtonPressFeedback buttonPressFeedback;
 
@@ -102,7 +102,7 @@ public class Sequencer : MonoBehaviour
         sequencerButts[7].onClick.AddListener(delegate { LoadSampleToSlots(7); });
 
         clipPlayerScript = clipPlayerSource.GetComponent<LocalClipPlayer>();
-        l = clipPlayerSource.GetComponent<loadAudioClips>();
+       // l = clipPlayerSource.GetComponent<loadAudioClips>();
 
 
 

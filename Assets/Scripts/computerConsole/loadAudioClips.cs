@@ -17,7 +17,9 @@ public class loadAudioClips : MonoBehaviour
     public SequenceRecorder seqRecorder;
     int sequenceNumber;
 
-    LocalClipPlayer localClipPlayer;
+    public LocalClipPlayer localClipPlayer;
+
+
 
     // Use this for initialization
     void Start()
@@ -27,7 +29,7 @@ public class loadAudioClips : MonoBehaviour
         InitSampleLoad();
         InitSequenceLoad();
 
-        localClipPlayer = GetComponent<LocalClipPlayer>();
+        
     }
 
     // Update is called once per frame
