@@ -46,6 +46,8 @@ public class FirstPersonController : MonoBehaviour
 
     SaveSound recordScript;
 
+    public Transform console;
+
     void Start()
     {
         player = GetComponent<CharacterController>();
@@ -130,18 +132,15 @@ public class FirstPersonController : MonoBehaviour
             }
         }
 
-        //count fown while player has recorder out to auto put it away
-        if (recOut)
+        //move away recorder if near sequencer
+        if(Vector3.Distance(transform.position, console.position) < 10)
         {
-            //checks that we are not doing anything with the recorder
-            if(!recordScript.isWritingName && !recordScript.uploading
-                && !recordScript.recOutput && hasRecorded)
-                recAwayTimer -= Time.deltaTime;
-
-            if(recAwayTimer < 0)
-            {
-                MoveRec(recAwayPos);
-            }
+            MoveRec(recAwayPos);
+        }
+        //keep it out
+        else
+        {
+            MoveRec(recOutPos);
         }
 
         //Take out recorder

@@ -127,6 +127,9 @@ public class SaveSound : MonoBehaviour
         //called after you have finished recording
         if (isWritingName)
         {
+            if (!enterName.isFocused)
+                enterName.ActivateInputField();
+
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 fileName = enterName.text + ".wav";

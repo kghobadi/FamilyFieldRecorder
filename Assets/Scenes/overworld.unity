@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1027449079}
-  m_IndirectSpecularColor: {r: 0.29483917, g: 0.6048812, b: 0.41639945, a: 1}
+  m_IndirectSpecularColor: {r: 0.89177, g: 0.59373116, b: 0.2611949, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6235,7 +6235,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114099606898796530, guid: c30077ca40f89944a889c2bffe1b33d6,
+        type: 2}
+      propertyPath: openDistanceOut
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 65730764145651328, guid: c30077ca40f89944a889c2bffe1b33d6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c30077ca40f89944a889c2bffe1b33d6, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &584535296
@@ -9940,6 +9946,11 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!4 &1140123054 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4947801568461980, guid: 24f4839d91a9b4131967d9bff7113ac0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1800981730}
 --- !u!1 &1140849545
 GameObject:
   m_ObjectHideFlags: 0
@@ -15260,6 +15271,11 @@ Prefab:
       propertyPath: uploadingBar
       value: 
       objectReference: {fileID: 1935329943}
+    - target: {fileID: 114199935247672294, guid: c3677880339f95940a7bd0f02039e69e,
+        type: 2}
+      propertyPath: console
+      value: 
+      objectReference: {fileID: 1140123054}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3677880339f95940a7bd0f02039e69e, type: 2}
   m_IsPrefabParent: 0
@@ -15503,6 +15519,26 @@ Prefab:
       propertyPath: saveSoundScript
       value: 
       objectReference: {fileID: 1022847694}
+    - target: {fileID: 224595434558633798, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224844009178261082, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224083670685792216, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224862595608756222, guid: 24f4839d91a9b4131967d9bff7113ac0,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24f4839d91a9b4131967d9bff7113ac0, type: 2}
   m_IsPrefabParent: 0

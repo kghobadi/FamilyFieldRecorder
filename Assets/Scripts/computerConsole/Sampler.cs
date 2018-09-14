@@ -135,6 +135,8 @@ public class Sampler : MonoBehaviour
 
         if (isWritingName)
         {
+            if (!enterSampleName.isFocused)
+                enterSampleName.ActivateInputField();
 
             if (Input.GetKeyDown(KeyCode.Return))
             {

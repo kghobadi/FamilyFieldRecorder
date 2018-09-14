@@ -130,6 +130,8 @@ public class SequenceRecorder : MonoBehaviour
 
         if (isWritingName)
         {
+            if (!enterSequenceName.isFocused)
+                enterSequenceName.ActivateInputField();
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
