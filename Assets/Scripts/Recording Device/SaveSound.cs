@@ -28,7 +28,8 @@ public class SaveSound : MonoBehaviour
     private FileStream fileStream;
     //we should allow player to view and listen to their songs as AudioClips in game
 
-    public GameObject enterNameObj, spaceToStopObj, spaceToRecordObj, uploadingObj, recordingLight, stopLight;
+    public GameObject enterNameObj, spaceToStopObj, spaceToRecordObj, 
+        uploadingObj, uploadingBar, recordingLight, stopLight;
     InputField enterName;
 
     public bool newRec = false;
@@ -126,6 +127,9 @@ public class SaveSound : MonoBehaviour
         //called after you have finished recording
         if (isWritingName)
         {
+            if (!enterName.isFocused)
+                enterName.ActivateInputField();
+
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 fileName = enterName.text + ".wav";
@@ -147,6 +151,7 @@ public class SaveSound : MonoBehaviour
                 uploading = true;
                 pressEnterObj.SetActive(false);
                 uploadingObj.SetActive(true);
+                uploadingBar.SetActive(true);
 
                 if (!fpc.hasRecorded)
                     fpc.hasRecorded = true;
@@ -174,11 +179,14 @@ public class SaveSound : MonoBehaviour
         if (uploading)
         {
             uploadTimer -= Time.deltaTime;
+            uploadingBar.GetComponent<Image>().fillAmount += Time.deltaTime / 2.8f;
 
             if (uploadTimer < 0)
             {
                 uploading = false;
                 uploadingObj.SetActive(false);
+                uploadingBar.GetComponent<Image>().fillAmount = 0;
+                uploadingBar.SetActive(false);
                 spaceToRecordObj.SetActive(true);
                 stopLight.SetActive(false);
                 uploadTimer = uploadTotal;

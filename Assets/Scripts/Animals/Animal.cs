@@ -39,6 +39,12 @@ public abstract class Animal : MonoBehaviour {
 
     public float randomScaleMin = 0.5f, randomScaleMax = 2;
 
+    //for color lerping animal's materials
+    public SkinnedMeshRenderer myMR;
+    public Color idleSilent, idleAudible, walkingSilent, walkingAudible, runningSilent, runningAudible;
+
+    public float lerpSpeed;
+
 	public virtual void Start () {
         //find our player!
         player = GameObject.FindGameObjectWithTag("Player");
@@ -54,6 +60,14 @@ public abstract class Animal : MonoBehaviour {
         myNavMesh.speed = walkSpeed;
 
         RandomizeSize();
+
+        float randomStartMove = Random.Range(0, 100);
+        if(randomStartMove > 50)
+        {
+            isMoving = true;
+        }
+
+        myMR = GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
     public virtual void Update () {
@@ -120,6 +134,47 @@ public abstract class Animal : MonoBehaviour {
         if(Vector3.Distance(transform.position, player.transform.position) < spookDistance && !isRunning)
         {
             RunAway();
+        }
+
+        //color lerping in relation to audio
+
+        //while walking
+        if (isMoving && !isRunning)
+        {
+            if (animalAudio.isPlaying)
+            {
+                myMR.material.color = Color.Lerp(myMR.material.color, walkingAudible, Time.deltaTime * lerpSpeed);
+            }
+            else
+            {
+                myMR.material.color = Color.Lerp(myMR.material.color, walkingSilent, Time.deltaTime * lerpSpeed);
+            }
+        }
+
+        //while running
+        if (isRunning)
+        {
+            if (animalAudio.isPlaying)
+            {
+                myMR.material.color = Color.Lerp(myMR.material.color, runningAudible, Time.deltaTime * lerpSpeed);
+            }
+            else
+            {
+                myMR.material.color = Color.Lerp(myMR.material.color, runningSilent, Time.deltaTime * lerpSpeed);
+            }
+        }
+
+        //while idle
+        if(!isMoving && !isRunning)
+        {
+            if (animalAudio.isPlaying)
+            {
+                myMR.material.color = Color.Lerp(myMR.material.color, idleAudible, Time.deltaTime * lerpSpeed);
+            }
+            else
+            {
+                myMR.material.color = Color.Lerp(myMR.material.color, idleSilent, Time.deltaTime * lerpSpeed);
+            }
         }
 	}
 
