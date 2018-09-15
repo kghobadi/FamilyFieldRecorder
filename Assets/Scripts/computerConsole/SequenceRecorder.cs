@@ -140,14 +140,24 @@ public class SequenceRecorder : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                sequenceSavePath = Application.dataPath + "/../savedSequences/" + enterSequenceName.text + ".wav";
                 fileName = enterSequenceName.text + ".wav";
-                enterSequenceName.gameObject.SetActive(false);
-                sequenceSavePath = Application.dataPath + "/Resources/savedSequences/" + fileName;
+                while (File.Exists(sequenceSavePath))
+                {
+                    sequenceSavePath = sequenceSavePath.Remove(sequenceSavePath.Length - 4);
+                    sequenceSavePath = sequenceSavePath + "_.wav";
+                    fileName = fileName.Remove(fileName.Length - 4);
+                    fileName = fileName + "_.wav";
+                }
 
-                System.IO.File.Move(Application.dataPath + "/Resources/savedSequences/test.wav", sequenceSavePath);//make it add copy if it already exists!
+                //fileName = enterSequenceName.text + ".wav";
+                //enterSequenceName.gameObject.SetActive(false);
+                //sequenceSavePath = Application.dataPath + "/../savedSequences/" + fileName;
+
+                System.IO.File.Move(Application.dataPath + "/../savedSequences/test.wav", sequenceSavePath);//make it add copy if it already exists!
 
 
-                StartCoroutine(loader.LoadNewSequence());
+                StartCoroutine(loader.LoadNewSequence(""));
 
                 sequenceRecordProgress.rectTransform.sizeDelta = new Vector2(0, 10);
 
@@ -165,7 +175,7 @@ public class SequenceRecorder : MonoBehaviour
     void StartWriting()
     {
 
-        fileStream = new FileStream(Application.dataPath + "/Resources/savedSequences/test.wav", FileMode.Create);
+        fileStream = new FileStream(Application.dataPath + "/../savedSequences/test.wav", FileMode.Create);
         byte emptyByte = new byte();
 
         for (int i = 0; i < headerSize; i++)

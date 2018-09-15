@@ -173,7 +173,7 @@ public class FirstPersonController : MonoBehaviour
             }
 
             //move away recorder if near sequencer
-            if (Vector3.Distance(transform.position, console.position) < 10 && !recordScript.doingRecordingThingFull)
+            if (Vector3.Distance(transform.position, console.position) < 15 && !recordScript.doingRecordingThingFull)
             {
                 MoveRec(recAwayPos);
             }

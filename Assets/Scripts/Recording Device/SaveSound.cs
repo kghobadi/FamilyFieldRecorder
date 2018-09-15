@@ -143,14 +143,24 @@ public class SaveSound : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Return))
                 {
+                    clipSavePath = Application.dataPath + "/../savedClips/" + enterName.text + ".wav";
                     fileName = enterName.text + ".wav";
+                    while (File.Exists(clipSavePath))
+                    {
+                        clipSavePath = clipSavePath.Remove(clipSavePath.Length - 4);
+                        clipSavePath = clipSavePath + "_.wav";
+                        fileName = fileName.Remove(fileName.Length - 4);
+                        fileName = fileName + "_.wav";
+                    }
+
+                    
+                    //clipSavePath = Application.dataPath + "/../savedClips/" + fileName;
+
                     enterNameObj.SetActive(false);
-                    clipSavePath = Application.dataPath + "/Resources/savedClips/" + fileName;
+                    
+                    System.IO.File.Move(Application.dataPath + "/../savedClips/test.wav", clipSavePath);//make it add copy if it already exists!
 
-                    System.IO.File.Move(Application.dataPath + "/Resources/savedClips/test.wav", clipSavePath);//make it add copy if it already exists!
-
-
-                    StartCoroutine(loader.LoadNewClip());
+                    StartCoroutine(loader.LoadNewClip(""));
 
                     //clipRecordProgress.rectTransform.sizeDelta = new Vector2(0, 10);
 
@@ -262,7 +272,7 @@ public class SaveSound : MonoBehaviour
     void StartWriting()
     {
 
-        fileStream = new FileStream(Application.dataPath + "/Resources/savedClips/test.wav", FileMode.Create);
+        fileStream = new FileStream(Application.dataPath + "/../savedClips/test.wav", FileMode.Create);
         byte emptyByte = new byte();
 
         for (int i = 0; i < headerSize; i++)

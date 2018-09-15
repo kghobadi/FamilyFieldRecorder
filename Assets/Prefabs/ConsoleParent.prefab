@@ -13872,6 +13872,7 @@ MonoBehaviour:
   firstPersonController: {fileID: 0}
   playerConsolePosition: {fileID: 4274057433441116}
   explorationMix: {fileID: 24100000, guid: 457d012c79be5334db6ea72edd3d15e7, type: 2}
+  s: {fileID: 0}
 --- !u!114 &114499980654490970
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -145,14 +145,24 @@ public class Sampler : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                sampleSavePath = Application.dataPath + "/../savedSamples/" + enterSampleName.text + ".wav";
                 fileName = enterSampleName.text + ".wav";
+                while (File.Exists(sampleSavePath))
+                {
+                    sampleSavePath = sampleSavePath.Remove(sampleSavePath.Length - 4);
+                    sampleSavePath = sampleSavePath + "_.wav";
+                    fileName = fileName.Remove(fileName.Length - 4);
+                    fileName = fileName + "_.wav";
+                }
+
+                //fileName = enterSampleName.text + ".wav";
                 //enterSampleName.gameObject.SetActive(false);
-                sampleSavePath = Application.dataPath + "/Resources/savedSamples/" + fileName;
+                //sampleSavePath = Application.dataPath + "/../savedSamples/" + fileName;
 
-                System.IO.File.Move(Application.dataPath + "/Resources/savedSamples/test.wav", sampleSavePath);//make it add copy if it already exists!
+                System.IO.File.Move(Application.dataPath + "/../savedSamples/test.wav", sampleSavePath);//make it add copy if it already exists!
 
 
-                StartCoroutine(loader.LoadNewSample());
+                StartCoroutine(loader.LoadNewSample(""));
 
                 sampleRecordProgress.rectTransform.sizeDelta = new Vector2(0, 25);
 
@@ -221,7 +231,7 @@ public class Sampler : MonoBehaviour
     void StartWriting(String name)
     {
         //sampleSavePath = Application.dataPath + "/Resources/savedSamples/test.wav";
-        fileStream = new FileStream(Application.dataPath + "/Resources/savedSamples/test.wav", FileMode.Create);
+        fileStream = new FileStream(Application.dataPath + "/../savedSamples/test.wav", FileMode.Create);
         byte emptyByte = new byte();
 
         for (int i = 0; i < headerSize; i++)

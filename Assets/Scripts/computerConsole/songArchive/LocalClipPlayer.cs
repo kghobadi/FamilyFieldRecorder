@@ -343,7 +343,7 @@ public class LocalClipPlayer : MonoBehaviour
         {
             case FileType.clip:
 
-                System.IO.File.Delete(Application.dataPath + "/Resources/savedClips/" + l.clipFiles[clipIndex].name + ".wav");
+                System.IO.File.Delete(Application.dataPath + "/../savedClips/" + l.clipFiles[clipIndex].name + ".wav");
                 l.clipFiles.RemoveAt(clipIndex);
                 if (clipIndex > l.clipFiles.Count - 1)
                     clipIndex--;
@@ -351,7 +351,7 @@ public class LocalClipPlayer : MonoBehaviour
                 break;
             case FileType.sample:
 
-                System.IO.File.Delete(Application.dataPath + "/Resources/savedSamples/" + l.sampleFiles[sampleIndex].name + ".wav");
+                System.IO.File.Delete(Application.dataPath + "/../savedSamples/" + l.sampleFiles[sampleIndex].name + ".wav");
                 l.sampleFiles.RemoveAt(sampleIndex);
                 if (sampleIndex > l.sampleFiles.Count - 1)
                     sampleIndex--;
@@ -359,7 +359,7 @@ public class LocalClipPlayer : MonoBehaviour
                 break;
             case FileType.sequence:
 
-                System.IO.File.Delete(Application.dataPath + "/Resources/savedSequences/" + l.sequenceFiles[sequenceIndex].name + ".wav");
+                System.IO.File.Delete(Application.dataPath + "/../savedSequences/" + l.sequenceFiles[sequenceIndex].name + ".wav");
                 l.sequenceFiles.RemoveAt(sequenceIndex);
                 if (sequenceIndex > l.sequenceFiles.Count - 1)
                     sequenceIndex--;
