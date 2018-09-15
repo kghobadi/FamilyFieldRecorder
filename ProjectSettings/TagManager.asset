@@ -17,6 +17,9 @@ TagManager:
   - House
   - RenderCam
   - RenderWall
+  - Rain
+  - WorldCanvas
+  - Clock
   layers:
   - Default
   - TransparentFX

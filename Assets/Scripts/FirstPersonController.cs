@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class FirstPersonController : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class FirstPersonController : MonoBehaviour
     public float footStepTimerTotal = 0.5f;
 
     CharacterController player;
-
+    camMouseLook mouseLook;
     Vector3 movement;
 
     //for footstep sounds
@@ -36,11 +38,13 @@ public class FirstPersonController : MonoBehaviour
 
     Vector3 lastPosition;
 
-    public bool recOut = true, recMoving, inHouse, hasRecorded;
+    public bool recOut = true, recMoving, inHouse,
+        hasStarted, bypassStart, canStart, lerpingCam,
+        paused;
 
     public float recAwayTimer, recAwayTimeTotal;
 
-    public Vector3 recOutPos, recAwayPos , targetPos;
+    public Vector3 recOutPos, recAwayPos , recMenuPos, targetPos;
 
     public Transform recorder;
 
@@ -48,109 +52,237 @@ public class FirstPersonController : MonoBehaviour
 
     public Transform console;
 
+    public GameObject[] titleTextObjs;
+    public GameObject spaceToStartPlayingObj;
+    public AudioClip[] titleTextSounds;
+    public AudioClip spaceToStartSound;
+
+    public AudioMixer generalMixer;
+
     void Start()
     {
         player = GetComponent<CharacterController>();
         playerAudSource = GetComponent<AudioSource>();
+        mouseLook = Camera.main.GetComponent<camMouseLook>();
 
         //for rec pos
-        recOutPos = recorder.localPosition;
-        recAwayPos = recorder.localPosition - new Vector3(0, 2, 0);
+        recOutPos = recorder.localPosition + new Vector3(0, 2, 0);
+        recAwayPos = recorder.localPosition;
+        recMenuPos = new Vector3(0, -0.07f, 0.44f);
         recAwayTimer = recAwayTimeTotal;
-
         recordScript = recorder.GetComponent<SaveSound>();
+        
+        //allows us to bypass start menu from inspector
+        if (bypassStart)
+        {
+            StartCoroutine(StartGame());
+        }
+        else
+        {
+            StartCoroutine(TypeTitleText());
+        }
     }
 
     void Update()
     {
-        //when hold mouse 1, you begin to move in that direction
-            if (Input.GetMouseButton(0))
-            {
-            moving = true;
-            ResetNearbyAudioSources();
-            movement = new Vector3(0, 0, currentSpeed);
-            sprintTimer += Time.deltaTime;
-            //while speed is less than sprint, autoAdd
-            if (sprintTimer > sprintTimerMax && currentSpeed < sprintSpeed)
-            {
-                currentSpeed += Time.deltaTime;
-            }
-
-            footStepTimer -= Time.deltaTime;
-            if (footStepTimer < 0)
-            {
-                PlayFootStepAudio();
-                footStepTimer = footStepTimerTotal;
-            }
-        }
-            else if(Input.GetMouseButton(1))
+        if (hasStarted)
         {
-            moving = true;
-            ResetNearbyAudioSources();
-            movement = new Vector3(0, 0, -currentSpeed);
-            footStepTimer -= Time.deltaTime;
-            if (footStepTimer < 0)
-            {   
-                PlayFootStepAudio();
-                footStepTimer = footStepTimerTotal;
-            }
-
-            
-        }
-            //when not moving
-            else
+            if (!paused)
             {
-            moving = false;
-                movement = Vector3.zero;
-            currentSpeed = walkSpeed;
-            }
-        
-
-
-        movement = transform.rotation * movement;
-        player.Move(movement * Time.deltaTime);
-
-        player.Move(new Vector3(0, -0.5f, 0));
-
-        //moves the recorder obj
-        if (recMoving)
-        {
-            recorder.localPosition = Vector3.MoveTowards(recorder.localPosition, targetPos, 3 * Time.deltaTime);
-
-            if (Vector3.Distance(recorder.localPosition, targetPos) < 0.1f)
-            {
-                recMoving = false;
-
-                if(targetPos == recAwayPos)
+                //when hold mouse 1, you begin to move in that direction
+                if (Input.GetMouseButton(0))
                 {
-                    recOut = false;
+                    moving = true;
+                    ResetNearbyAudioSources();
+                    movement = new Vector3(0, 0, currentSpeed);
+
+
+                    footStepTimer -= Time.deltaTime;
+                    if (footStepTimer < 0)
+                    {
+                        PlayFootStepAudio();
+                        footStepTimer = footStepTimerTotal;
+                    }
+
+                    SprintSpeed();
                 }
+                //move backwards
+                else if (Input.GetMouseButton(1))
+                {
+                    moving = true;
+                    ResetNearbyAudioSources();
+                    movement = new Vector3(0, 0, -currentSpeed);
+                    footStepTimer -= Time.deltaTime;
+                    if (footStepTimer < 0)
+                    {
+                        PlayFootStepAudio();
+                        footStepTimer = footStepTimerTotal;
+                    }
+
+                    SprintSpeed();
+                }
+                //WASD controls
+                else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) ||
+                    Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+                {
+                    moving = true;
+                    float moveForwardBackward = Input.GetAxis("Vertical") * currentSpeed;
+                    float moveLeftRight = Input.GetAxis("Horizontal") * currentSpeed;
+                    //float moveUpDown = Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
+                    if ((moveForwardBackward != 0 || moveLeftRight != 0) && !playerAudSource.isPlaying)
+                    {
+                        PlayFootStepAudio();
+                    }
+
+                    movement = new Vector3(moveLeftRight, 0, moveForwardBackward);
+
+                    SprintSpeed();
+                }
+                //when not moving
                 else
                 {
-                    recOut = true;
+                    moving = false;
+                    movement = Vector3.zero;
+                    currentSpeed = walkSpeed;
                 }
+
+                movement = transform.rotation * movement;
+                player.Move(movement * Time.deltaTime);
+
+                player.Move(new Vector3(0, -0.5f, 0));
+            }
+
+            //moves the recorder obj
+            if (recMoving)
+            {
+                recorder.localPosition = Vector3.MoveTowards(recorder.localPosition, targetPos, 3 * Time.deltaTime);
+
+                if (Vector3.Distance(recorder.localPosition, targetPos) < 0.1f)
+                {
+                    recMoving = false;
+
+                    if (targetPos == recAwayPos || targetPos == recMenuPos)
+                    {
+                        recOut = false;
+                    }
+                    else
+                    {
+                        recOut = true;
+                    }
+                }
+            }
+
+            //move away recorder if near sequencer
+            if (Vector3.Distance(transform.position, console.position) < 15 && !recordScript.doingRecordingThingFull)
+            {
+                MoveRec(recAwayPos);
+            }
+            //keep it out
+            else if(Vector3.Distance(transform.position, console.position) > 10 && !paused)
+            {
+                MoveRec(recOutPos);
+            }
+
+            //Take out recorder
+            if (Input.GetKeyDown(KeyCode.Space) && !recOut)
+            {
+                recAwayTimer = recAwayTimeTotal;
+
+                MoveRec(recOutPos);
+            }
+
+            //lerps camera fov right after start
+            if (lerpingCam)
+            {
+                Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 60, 5 * Time.deltaTime);
+                if(Camera.main.fieldOfView <= 60.1f)
+                {
+                    lerpingCam = false;
+                }
+            }
+
+            //for enabling pause menu -- checks that recorder is not recording
+            if (Input.GetKeyDown(KeyCode.Escape) && !recordScript.doingRecordingThingFull  && recOut)
+            {
+                EnablePauseMenu();
+                Debug.Log("enable pause menu kas suks");
             }
         }
 
-        //move away recorder if near sequencer
-        if(Vector3.Distance(transform.position, console.position) < 10)
-        {
-            MoveRec(recAwayPos);
-        }
-        //keep it out
         else
         {
-            MoveRec(recOutPos);
+            //while start menu is enabled pressing space begins game
+            if (Input.GetKeyDown(KeyCode.Space) && canStart)
+            {
+                StartCoroutine(StartGame());
+            }
         }
+    }
 
-        //Take out recorder
-        if (Input.GetKeyDown(KeyCode.Space) && !recOut)
+    //called when player presses Escape
+    public void EnablePauseMenu()
+    {
+        recorder.transform.localEulerAngles = new Vector3(0, 0, 0);
+        mouseLook.enabled = false;
+        MoveRec(recMenuPos);
+        paused = true;
+        recordScript.PauseMenu();
+    }
+
+    //called by recorder script
+    public void DisablePauseMenu()
+    {
+        MoveRec(recOutPos);
+        mouseLook.enabled = true;
+        recorder.transform.localEulerAngles = new Vector3(0, 30, 0);
+        paused = false;
+        recordScript.paused = false;
+
+        Debug.Log("disable pause kas suks");
+    }
+
+    public IEnumerator TypeTitleText()
+    {
+        Camera.main.fieldOfView = 90;
+        generalMixer.SetFloat("masterVol", -20);
+
+        for(int i = 0; i < titleTextObjs.Length; i++)
         {
-            recAwayTimer = recAwayTimeTotal;
-
-            MoveRec(recOutPos);
+            titleTextObjs[i].SetActive(true);
+            int randomSound = Random.Range(0, titleTextSounds.Length);
+            playerAudSource.PlayOneShot(titleTextSounds[randomSound], 10f);
+            yield return new WaitForSeconds(titleTextSounds[randomSound].length);
         }
-        
+
+        //title screen stuff
+        spaceToStartPlayingObj.SetActive(true);
+        playerAudSource.PlayOneShot(spaceToStartSound, 25f);
+        canStart = true;
+    }
+
+    public IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(0.25f);
+        lerpingCam = true;
+        for(int i = 0; i < titleTextObjs.Length; i++)
+        {
+            titleTextObjs[i].GetComponent<FadeUI>().fadingOut = true;
+        }
+        spaceToStartPlayingObj.GetComponent<FadeUI>().fadingOut = true;
+        generalMixer.SetFloat("masterVol", 0);
+        hasStarted = true;
+        MoveRec(recOutPos);
+    }
+
+    //increases move speed while player is moving over time
+    public void SprintSpeed()
+    {
+        sprintTimer += Time.deltaTime;
+        //while speed is less than sprint, autoAdd
+        if (sprintTimer > sprintTimerMax && currentSpeed < sprintSpeed)
+        {
+            currentSpeed += Time.deltaTime;
+        }
     }
 
     private void PlayFootStepAudio()

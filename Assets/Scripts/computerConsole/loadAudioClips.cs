@@ -17,7 +17,9 @@ public class loadAudioClips : MonoBehaviour
     public SequenceRecorder seqRecorder;
     int sequenceNumber;
 
-    LocalClipPlayer localClipPlayer;
+    public LocalClipPlayer localClipPlayer;
+
+
 
     // Use this for initialization
     void Start()
@@ -27,7 +29,7 @@ public class loadAudioClips : MonoBehaviour
         InitSampleLoad();
         InitSequenceLoad();
 
-        localClipPlayer = GetComponent<LocalClipPlayer>();
+        
     }
 
     // Update is called once per frame
@@ -37,94 +39,160 @@ public class loadAudioClips : MonoBehaviour
 
     }
 
-    public IEnumerator LoadNewClip()
+    public IEnumerator LoadNewClip(string path)
     {
-        WWW www = new WWW("file://" + saveSoundScript.clipSavePath);
+        bool normalPath = false;
+        if (path == "")
+        {
+            path = saveSoundScript.clipSavePath;
+            normalPath = true;
+        }
+
+        WWW www = new WWW("file://" + path);
         yield return www;
 
         AudioClip file = www.GetAudioClip();
-        file.name = saveSoundScript.fileName.Remove(saveSoundScript.fileName.Length - 4);
+        if (normalPath)
+            file.name = saveSoundScript.fileName.Remove(saveSoundScript.fileName.Length - 4);
+        else
+        {
+            string s = Application.dataPath + "/../savedClips/";
+            int charCount = s.Length;
 
-        //AudioClip file = Resources.Load<AudioClip>("savedClips/" + saveSoundScript.fileName);
-        //Debug.Log("savedClips/" + saveSoundScript.fileName);
+            file.name = path.Remove(path.Length - 4);
+            file.name = file.name.Remove(0, charCount);
+        }
 
 
         clipFiles.Add(file);
-
-        //        print(recordedFiles.name);
         clipNumber++;
-        //saveSoundScript.newRec = false;
-
     }
 
-    public IEnumerator LoadNewSample()
+    public IEnumerator LoadNewSample(string path)
     {
+        bool normalPath = false;
+        if (path == "")
+        {
+            path = sampler.sampleSavePath;
+            normalPath = true;
+        }
+
         //Debug.Log(sampler.sampleSavePath);
-        WWW www = new WWW("file://" + sampler.sampleSavePath);
+        WWW www = new WWW("file://" + path);
         yield return www;
 
         AudioClip file = www.GetAudioClip();
-        file.name = sampler.fileName.Remove(sampler.fileName.Length - 4);
+        if (normalPath)
+            file.name = sampler.fileName.Remove(sampler.fileName.Length - 4);
+        else
+        {
+            string s = Application.dataPath + "/../savedSamples/";
+            int charCount = s.Length;
+
+            file.name = path.Remove(path.Length - 4);
+            file.name = file.name.Remove(0, charCount);
+        }
+       
 
         sampleFiles.Add(file);
         sampleNumber++;
 
-        localClipPlayer.sampleIndex = sampleFiles.Count - 1;
-        localClipPlayer.SampleButton();
+
+        if (normalPath)
+        {
+            localClipPlayer.sampleIndex = sampleFiles.Count - 1;
+            localClipPlayer.SampleButton();
+        }
 
     }
 
-    public IEnumerator LoadNewSequence()
+    public IEnumerator LoadNewSequence(string path)
     {
-        WWW www = new WWW("file://" + seqRecorder.sequenceSavePath);
+        bool normalPath = false;
+        if (path == "")
+        {
+            path = seqRecorder.sequenceSavePath;
+            normalPath = true;
+        }
+
+        WWW www = new WWW("file://" + path);
         yield return www;
 
         AudioClip file = www.GetAudioClip();
-        file.name = seqRecorder.fileName.Remove(seqRecorder.fileName.Length - 4);
+
+        if (normalPath)
+            file.name = seqRecorder.fileName.Remove(seqRecorder.fileName.Length - 4);
+        else
+        {
+            string s = Application.dataPath + "/../savedSequences/";
+            int charCount = s.Length;
+
+            file.name = path.Remove(path.Length - 4);
+            file.name = file.name.Remove(0, charCount);
+        }
+        
 
         sequenceFiles.Add(file);
         sequenceNumber++;
 
-        localClipPlayer.sequenceIndex = sequenceFiles.Count - 1;
-        localClipPlayer.SequenceButton();
+        if (normalPath)
+        {
+            localClipPlayer.sequenceIndex = sequenceFiles.Count - 1;
+            localClipPlayer.SequenceButton();
+        }
 
     }
 
     void InitClipLoad()
     {
-        clipFiles.Clear();
-        Object[] files = Resources.LoadAll("savedClips", typeof(AudioClip));
+        List<string> filesInDir = new List<string>();
 
-        for (int i = 0; i < files.Length; i++)
+        foreach (string file in Directory.GetFiles(Application.dataPath + "/../savedClips"))
         {
-            clipFiles.Add((AudioClip)files[i]);
-            clipNumber++;
-            //Debug.Log("added clip" + files[i].name);
+            filesInDir.Add(file);
+        }
+
+        clipFiles.Clear();
+       
+
+        for (int i = 0; i < filesInDir.Count; i++)
+        {
+            StartCoroutine(LoadNewClip(filesInDir[i]));
         }
 
     }
     void InitSampleLoad()
     {
-        sampleFiles.Clear();
-        Object[] files = Resources.LoadAll("savedSamples", typeof(AudioClip));
+        List<string> filesInDir = new List<string>();
 
-        for (int i = 0; i < files.Length; i++)
+        foreach (string file in Directory.GetFiles(Application.dataPath + "/../savedSamples"))
         {
-            sampleFiles.Add((AudioClip)files[i]);
-            sampleNumber++;
-            //Debug.Log("added sample" + files[i].name);
+            filesInDir.Add(file);
         }
+
+        sampleFiles.Clear();
+
+        for (int i = 0; i < filesInDir.Count; i++)
+        {
+            StartCoroutine(LoadNewSample(filesInDir[i]));
+        }
+
     }
     void InitSequenceLoad()
     {
-        sequenceFiles.Clear();
-        Object[] files = Resources.LoadAll("savedSequences", typeof(AudioClip));
+        List<string> filesInDir = new List<string>();
 
-        for (int i = 0; i < files.Length; i++)
+        foreach (string file in Directory.GetFiles(Application.dataPath + "/../savedSequences"))
         {
-            sequenceFiles.Add((AudioClip)files[i]);
-            sequenceNumber++;
-            //Debug.Log("added sequence" + files[i].name);
+            filesInDir.Add(file);
         }
+
+        sequenceFiles.Clear();
+
+        for (int i = 0; i < filesInDir.Count; i++)
+        {
+            StartCoroutine(LoadNewSequence(filesInDir[i]));
+        }
+
     }
 }

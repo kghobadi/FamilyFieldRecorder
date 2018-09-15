@@ -87,11 +87,7 @@ public class FadeUI : MonoBehaviour {
             else
             {
                 fadingOut = false;
-                if (!keepActive)
-                {
-                    gameObject.SetActive(false);
-                    transform.SetParent(nextParent);
-                }
+                gameObject.SetActive(false);
             }
         }
     }

@@ -10,7 +10,7 @@ public class LocalClipPlayer : MonoBehaviour
 
 
 
-    loadAudioClips l;
+    public loadAudioClips l;
 
     [HideInInspector]
     public int clipIndex, sampleIndex, sequenceIndex;
@@ -49,7 +49,7 @@ public class LocalClipPlayer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        l = GetComponent<loadAudioClips>();
+       
         audioSource = GetComponent<AudioSource>();
 
         ClipButton();
@@ -134,7 +134,12 @@ public class LocalClipPlayer : MonoBehaviour
             if (scrollBarValueIsChanging)
             {
                 audioSource.Pause();
+                if(clipScroller.value !=1)
                 audioSource.time = clipScroller.value * audioSource.clip.length;
+                else
+                {
+                    audioSource.time = 0.99f * audioSource.clip.length;
+                }
             }
             else
             {
@@ -338,7 +343,7 @@ public class LocalClipPlayer : MonoBehaviour
         {
             case FileType.clip:
 
-                System.IO.File.Delete(Application.dataPath + "/Resources/savedClips/" + l.clipFiles[clipIndex].name + ".wav");
+                System.IO.File.Delete(Application.dataPath + "/../savedClips/" + l.clipFiles[clipIndex].name + ".wav");
                 l.clipFiles.RemoveAt(clipIndex);
                 if (clipIndex > l.clipFiles.Count - 1)
                     clipIndex--;
@@ -346,7 +351,7 @@ public class LocalClipPlayer : MonoBehaviour
                 break;
             case FileType.sample:
 
-                System.IO.File.Delete(Application.dataPath + "/Resources/savedSamples/" + l.sampleFiles[sampleIndex].name + ".wav");
+                System.IO.File.Delete(Application.dataPath + "/../savedSamples/" + l.sampleFiles[sampleIndex].name + ".wav");
                 l.sampleFiles.RemoveAt(sampleIndex);
                 if (sampleIndex > l.sampleFiles.Count - 1)
                     sampleIndex--;
@@ -354,8 +359,8 @@ public class LocalClipPlayer : MonoBehaviour
                 break;
             case FileType.sequence:
 
-                System.IO.File.Delete(Application.dataPath + "/Resources/savedSequences/" + l.sequenceFiles[sequenceIndex].name + ".wav");
-                l.sampleFiles.RemoveAt(sampleIndex);
+                System.IO.File.Delete(Application.dataPath + "/../savedSequences/" + l.sequenceFiles[sequenceIndex].name + ".wav");
+                l.sequenceFiles.RemoveAt(sequenceIndex);
                 if (sequenceIndex > l.sequenceFiles.Count - 1)
                     sequenceIndex--;
 
