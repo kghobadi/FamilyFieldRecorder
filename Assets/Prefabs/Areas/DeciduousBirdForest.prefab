@@ -253,6 +253,7 @@ MonoBehaviour:
   birdTypes:
   - {fileID: 1829819741996628, guid: cdee644d1536bda43a5d969e9f5b45be, type: 2}
   - {fileID: 1929942440793436, guid: 52b7ef86f3379694ebc8734fba6844b1, type: 2}
+  - {fileID: 1584840225050250, guid: 060ca4af9724ee54386dd3bf29fc1d27, type: 2}
   gridOffset: {x: -243, y: 0, z: -237}
 --- !u!154 &154099125334154650
 TerrainCollider:

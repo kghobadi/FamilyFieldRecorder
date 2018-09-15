@@ -638,7 +638,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1275409271589174}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.316467, y: 0, z: 269.96924}
+  m_LocalPosition: {x: 3.424881, y: 5.065761, z: 15.757062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4448043306657672}
@@ -890,7 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea661ba94bcab84290786dea00f61f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deerWalking:
+  walking:
   - {fileID: 8300000, guid: 639376c26d0241f4eb99299e29e602bc, type: 3}
   - {fileID: 8300000, guid: 52e27547174379a4c916fa29dead6a04, type: 3}
   - {fileID: 8300000, guid: 6407f7c3a0e1a6a489bb48612369cfce, type: 3}
@@ -899,7 +899,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00c95a75e73e4604d9d70bc96ca8cdd6, type: 3}
   - {fileID: 8300000, guid: 7b147da2887790f47bd4ae6c2f524d0c, type: 3}
   - {fileID: 8300000, guid: 0fe0f5f956d364c41926cf6c995b4811, type: 3}
-  deerEating:
+  idle:
   - {fileID: 8300000, guid: ca3ba6e003acd8e41bf9592fae99da28, type: 3}
   - {fileID: 8300000, guid: 607463565818b0940ae2f7fb0b41d50c, type: 3}
   - {fileID: 8300000, guid: 9d04951cb36c14d4a82dcc29e742a5b9, type: 3}
@@ -907,7 +907,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4758bf9313087904b8c82ee35dcf616a, type: 3}
   - {fileID: 8300000, guid: 359166faea53bb54d88a7512a94698f3, type: 3}
   - {fileID: 8300000, guid: bdf4aeb2accd29d4ba87953b2cbb7eb1, type: 3}
-  deerRunning:
+  running:
   - {fileID: 8300000, guid: e995bb09b0cbc3e40b256bdab2280a78, type: 3}
   - {fileID: 8300000, guid: 8a97529c4a9b71d4db7ba1ad14575730, type: 3}
   - {fileID: 8300000, guid: db61bcadec0ab2c488f78bb51d4178b6, type: 3}
@@ -918,13 +918,24 @@ MonoBehaviour:
   movementRadius: 50
   walkSpeed: 5
   runSpeed: 25
-  moving: 0
-  running: 0
-  soundTimer: 0.25
+  moveTimerTotal: 5
+  isMoving: 0
+  isRunning: 0
+  nextNoteIn: 0.25
   soundTimerTotal: 0.5
   walkTimerTotal: 0.5
   runTimerTotal: 0.15
   spookDistance: 15
+  stopMovingDistance: 8
+  randomScaleMin: 0.5
+  randomScaleMax: 2
+  myMR: {fileID: 137567465620033436}
+  idleSilent: {r: 0.9372549, g: 0.09019608, b: 0.5411765, a: 1}
+  idleAudible: {r: 1, g: 0.23921569, b: 0.9254902, a: 1}
+  walkingSilent: {r: 0.69411767, g: 0.08235294, b: 0.93333334, a: 1}
+  walkingAudible: {r: 0.7764706, g: 0.53333336, b: 1, a: 1}
+  runningSilent: {r: 0.90867877, g: 0.4198113, b: 1, a: 1}
+  runningAudible: {r: 0.42850158, g: 0.0046279924, b: 0.9811321, a: 1}
 --- !u!137 &137567465620033436
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

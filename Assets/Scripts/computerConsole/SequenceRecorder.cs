@@ -32,7 +32,7 @@ public class SequenceRecorder : MonoBehaviour
 
     public string sequenceSavePath;
     public loadAudioClips loader;
-    LocalClipPlayer localClipPlayer;
+    public LocalClipPlayer localClipPlayer;
 
     public Button startRecordingButt;
     public Image sequenceRecordProgress;
@@ -42,6 +42,8 @@ public class SequenceRecorder : MonoBehaviour
     float sequenceMaxLength = 60;
 
     public ButtonPressFeedback buttonPressFeedback;
+
+    public GameObject blockImage1, blockImage2;
 
     void Awake()
     {
@@ -58,7 +60,7 @@ public class SequenceRecorder : MonoBehaviour
         //if (GetComponent<AudioListener>() == null)
         //print("put audiolistener on recorder!");
 
-        localClipPlayer = loader.GetComponent<LocalClipPlayer>();
+        //localClipPlayer = loader.GetComponent<LocalClipPlayer>();
 
         startRecordingButt.onClick.AddListener(RecordingFunction);
     }
@@ -130,17 +132,32 @@ public class SequenceRecorder : MonoBehaviour
 
         if (isWritingName)
         {
+            blockImage1.SetActive(true);
+            blockImage2.SetActive(true);
+
+            if (!enterSequenceName.isFocused)
+                enterSequenceName.ActivateInputField();
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                sequenceSavePath = Application.dataPath + "/../savedSequences/" + enterSequenceName.text + ".wav";
                 fileName = enterSequenceName.text + ".wav";
-                enterSequenceName.gameObject.SetActive(false);
-                sequenceSavePath = Application.dataPath + "/Resources/savedSequences/" + fileName;
+                while (File.Exists(sequenceSavePath))
+                {
+                    sequenceSavePath = sequenceSavePath.Remove(sequenceSavePath.Length - 4);
+                    sequenceSavePath = sequenceSavePath + "_.wav";
+                    fileName = fileName.Remove(fileName.Length - 4);
+                    fileName = fileName + "_.wav";
+                }
 
-                System.IO.File.Move(Application.dataPath + "/Resources/savedSequences/test.wav", sequenceSavePath);//make it add copy if it already exists!
+                //fileName = enterSequenceName.text + ".wav";
+                //enterSequenceName.gameObject.SetActive(false);
+                //sequenceSavePath = Application.dataPath + "/../savedSequences/" + fileName;
+
+                System.IO.File.Move(Application.dataPath + "/../savedSequences/test.wav", sequenceSavePath);//make it add copy if it already exists!
 
 
-                StartCoroutine(loader.LoadNewSequence());
+                StartCoroutine(loader.LoadNewSequence(""));
 
                 sequenceRecordProgress.rectTransform.sizeDelta = new Vector2(0, 10);
 
@@ -148,6 +165,9 @@ public class SequenceRecorder : MonoBehaviour
 
                 recordingTimer = 0;
                 isWritingName = false;
+
+                blockImage1.SetActive(false);
+                blockImage2.SetActive(false);
             }
         }
     }
@@ -155,7 +175,7 @@ public class SequenceRecorder : MonoBehaviour
     void StartWriting()
     {
 
-        fileStream = new FileStream(Application.dataPath + "/Resources/savedSequences/test.wav", FileMode.Create);
+        fileStream = new FileStream(Application.dataPath + "/../savedSequences/test.wav", FileMode.Create);
         byte emptyByte = new byte();
 
         for (int i = 0; i < headerSize; i++)

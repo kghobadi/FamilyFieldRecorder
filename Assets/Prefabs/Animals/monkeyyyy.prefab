@@ -4196,7 +4196,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1415062705574488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 250, y: 3.78, z: 200.7}
+  m_LocalPosition: {x: 6.5257, y: 3.9449575, z: 21.766672}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4685433528657808}
@@ -6487,21 +6487,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7213c4e16c29a6479e3d956a1b58b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walking: []
-  idle: []
-  running: []
-  movementRadius: 25
-  walkSpeed: 0
-  runSpeed: 10
+  walking:
+  - {fileID: 8300000, guid: 14fc75821868b8749b63e879670507fb, type: 3}
+  - {fileID: 8300000, guid: 410664ec9e21c5646b5af182d38e1f96, type: 3}
+  - {fileID: 8300000, guid: 585240b9bdc099b45b2aa1d331c70432, type: 3}
+  - {fileID: 8300000, guid: 1e1864c9242833f40a88ea79d7b2c396, type: 3}
+  idle:
+  - {fileID: 8300000, guid: 86f2830dfb19cd540bf3405bda79e48d, type: 3}
+  - {fileID: 8300000, guid: a347f18251f0cef4b954656ec37c3919, type: 3}
+  - {fileID: 8300000, guid: 1ee37c4b6f647d745b51f195895491f3, type: 3}
+  - {fileID: 8300000, guid: fc6bc94ae4360ee4c957d5218387da81, type: 3}
+  - {fileID: 8300000, guid: fd8cba59077146b4ba03cf7a74c2d5b9, type: 3}
+  - {fileID: 8300000, guid: 89d1bb0c889722942a67855f5399c527, type: 3}
+  - {fileID: 8300000, guid: 6c98cdc6acb3cce41983a821de7bbc1f, type: 3}
+  - {fileID: 8300000, guid: 670e4935c00f2a94aa1538d0ac7a9fb2, type: 3}
+  - {fileID: 8300000, guid: d54e512bd3bf01c4d80452a7f42d8871, type: 3}
+  - {fileID: 8300000, guid: 77135277a191cfe4dbc6cf503d4e59c4, type: 3}
+  - {fileID: 8300000, guid: 33cc3015fc08eaf44b2e3827fb4d80a3, type: 3}
+  running:
+  - {fileID: 8300000, guid: 86f2830dfb19cd540bf3405bda79e48d, type: 3}
+  - {fileID: 8300000, guid: a347f18251f0cef4b954656ec37c3919, type: 3}
+  - {fileID: 8300000, guid: 1ee37c4b6f647d745b51f195895491f3, type: 3}
+  - {fileID: 8300000, guid: fc6bc94ae4360ee4c957d5218387da81, type: 3}
+  - {fileID: 8300000, guid: fd8cba59077146b4ba03cf7a74c2d5b9, type: 3}
+  - {fileID: 8300000, guid: 89d1bb0c889722942a67855f5399c527, type: 3}
+  - {fileID: 8300000, guid: 6c98cdc6acb3cce41983a821de7bbc1f, type: 3}
+  - {fileID: 8300000, guid: 7339f667fb88c5046a9f0517c6796593, type: 3}
+  - {fileID: 8300000, guid: e5de6737160d8cf43a20546d9637387d, type: 3}
+  - {fileID: 8300000, guid: cf82eb54d44d64a4ebae932bafa35485, type: 3}
+  - {fileID: 8300000, guid: a4108726e5447ac438856aed3328e200, type: 3}
+  movementRadius: 35
+  walkSpeed: 10
+  runSpeed: 20
   moveTimerTotal: 5
   isMoving: 0
   isRunning: 0
   nextNoteIn: 0.25
-  soundTimerTotal: 0.25
+  soundTimerTotal: 1
   walkTimerTotal: 0.5
-  runTimerTotal: 0.15
-  spookDistance: 15
-  stopMovingDistance: 5
+  runTimerTotal: 0.2
+  spookDistance: 20
+  stopMovingDistance: 8
+  randomScaleMin: 0.25
+  randomScaleMax: 0.75
+  myMR: {fileID: 137667028048706324}
+  idleSilent: {r: 0.4251958, g: 0.43572703, b: 0.990566, a: 1}
+  idleAudible: {r: 0.2216981, g: 0.29204378, b: 1, a: 1}
+  walkingSilent: {r: 0, g: 1, b: 0.533272, a: 1}
+  walkingAudible: {r: 0.030838395, g: 0.9339623, b: 0.30361393, a: 1}
+  runningSilent: {r: 0.9607471, g: 1, b: 0.07075471, a: 1}
+  runningAudible: {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
 --- !u!137 &137667028048706324
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -86,7 +86,7 @@ Material:
     - _NoiseAmplitude: 5
     - _NoiseBias: 2.32
     - _NoiseFreq: 3
-    - _NoiseFreq1: 1.45
+    - _NoiseFreq1: 1.4
     - _NoiseFreq2: 5
     - _NoiseOffset: -0.2
     - _OcclusionStrength: 1
